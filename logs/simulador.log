@@ -1,0 +1,1900 @@
+2025-12-02 13:17:48,915 [INFO] Total de eventos programados: 50
+2025-12-02 13:17:48,915 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+2025-12-02 13:17:48,921 [INFO] Creado DLH1421 con hex 1E68AC en intento 1
+2025-12-02 13:18:21,850 [INFO] Ejecutando evento 2025-12-02 05:57:00+01:00 (Creacion de EZY8104)
+2025-12-02 13:18:21,855 [INFO] Creado EZY8104 con hex CB4F11 en intento 1
+2025-12-02 13:18:54,777 [INFO] Ejecutando evento 2025-12-02 05:57:30+01:00 (Creacion de AFR1738)
+2025-12-02 13:18:54,780 [INFO] Creado AFR1738 con hex F64D74 en intento 1
+2025-12-02 13:20:32,029 [INFO] Ejecutando evento 2025-12-02 05:59:00+01:00 (Creacion de VLG201)
+2025-12-02 13:20:32,033 [INFO] Creado VLG201 con hex 59D9B0 en intento 1
+2025-12-02 13:21:37,734 [INFO] Ejecutando evento 2025-12-02 06:00:00+01:00 (VLG201 tramo 1: despegue y ascenso a NELSO)
+2025-12-02 13:21:37,737 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 1: despegue y ascenso a NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 13:21:52,734 [INFO] Ejecutando evento 2025-12-02 06:00:15+01:00 (Creacion de IBE432)
+2025-12-02 13:21:52,738 [INFO] Creado IBE432 con hex A81837 en intento 1
+2025-12-02 13:22:25,586 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (IBE432 tramo 1: ascenso hacia MASNU)
+2025-12-02 13:22:25,589 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 1: ascenso hacia MASNU): rumbo 41.9, vel 190.0 kt, vr 833 ft/min
+2025-12-02 13:22:25,590 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (Creacion de VY6502)
+2025-12-02 13:22:25,592 [INFO] Creado VY6502 con hex D1DA10 en intento 1
+2025-12-02 13:23:03,354 [INFO] Ejecutando evento 2025-12-02 06:01:20+01:00 (Creacion de RYR221)
+2025-12-02 13:23:03,357 [INFO] Creado RYR221 con hex 0D8EF3 en intento 1
+2025-12-02 13:23:13,354 [INFO] Ejecutando evento 2025-12-02 06:01:30+01:00 (VY6502 tramo 1: salida costera NELSO)
+2025-12-02 13:23:13,357 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 1: salida costera NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 13:23:35,215 [INFO] Ejecutando evento 2025-12-02 06:01:49.056293+01:00 (VLG201 tramo 2: rumbo oeste hacia TARRA)
+2025-12-02 13:23:35,218 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 2: rumbo oeste hacia TARRA): rumbo 254.2, vel 250.0 kt, vr 682 ft/min
+2025-12-02 13:24:03,949 [INFO] Ejecutando evento 2025-12-02 06:02:15+01:00 (RYR221 tramo 1: ascenso inicial hacia MASNU)
+2025-12-02 13:24:03,952 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 1: ascenso inicial hacia MASNU): rumbo 41.9, vel 200.0 kt, vr 877 ft/min
+2025-12-02 13:24:51,722 [INFO] Ejecutando evento 2025-12-02 06:03:00+01:00 (DLH1421 tramo 1: LORET a SITGE)
+2025-12-02 13:24:51,725 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 1: LORET a SITGE): rumbo 103.8, vel 250.0 kt, vr -299 ft/min
+2025-12-02 13:25:13,447 [INFO] Ejecutando evento 2025-12-02 06:03:19.056293+01:00 (VY6502 tramo 2: viraje hacia SITGE)
+2025-12-02 13:25:13,449 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 2: viraje hacia SITGE): rumbo 270.1, vel 240.0 kt, vr 886 ft/min
+2025-12-02 13:25:57,215 [INFO] Ejecutando evento 2025-12-02 06:04:00+01:00 (EZY8104 tramo 1: KENAS a BAMES)
+2025-12-02 13:25:57,218 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 1: KENAS a BAMES): rumbo 223.2, vel 250.0 kt, vr -670 ft/min
+2025-12-02 13:26:29,827 [INFO] Ejecutando evento 2025-12-02 06:04:30+01:00 (Creacion de RYR611)
+2025-12-02 13:26:29,830 [WARNING] Fallo creando RYR611 (intento 1): maximum number of simulated aircraft (10) reached
+
+2025-12-02 13:26:30,832 [WARNING] Fallo creando RYR611 (intento 2): maximum number of simulated aircraft (10) reached
+
+2025-12-02 13:26:31,836 [WARNING] Fallo creando RYR611 (intento 3): maximum number of simulated aircraft (10) reached
+
+Traceback (most recent call last):
+  File "/home/mario/uni/admin/simulador_bcn.py", line 12, in <module>
+    main()
+  File "/home/mario/uni/admin/simulador_bcn_pkg/cli.py", line 83, in main
+    ejecutar_eventos(contexto, eventos, factor_tiempo=argumentos.factor_tiempo)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/scheduler.py", line 31, in ejecutar_eventos
+    evento.accion(contexto)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/models.py", line 99, in accion_creacion
+    contexto.crear_aeronave(
+  File "/home/mario/uni/admin/simulador_bcn_pkg/context.py", line 75, in crear_aeronave
+    raise RuntimeError(f"No se pudo crear {vuelo.identificador} tras {self.reintentos} intentos.")
+RuntimeError: No se pudo crear RYR611 tras 3 intentos.
+2025-12-02 13:27:11,669 [INFO] Ejecutando evento 2025-12-02 05:59:00+01:00 (Creacion de VLG201)
+2025-12-02 13:27:11,672 [WARNING] Fallo creando VLG201 (intento 1): maximum number of simulated aircraft (10) reached
+
+2025-12-02 13:27:12,675 [WARNING] Fallo creando VLG201 (intento 2): maximum number of simulated aircraft (10) reached
+
+2025-12-02 13:27:13,678 [WARNING] Fallo creando VLG201 (intento 3): maximum number of simulated aircraft (10) reached
+
+Traceback (most recent call last):
+  File "/home/mario/uni/admin/simulador_bcn.py", line 12, in <module>
+    main()
+  File "/home/mario/uni/admin/simulador_bcn_pkg/cli.py", line 83, in main
+    ejecutar_eventos(contexto, eventos, factor_tiempo=argumentos.factor_tiempo)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/scheduler.py", line 31, in ejecutar_eventos
+    evento.accion(contexto)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/models.py", line 99, in accion_creacion
+    contexto.crear_aeronave(
+  File "/home/mario/uni/admin/simulador_bcn_pkg/context.py", line 75, in crear_aeronave
+    raise RuntimeError(f"No se pudo crear {vuelo.identificador} tras {self.reintentos} intentos.")
+RuntimeError: No se pudo crear VLG201 tras 3 intentos.
+2025-12-02 13:35:23,649 [INFO] Total de eventos programados: 50
+2025-12-02 13:35:23,650 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+2025-12-02 13:35:23,656 [WARNING] Fallo creando DLH1421 (intento 1): maximum number of simulated aircraft (10) reached
+
+2025-12-02 13:35:24,659 [WARNING] Fallo creando DLH1421 (intento 2): maximum number of simulated aircraft (10) reached
+
+2025-12-02 13:35:25,662 [WARNING] Fallo creando DLH1421 (intento 3): maximum number of simulated aircraft (10) reached
+
+Traceback (most recent call last):
+  File "/home/mario/uni/admin/simulador_bcn.py", line 12, in <module>
+    main()
+  File "/home/mario/uni/admin/simulador_bcn_pkg/cli.py", line 83, in main
+    ejecutar_eventos(contexto, eventos, factor_tiempo=argumentos.factor_tiempo)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/scheduler.py", line 31, in ejecutar_eventos
+    evento.accion(contexto)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/models.py", line 99, in accion_creacion
+    contexto.crear_aeronave(
+  File "/home/mario/uni/admin/simulador_bcn_pkg/context.py", line 75, in crear_aeronave
+    raise RuntimeError(f"No se pudo crear {vuelo.identificador} tras {self.reintentos} intentos.")
+RuntimeError: No se pudo crear DLH1421 tras 3 intentos.
+2025-12-02 13:37:34,167 [INFO] Total de eventos programados: 50
+2025-12-02 13:37:34,167 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 497, in _make_request
+    conn.request(
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 395, in request
+    self.endheaders()
+  File "/usr/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7411477eae40>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 845, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 517, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/simulation/aircraft (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7411477eae40>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mario/uni/admin/simulador_bcn.py", line 12, in <module>
+    main()
+  File "/home/mario/uni/admin/simulador_bcn_pkg/cli.py", line 83, in main
+    ejecutar_eventos(contexto, eventos, factor_tiempo=argumentos.factor_tiempo)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/scheduler.py", line 31, in ejecutar_eventos
+    evento.accion(contexto)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/models.py", line 99, in accion_creacion
+    contexto.crear_aeronave(
+  File "/home/mario/uni/admin/simulador_bcn_pkg/context.py", line 53, in crear_aeronave
+    respuesta = self.sesion.post(url, json=cuerpo_peticion, timeout=5)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/simulation/aircraft (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7411477eae40>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-12-02 13:40:01,656 [INFO] Total de eventos programados: 50
+2025-12-02 13:40:01,656 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 497, in _make_request
+    conn.request(
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 395, in request
+    self.endheaders()
+  File "/usr/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7450f2d7fa10>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 845, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 517, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/simulation/aircraft (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7450f2d7fa10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mario/uni/admin/simulador_bcn.py", line 12, in <module>
+    main()
+  File "/home/mario/uni/admin/simulador_bcn_pkg/cli.py", line 83, in main
+    ejecutar_eventos(contexto, eventos, factor_tiempo=argumentos.factor_tiempo)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/scheduler.py", line 31, in ejecutar_eventos
+    evento.accion(contexto)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/models.py", line 99, in accion_creacion
+    contexto.crear_aeronave(
+  File "/home/mario/uni/admin/simulador_bcn_pkg/context.py", line 53, in crear_aeronave
+    respuesta = self.sesion.post(url, json=cuerpo_peticion, timeout=5)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/simulation/aircraft (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7450f2d7fa10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-12-02 13:41:09,669 [INFO] Total de eventos programados: 50
+2025-12-02 13:41:09,669 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 497, in _make_request
+    conn.request(
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 395, in request
+    self.endheaders()
+  File "/usr/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7393c057fa10>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 845, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 517, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/simulation/aircraft (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7393c057fa10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mario/uni/admin/simulador_bcn.py", line 12, in <module>
+    main()
+  File "/home/mario/uni/admin/simulador_bcn_pkg/cli.py", line 83, in main
+    ejecutar_eventos(contexto, eventos, factor_tiempo=argumentos.factor_tiempo)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/scheduler.py", line 31, in ejecutar_eventos
+    evento.accion(contexto)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/models.py", line 99, in accion_creacion
+    contexto.crear_aeronave(
+  File "/home/mario/uni/admin/simulador_bcn_pkg/context.py", line 53, in crear_aeronave
+    respuesta = self.sesion.post(url, json=cuerpo_peticion, timeout=5)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/simulation/aircraft (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7393c057fa10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-12-02 13:43:31,089 [INFO] Total de eventos programados: 50
+2025-12-02 13:43:31,090 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 497, in _make_request
+    conn.request(
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 395, in request
+    self.endheaders()
+  File "/usr/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7de05b4a81a0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 845, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 517, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/simulation/aircraft (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7de05b4a81a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mario/uni/admin/simulador_bcn.py", line 12, in <module>
+    main()
+  File "/home/mario/uni/admin/simulador_bcn_pkg/cli.py", line 83, in main
+    ejecutar_eventos(contexto, eventos, factor_tiempo=argumentos.factor_tiempo)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/scheduler.py", line 31, in ejecutar_eventos
+    evento.accion(contexto)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/models.py", line 99, in accion_creacion
+    contexto.crear_aeronave(
+  File "/home/mario/uni/admin/simulador_bcn_pkg/context.py", line 53, in crear_aeronave
+    respuesta = self.sesion.post(url, json=cuerpo_peticion, timeout=5)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/simulation/aircraft (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7de05b4a81a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-12-02 13:45:25,426 [INFO] Total de eventos programados: 50
+2025-12-02 13:45:25,426 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 497, in _make_request
+    conn.request(
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 395, in request
+    self.endheaders()
+  File "/usr/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x787ce249ffe0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 845, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 517, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/simulation/aircraft (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x787ce249ffe0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mario/uni/admin/simulador_bcn.py", line 12, in <module>
+    main()
+  File "/home/mario/uni/admin/simulador_bcn_pkg/cli.py", line 83, in main
+    ejecutar_eventos(contexto, eventos, factor_tiempo=argumentos.factor_tiempo)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/scheduler.py", line 31, in ejecutar_eventos
+    evento.accion(contexto)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/models.py", line 99, in accion_creacion
+    contexto.crear_aeronave(
+  File "/home/mario/uni/admin/simulador_bcn_pkg/context.py", line 53, in crear_aeronave
+    respuesta = self.sesion.post(url, json=cuerpo_peticion, timeout=5)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/simulation/aircraft (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x787ce249ffe0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-12-02 13:48:14,086 [INFO] Total de eventos programados: 50
+2025-12-02 13:48:14,087 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 497, in _make_request
+    conn.request(
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 395, in request
+    self.endheaders()
+  File "/usr/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7ef6e85eae40>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 845, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 517, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/simulation/aircraft (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ef6e85eae40>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mario/uni/admin/simulador_bcn.py", line 12, in <module>
+    main()
+  File "/home/mario/uni/admin/simulador_bcn_pkg/cli.py", line 83, in main
+    ejecutar_eventos(contexto, eventos, factor_tiempo=argumentos.factor_tiempo)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/scheduler.py", line 31, in ejecutar_eventos
+    evento.accion(contexto)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/models.py", line 99, in accion_creacion
+    contexto.crear_aeronave(
+  File "/home/mario/uni/admin/simulador_bcn_pkg/context.py", line 53, in crear_aeronave
+    respuesta = self.sesion.post(url, json=cuerpo_peticion, timeout=5)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/simulation/aircraft (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ef6e85eae40>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-12-02 13:50:17,929 [INFO] Total de eventos programados: 50
+2025-12-02 13:50:17,929 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 497, in _make_request
+    conn.request(
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 395, in request
+    self.endheaders()
+  File "/usr/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7d3a73aeffb0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 845, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 517, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/simulation/aircraft (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d3a73aeffb0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mario/uni/admin/simulador_bcn.py", line 12, in <module>
+    main()
+  File "/home/mario/uni/admin/simulador_bcn_pkg/cli.py", line 83, in main
+    ejecutar_eventos(contexto, eventos, factor_tiempo=argumentos.factor_tiempo)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/scheduler.py", line 31, in ejecutar_eventos
+    evento.accion(contexto)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/models.py", line 99, in accion_creacion
+    contexto.crear_aeronave(
+  File "/home/mario/uni/admin/simulador_bcn_pkg/context.py", line 53, in crear_aeronave
+    respuesta = self.sesion.post(url, json=cuerpo_peticion, timeout=5)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/simulation/aircraft (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d3a73aeffb0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-12-02 14:28:18,134 [INFO] Total de eventos programados: 50
+2025-12-02 14:28:18,134 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+2025-12-02 14:28:18,137 [INFO] Creado DLH1421 con hex CABC07 en intento 1
+2025-12-02 14:28:51,028 [INFO] Ejecutando evento 2025-12-02 05:57:00+01:00 (Creacion de EZY8104)
+2025-12-02 14:28:51,030 [INFO] Creado EZY8104 con hex DC0E5E en intento 1
+2025-12-02 14:29:23,916 [INFO] Ejecutando evento 2025-12-02 05:57:30+01:00 (Creacion de AFR1738)
+2025-12-02 14:29:23,918 [INFO] Creado AFR1738 con hex D8B479 en intento 1
+2025-12-02 14:39:02,765 [INFO] Total de eventos programados: 50
+2025-12-02 14:39:02,765 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+2025-12-02 14:39:02,767 [INFO] Creado DLH1421 con hex 999354 en intento 1
+2025-12-02 14:39:35,407 [INFO] Ejecutando evento 2025-12-02 05:57:00+01:00 (Creacion de EZY8104)
+2025-12-02 14:39:35,409 [INFO] Creado EZY8104 con hex 5B247A en intento 1
+2025-12-02 14:40:08,328 [INFO] Ejecutando evento 2025-12-02 05:57:30+01:00 (Creacion de AFR1738)
+2025-12-02 14:40:08,329 [INFO] Creado AFR1738 con hex 206BF1 en intento 1
+2025-12-02 14:43:11,737 [INFO] Total de eventos programados: 50
+2025-12-02 14:43:11,737 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+2025-12-02 14:43:11,741 [INFO] Creado DLH1421 con hex D15103 en intento 1
+2025-12-02 14:43:44,634 [INFO] Ejecutando evento 2025-12-02 05:57:00+01:00 (Creacion de EZY8104)
+2025-12-02 14:43:44,636 [INFO] Creado EZY8104 con hex 0F0C55 en intento 1
+2025-12-02 14:44:17,495 [INFO] Ejecutando evento 2025-12-02 05:57:30+01:00 (Creacion de AFR1738)
+2025-12-02 14:44:17,497 [INFO] Creado AFR1738 con hex B06B73 en intento 1
+2025-12-02 14:45:56,022 [INFO] Ejecutando evento 2025-12-02 05:59:00+01:00 (Creacion de VLG201)
+2025-12-02 14:45:56,024 [INFO] Creado VLG201 con hex 66D11E en intento 1
+2025-12-02 14:47:01,528 [INFO] Total de eventos programados: 50
+2025-12-02 14:47:01,529 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+2025-12-02 14:47:01,533 [INFO] Creado DLH1421 con hex C258E7 en intento 1
+2025-12-02 14:47:34,384 [INFO] Ejecutando evento 2025-12-02 05:57:00+01:00 (Creacion de EZY8104)
+2025-12-02 14:47:34,387 [INFO] Creado EZY8104 con hex 6236B1 en intento 1
+2025-12-02 14:48:07,230 [INFO] Ejecutando evento 2025-12-02 05:57:30+01:00 (Creacion de AFR1738)
+2025-12-02 14:48:07,231 [INFO] Creado AFR1738 con hex 75B335 en intento 1
+2025-12-02 14:50:04,611 [INFO] Total de eventos programados: 50
+2025-12-02 14:50:04,611 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+2025-12-02 14:50:04,614 [INFO] Creado DLH1421 con hex 117063 en intento 1
+2025-12-02 14:50:37,503 [INFO] Ejecutando evento 2025-12-02 05:57:00+01:00 (Creacion de EZY8104)
+2025-12-02 14:50:37,505 [INFO] Creado EZY8104 con hex 5F1849 en intento 1
+2025-12-02 14:53:51,802 [INFO] Total de eventos programados: 50
+2025-12-02 14:53:51,802 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+2025-12-02 14:53:51,805 [INFO] Creado DLH1421 con hex 3A458F en intento 1
+2025-12-02 14:53:51,852 [INFO] Ejecutando evento 2025-12-02 05:57:00+01:00 (Creacion de EZY8104)
+2025-12-02 14:53:51,855 [INFO] Creado EZY8104 con hex 8A6096 en intento 1
+2025-12-02 14:53:51,902 [INFO] Ejecutando evento 2025-12-02 05:57:30+01:00 (Creacion de AFR1738)
+2025-12-02 14:53:51,904 [INFO] Creado AFR1738 con hex A2C6A8 en intento 1
+2025-12-02 14:53:52,052 [INFO] Ejecutando evento 2025-12-02 05:59:00+01:00 (Creacion de VLG201)
+2025-12-02 14:53:52,054 [INFO] Creado VLG201 con hex E7FB08 en intento 1
+2025-12-02 14:53:52,152 [INFO] Ejecutando evento 2025-12-02 06:00:00+01:00 (VLG201 tramo 1: despegue y ascenso a NELSO)
+2025-12-02 14:53:52,154 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 1: despegue y ascenso a NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 14:53:52,177 [INFO] Ejecutando evento 2025-12-02 06:00:15+01:00 (Creacion de IBE432)
+2025-12-02 14:53:52,179 [INFO] Creado IBE432 con hex 36CDE8 en intento 1
+2025-12-02 14:53:52,227 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (IBE432 tramo 1: ascenso hacia MASNU)
+2025-12-02 14:53:52,229 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 1: ascenso hacia MASNU): rumbo 41.9, vel 190.0 kt, vr 833 ft/min
+2025-12-02 14:53:52,229 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (Creacion de VY6502)
+2025-12-02 14:53:52,230 [INFO] Creado VY6502 con hex 97FFF8 en intento 1
+2025-12-02 14:53:52,286 [INFO] Ejecutando evento 2025-12-02 06:01:20+01:00 (Creacion de RYR221)
+2025-12-02 14:53:52,287 [INFO] Creado RYR221 con hex 6A8A03 en intento 1
+2025-12-02 14:53:52,302 [INFO] Ejecutando evento 2025-12-02 06:01:30+01:00 (VY6502 tramo 1: salida costera NELSO)
+2025-12-02 14:53:52,304 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 1: salida costera NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 14:53:52,334 [INFO] Ejecutando evento 2025-12-02 06:01:49.056293+01:00 (VLG201 tramo 2: rumbo oeste hacia TARRA)
+2025-12-02 14:53:52,335 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 2: rumbo oeste hacia TARRA): rumbo 254.2, vel 250.0 kt, vr 682 ft/min
+2025-12-02 14:53:52,377 [INFO] Ejecutando evento 2025-12-02 06:02:15+01:00 (RYR221 tramo 1: ascenso inicial hacia MASNU)
+2025-12-02 14:53:52,379 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 1: ascenso inicial hacia MASNU): rumbo 41.9, vel 200.0 kt, vr 877 ft/min
+2025-12-02 14:53:52,452 [INFO] Ejecutando evento 2025-12-02 06:03:00+01:00 (DLH1421 tramo 1: LORET a SITGE)
+2025-12-02 14:53:52,454 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 1: LORET a SITGE): rumbo 103.8, vel 250.0 kt, vr -299 ft/min
+2025-12-02 14:53:52,484 [INFO] Ejecutando evento 2025-12-02 06:03:19.056293+01:00 (VY6502 tramo 2: viraje hacia SITGE)
+2025-12-02 14:53:52,485 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 2: viraje hacia SITGE): rumbo 270.1, vel 240.0 kt, vr 886 ft/min
+2025-12-02 14:53:52,552 [INFO] Ejecutando evento 2025-12-02 06:04:00+01:00 (EZY8104 tramo 1: KENAS a BAMES)
+2025-12-02 14:53:52,554 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 1: KENAS a BAMES): rumbo 223.2, vel 250.0 kt, vr -670 ft/min
+2025-12-02 14:53:52,602 [INFO] Ejecutando evento 2025-12-02 06:04:30+01:00 (Creacion de RYR611)
+2025-12-02 14:53:52,604 [INFO] Creado RYR611 con hex 036602 en intento 1
+2025-12-02 14:53:52,652 [INFO] Ejecutando evento 2025-12-02 06:05:00+01:00 (RYR611 tramo 1: TGA a SITGE)
+2025-12-02 14:53:52,654 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 1: TGA a SITGE): rumbo 79.4, vel 280.0 kt, vr -810 ft/min
+2025-12-02 14:53:52,707 [INFO] Ejecutando evento 2025-12-02 06:05:33.175599+01:00 (IBE432 tramo 2: ruta norte a BAMES)
+2025-12-02 14:53:52,709 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 2: ruta norte a BAMES): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 14:53:52,752 [INFO] Ejecutando evento 2025-12-02 06:06:00+01:00 (AFR1738 tramo 1: MASNU a SLL)
+2025-12-02 14:53:52,754 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 1: MASNU a SLL): rumbo 284.2, vel 220.0 kt, vr -1216 ft/min
+2025-12-02 14:53:52,833 [INFO] Ejecutando evento 2025-12-02 06:06:48.766819+01:00 (RYR221 tramo 2: seguimiento costa norte)
+2025-12-02 14:53:52,835 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 2: seguimiento costa norte): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 14:53:52,851 [INFO] Ejecutando evento 2025-12-02 06:06:59.236178+01:00 (EZY8104 tramo 2: descenso hacia MASNU)
+2025-12-02 14:53:52,852 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 2: descenso hacia MASNU): rumbo 194.8, vel 230.0 kt, vr -726 ft/min
+2025-12-02 14:53:52,935 [INFO] Ejecutando evento 2025-12-02 06:07:49.983784+01:00 (VY6502 tramo 3: ascenso sobre TGA)
+2025-12-02 14:53:52,937 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 3: ascenso sobre TGA): rumbo 259.8, vel 280.0 kt, vr 810 ft/min
+2025-12-02 14:53:52,999 [INFO] Ejecutando evento 2025-12-02 06:08:28.000006+01:00 (AFR1738 tramo 2: descenso intermedio)
+2025-12-02 14:53:53,001 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 2: descenso intermedio): rumbo 201.8, vel 190.0 kt, vr -746 ft/min
+2025-12-02 14:53:53,067 [INFO] Ejecutando evento 2025-12-02 06:09:09.127978+01:00 (VLG201 tramo 3: cruce de TGA)
+2025-12-02 14:53:53,069 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 3: cruce de TGA): rumbo 280.8, vel 280.0 kt, vr 1077 ft/min
+2025-12-02 14:53:53,103 [INFO] Ejecutando evento 2025-12-02 06:09:30.692551+01:00 (IBE432 tramo 3: intercepta KENAS)
+2025-12-02 14:53:53,105 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 3: intercepta KENAS): rumbo 43.0, vel 280.0 kt, vr 2250 ft/min
+2025-12-02 14:53:53,229 [INFO] Ejecutando evento 2025-12-02 06:10:46.283771+01:00 (RYR221 tramo 3: cruce Girona TMA)
+2025-12-02 14:53:53,231 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 3: cruce Girona TMA): rumbo 43.0, vel 260.0 kt, vr 1393 ft/min
+2025-12-02 14:53:53,264 [INFO] Ejecutando evento 2025-12-02 06:11:07.079954+01:00 (EZY8104 tramo 3: SLL inicial)
+2025-12-02 14:53:53,266 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 3: SLL inicial): rumbo 284.2, vel 210.0 kt, vr -1161 ft/min
+2025-12-02 14:53:53,269 [INFO] Ejecutando evento 2025-12-02 06:11:10.177372+01:00 (RYR611 tramo 2: aproximacion via SARGO)
+2025-12-02 14:53:53,270 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 2: aproximacion via SARGO): rumbo 84.8, vel 240.0 kt, vr -1765 ft/min
+2025-12-02 14:53:53,370 [INFO] Ejecutando evento 2025-12-02 06:12:10.724853+01:00 (IBE432 tramo 4: salida a GIRON)
+Traceback (most recent call last):
+  File "/home/mario/uni/admin/simulador_bcn.py", line 12, in <module>
+    main()
+  File "/home/mario/uni/admin/simulador_bcn_pkg/cli.py", line 83, in main
+    ejecutar_eventos(contexto, eventos, factor_tiempo=argumentos.factor_tiempo)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/scheduler.py", line 31, in ejecutar_eventos
+    evento.accion(contexto)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/models.py", line 136, in accion_tramo
+    contexto.actualizar_controles(
+  File "/home/mario/uni/admin/simulador_bcn_pkg/context.py", line 103, in actualizar_controles
+    raise RuntimeError(
+RuntimeError: Error actualizando IBE432: 400 Invalid vertical rate (-3000 to +3000 fpm)
+
+2025-12-02 16:06:22,160 [INFO] Total de eventos programados: 61
+2025-12-02 16:06:22,160 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+2025-12-02 16:06:22,162 [INFO] Creado DLH1421 con hex 0EAF83 en intento 1
+2025-12-02 16:06:22,410 [INFO] Ejecutando evento 2025-12-02 05:57:00+01:00 (Creacion de EZY8104)
+2025-12-02 16:06:22,412 [INFO] Creado EZY8104 con hex B01408 en intento 1
+2025-12-02 16:06:22,660 [INFO] Ejecutando evento 2025-12-02 05:57:30+01:00 (Creacion de AFR1738)
+2025-12-02 16:06:22,662 [INFO] Creado AFR1738 con hex 52EB76 en intento 1
+2025-12-02 16:06:23,410 [INFO] Ejecutando evento 2025-12-02 05:59:00+01:00 (Creacion de VLG201)
+2025-12-02 16:06:23,412 [INFO] Creado VLG201 con hex D603FD en intento 1
+2025-12-02 16:06:23,910 [INFO] Ejecutando evento 2025-12-02 06:00:00+01:00 (VLG201 tramo 1: despegue y ascenso a NELSO)
+2025-12-02 16:06:23,912 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 1: despegue y ascenso a NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 16:06:24,035 [INFO] Ejecutando evento 2025-12-02 06:00:15+01:00 (Creacion de IBE432)
+2025-12-02 16:06:24,037 [INFO] Creado IBE432 con hex 9BC32D en intento 1
+2025-12-02 16:06:24,285 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (IBE432 tramo 1: ascenso hacia MASNU)
+2025-12-02 16:06:24,287 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 1: ascenso hacia MASNU): rumbo 41.9, vel 190.0 kt, vr 833 ft/min
+2025-12-02 16:06:24,287 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (Creacion de VY6502)
+2025-12-02 16:06:24,288 [INFO] Creado VY6502 con hex 9A5756 en intento 1
+2025-12-02 16:06:24,577 [INFO] Ejecutando evento 2025-12-02 06:01:20+01:00 (Creacion de RYR221)
+2025-12-02 16:06:24,578 [INFO] Creado RYR221 con hex 2F831B en intento 1
+2025-12-02 16:06:24,660 [INFO] Ejecutando evento 2025-12-02 06:01:30+01:00 (VY6502 tramo 1: salida costera NELSO)
+2025-12-02 16:06:24,662 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 1: salida costera NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 16:06:24,819 [INFO] Ejecutando evento 2025-12-02 06:01:49.056293+01:00 (VLG201 tramo 2: rumbo oeste hacia TARRA)
+2025-12-02 16:06:24,820 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 2: rumbo oeste hacia TARRA): rumbo 254.2, vel 250.0 kt, vr 682 ft/min
+2025-12-02 16:06:25,035 [INFO] Ejecutando evento 2025-12-02 06:02:15+01:00 (RYR221 tramo 1: ascenso inicial hacia MASNU)
+2025-12-02 16:06:25,037 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 1: ascenso inicial hacia MASNU): rumbo 41.9, vel 200.0 kt, vr 877 ft/min
+2025-12-02 16:06:25,410 [INFO] Ejecutando evento 2025-12-02 06:03:00+01:00 (DLH1421 tramo 1: LORET a SITGE)
+2025-12-02 16:06:25,411 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 1: LORET a SITGE): rumbo 103.8, vel 250.0 kt, vr -299 ft/min
+2025-12-02 16:06:25,569 [INFO] Ejecutando evento 2025-12-02 06:03:19.056293+01:00 (VY6502 tramo 2: viraje hacia SITGE)
+2025-12-02 16:06:25,570 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 2: viraje hacia SITGE): rumbo 270.1, vel 240.0 kt, vr 886 ft/min
+2025-12-02 16:06:25,910 [INFO] Ejecutando evento 2025-12-02 06:04:00+01:00 (EZY8104 tramo 1: KENAS a BAMES)
+2025-12-02 16:06:25,912 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 1: KENAS a BAMES): rumbo 223.2, vel 250.0 kt, vr -670 ft/min
+2025-12-02 16:06:26,160 [INFO] Ejecutando evento 2025-12-02 06:04:30+01:00 (Creacion de RYR611)
+2025-12-02 16:06:26,173 [INFO] Creado RYR611 con hex 1B4D79 en intento 1
+2025-12-02 16:06:26,410 [INFO] Ejecutando evento 2025-12-02 06:05:00+01:00 (RYR611 tramo 1: TGA a SITGE)
+2025-12-02 16:06:26,412 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 1: TGA a SITGE): rumbo 79.4, vel 280.0 kt, vr -810 ft/min
+2025-12-02 16:06:26,686 [INFO] Ejecutando evento 2025-12-02 06:05:33.175599+01:00 (IBE432 tramo 2: ruta norte a BAMES)
+2025-12-02 16:06:26,688 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 2: ruta norte a BAMES): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 16:06:26,910 [INFO] Ejecutando evento 2025-12-02 06:06:00+01:00 (AFR1738 tramo 1: MASNU a SLL)
+2025-12-02 16:06:26,912 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 1: MASNU a SLL): rumbo 284.2, vel 220.0 kt, vr -1216 ft/min
+2025-12-02 16:06:27,316 [INFO] Ejecutando evento 2025-12-02 06:06:48.766819+01:00 (RYR221 tramo 2: seguimiento costa norte)
+2025-12-02 16:06:27,318 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 2: seguimiento costa norte): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 16:06:27,404 [INFO] Ejecutando evento 2025-12-02 06:06:59.236178+01:00 (EZY8104 tramo 2: descenso hacia MASNU)
+2025-12-02 16:06:27,405 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 2: descenso hacia MASNU): rumbo 194.8, vel 230.0 kt, vr -726 ft/min
+2025-12-02 16:06:27,827 [INFO] Ejecutando evento 2025-12-02 06:07:49.983784+01:00 (VY6502 tramo 3: ascenso sobre TGA)
+2025-12-02 16:06:27,828 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 3: ascenso sobre TGA): rumbo 259.8, vel 280.0 kt, vr 810 ft/min
+2025-12-02 16:06:28,143 [INFO] Ejecutando evento 2025-12-02 06:08:28.000006+01:00 (AFR1738 tramo 2: downwind norte)
+2025-12-02 16:06:28,145 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 2: downwind norte): rumbo 208.6, vel 200.0 kt, vr -417 ft/min
+2025-12-02 16:06:28,486 [INFO] Ejecutando evento 2025-12-02 06:09:09.127978+01:00 (VLG201 tramo 3: cruce de TGA)
+2025-12-02 16:06:28,488 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 3: cruce de TGA): rumbo 280.8, vel 280.0 kt, vr 1077 ft/min
+2025-12-02 16:06:28,666 [INFO] Ejecutando evento 2025-12-02 06:09:30.692551+01:00 (IBE432 tramo 3: intercepta KENAS)
+2025-12-02 16:06:28,667 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 3: intercepta KENAS): rumbo 43.0, vel 280.0 kt, vr 2250 ft/min
+2025-12-02 16:06:29,296 [INFO] Ejecutando evento 2025-12-02 06:10:46.283771+01:00 (RYR221 tramo 3: cruce Girona TMA)
+2025-12-02 16:06:29,297 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 3: cruce Girona TMA): rumbo 43.0, vel 260.0 kt, vr 1393 ft/min
+2025-12-02 16:06:29,342 [INFO] Ejecutando evento 2025-12-02 06:10:51.877197+01:00 (AFR1738 tramo 3: tramo base 07R)
+2025-12-02 16:06:29,344 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 3: tramo base 07R): rumbo 163.9, vel 185.0 kt, vr -759 ft/min
+2025-12-02 16:06:29,469 [INFO] Ejecutando evento 2025-12-02 06:11:07.079954+01:00 (EZY8104 tramo 3: SLL inicial)
+2025-12-02 16:06:29,471 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 3: SLL inicial): rumbo 284.2, vel 210.0 kt, vr -387 ft/min
+2025-12-02 16:06:29,495 [INFO] Ejecutando evento 2025-12-02 06:11:10.177372+01:00 (RYR611 tramo 2: aproximacion via SARGO)
+2025-12-02 16:06:29,497 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 2: aproximacion via SARGO): rumbo 84.8, vel 240.0 kt, vr -1765 ft/min
+2025-12-02 16:06:29,999 [INFO] Ejecutando evento 2025-12-02 06:12:10.724853+01:00 (IBE432 tramo 4: salida a GIRON)
+Traceback (most recent call last):
+  File "/home/mario/uni/admin/simulador_bcn.py", line 12, in <module>
+    main()
+  File "/home/mario/uni/admin/simulador_bcn_pkg/cli.py", line 83, in main
+    ejecutar_eventos(contexto, eventos, factor_tiempo=argumentos.factor_tiempo)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/scheduler.py", line 31, in ejecutar_eventos
+    evento.accion(contexto)
+  File "/home/mario/uni/admin/simulador_bcn_pkg/models.py", line 136, in accion_tramo
+    contexto.actualizar_controles(
+  File "/home/mario/uni/admin/simulador_bcn_pkg/context.py", line 103, in actualizar_controles
+    raise RuntimeError(
+RuntimeError: Error actualizando IBE432: 400 Invalid vertical rate (-3000 to +3000 fpm)
+
+2025-12-02 16:10:39,751 [INFO] Total de eventos programados: 61
+2025-12-02 16:10:39,751 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+2025-12-02 16:10:39,755 [INFO] Creado DLH1421 con hex 0F13AE en intento 1
+2025-12-02 16:10:39,801 [INFO] Ejecutando evento 2025-12-02 05:57:00+01:00 (Creacion de EZY8104)
+2025-12-02 16:10:39,803 [INFO] Creado EZY8104 con hex 0EC2B5 en intento 1
+2025-12-02 16:10:39,851 [INFO] Ejecutando evento 2025-12-02 05:57:30+01:00 (Creacion de AFR1738)
+2025-12-02 16:10:39,853 [INFO] Creado AFR1738 con hex 93E984 en intento 1
+2025-12-02 16:10:40,001 [INFO] Ejecutando evento 2025-12-02 05:59:00+01:00 (Creacion de VLG201)
+2025-12-02 16:10:40,003 [INFO] Creado VLG201 con hex C0B55F en intento 1
+2025-12-02 16:10:40,101 [INFO] Ejecutando evento 2025-12-02 06:00:00+01:00 (VLG201 tramo 1: despegue y ascenso a NELSO)
+2025-12-02 16:10:40,103 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 1: despegue y ascenso a NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 16:10:40,126 [INFO] Ejecutando evento 2025-12-02 06:00:15+01:00 (Creacion de IBE432)
+2025-12-02 16:10:40,128 [INFO] Creado IBE432 con hex 57FF10 en intento 1
+2025-12-02 16:10:40,176 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (IBE432 tramo 1: ascenso hacia MASNU)
+2025-12-02 16:10:40,178 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 1: ascenso hacia MASNU): rumbo 41.9, vel 190.0 kt, vr 833 ft/min
+2025-12-02 16:10:40,178 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (Creacion de VY6502)
+2025-12-02 16:10:40,180 [INFO] Creado VY6502 con hex 5D7808 en intento 1
+2025-12-02 16:10:40,235 [INFO] Ejecutando evento 2025-12-02 06:01:20+01:00 (Creacion de RYR221)
+2025-12-02 16:10:40,236 [INFO] Creado RYR221 con hex 8E4835 en intento 1
+2025-12-02 16:10:40,251 [INFO] Ejecutando evento 2025-12-02 06:01:30+01:00 (VY6502 tramo 1: salida costera NELSO)
+2025-12-02 16:10:40,253 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 1: salida costera NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 16:10:40,283 [INFO] Ejecutando evento 2025-12-02 06:01:49.056293+01:00 (VLG201 tramo 2: rumbo oeste hacia TARRA)
+2025-12-02 16:10:40,285 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 2: rumbo oeste hacia TARRA): rumbo 254.2, vel 250.0 kt, vr 682 ft/min
+2025-12-02 16:10:40,326 [INFO] Ejecutando evento 2025-12-02 06:02:15+01:00 (RYR221 tramo 1: ascenso inicial hacia MASNU)
+2025-12-02 16:10:40,328 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 1: ascenso inicial hacia MASNU): rumbo 41.9, vel 200.0 kt, vr 877 ft/min
+2025-12-02 16:10:40,401 [INFO] Ejecutando evento 2025-12-02 06:03:00+01:00 (DLH1421 tramo 1: LORET a SITGE)
+2025-12-02 16:10:40,403 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 1: LORET a SITGE): rumbo 103.8, vel 250.0 kt, vr -299 ft/min
+2025-12-02 16:10:40,433 [INFO] Ejecutando evento 2025-12-02 06:03:19.056293+01:00 (VY6502 tramo 2: viraje hacia SITGE)
+2025-12-02 16:10:40,435 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 2: viraje hacia SITGE): rumbo 270.1, vel 240.0 kt, vr 886 ft/min
+2025-12-02 16:10:40,501 [INFO] Ejecutando evento 2025-12-02 06:04:00+01:00 (EZY8104 tramo 1: KENAS a BAMES)
+2025-12-02 16:10:40,503 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 1: KENAS a BAMES): rumbo 223.2, vel 250.0 kt, vr -670 ft/min
+2025-12-02 16:10:40,551 [INFO] Ejecutando evento 2025-12-02 06:04:30+01:00 (Creacion de RYR611)
+2025-12-02 16:10:40,553 [INFO] Creado RYR611 con hex 5C81FB en intento 1
+2025-12-02 16:10:40,601 [INFO] Ejecutando evento 2025-12-02 06:05:00+01:00 (RYR611 tramo 1: TGA a SITGE)
+2025-12-02 16:10:40,603 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 1: TGA a SITGE): rumbo 79.4, vel 280.0 kt, vr -810 ft/min
+2025-12-02 16:10:40,657 [INFO] Ejecutando evento 2025-12-02 06:05:33.175599+01:00 (IBE432 tramo 2: ruta norte a BAMES)
+2025-12-02 16:10:40,658 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 2: ruta norte a BAMES): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 16:10:40,701 [INFO] Ejecutando evento 2025-12-02 06:06:00+01:00 (AFR1738 tramo 1: MASNU a SLL)
+2025-12-02 16:10:40,703 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 1: MASNU a SLL): rumbo 284.2, vel 220.0 kt, vr -1216 ft/min
+2025-12-02 16:10:40,783 [INFO] Ejecutando evento 2025-12-02 06:06:48.766819+01:00 (RYR221 tramo 2: seguimiento costa norte)
+2025-12-02 16:10:40,784 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 2: seguimiento costa norte): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 16:10:40,800 [INFO] Ejecutando evento 2025-12-02 06:06:59.236178+01:00 (EZY8104 tramo 2: descenso hacia MASNU)
+2025-12-02 16:10:40,802 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 2: descenso hacia MASNU): rumbo 194.8, vel 230.0 kt, vr -726 ft/min
+2025-12-02 16:10:40,885 [INFO] Ejecutando evento 2025-12-02 06:07:49.983784+01:00 (VY6502 tramo 3: ascenso sobre TGA)
+2025-12-02 16:10:40,886 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 3: ascenso sobre TGA): rumbo 259.8, vel 280.0 kt, vr 810 ft/min
+2025-12-02 16:10:40,948 [INFO] Ejecutando evento 2025-12-02 06:08:28.000006+01:00 (AFR1738 tramo 2: downwind norte)
+2025-12-02 16:10:40,950 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 2: downwind norte): rumbo 208.6, vel 200.0 kt, vr -417 ft/min
+2025-12-02 16:10:41,016 [INFO] Ejecutando evento 2025-12-02 06:09:09.127978+01:00 (VLG201 tramo 3: cruce de TGA)
+2025-12-02 16:10:41,018 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 3: cruce de TGA): rumbo 280.8, vel 280.0 kt, vr 1077 ft/min
+2025-12-02 16:10:41,052 [INFO] Ejecutando evento 2025-12-02 06:09:30.692551+01:00 (IBE432 tramo 3: intercepta KENAS)
+2025-12-02 16:10:41,054 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 3: intercepta KENAS): rumbo 43.0, vel 280.0 kt, vr 2250 ft/min
+2025-12-02 16:10:41,178 [INFO] Ejecutando evento 2025-12-02 06:10:46.283771+01:00 (RYR221 tramo 3: cruce Girona TMA)
+2025-12-02 16:10:41,180 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 3: cruce Girona TMA): rumbo 43.0, vel 260.0 kt, vr 1393 ft/min
+2025-12-02 16:10:41,188 [INFO] Ejecutando evento 2025-12-02 06:10:51.877197+01:00 (AFR1738 tramo 3: tramo base 07R)
+2025-12-02 16:10:41,189 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 3: tramo base 07R): rumbo 163.9, vel 185.0 kt, vr -759 ft/min
+2025-12-02 16:10:41,213 [INFO] Ejecutando evento 2025-12-02 06:11:07.079954+01:00 (EZY8104 tramo 3: SLL inicial)
+2025-12-02 16:10:41,215 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 3: SLL inicial): rumbo 284.2, vel 210.0 kt, vr -387 ft/min
+2025-12-02 16:10:41,218 [INFO] Ejecutando evento 2025-12-02 06:11:10.177372+01:00 (RYR611 tramo 2: aproximacion via SARGO)
+2025-12-02 16:10:41,219 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 2: aproximacion via SARGO): rumbo 84.8, vel 240.0 kt, vr -1765 ft/min
+2025-12-02 16:10:41,319 [INFO] Ejecutando evento 2025-12-02 06:12:10.724853+01:00 (IBE432 tramo 4: salida a GIRON)
+2025-12-02 16:10:41,321 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 4: salida a GIRON): rumbo 84.1, vel 300.0 kt, vr 3000 ft/min
+2025-12-02 16:10:41,321 [INFO] Ejecutando evento 2025-12-02 06:12:10.920683+01:00 (AFR1738 tramo 4: captura localizador 07R)
+2025-12-02 16:10:41,322 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 4: captura localizador 07R): rumbo 153.4, vel 170.0 kt, vr -1125 ft/min
+2025-12-02 16:10:41,388 [INFO] Ejecutando evento 2025-12-02 06:12:52.033505+01:00 (VLG201 tramo 4: salida del TMA via LORET)
+2025-12-02 16:10:41,390 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 4: salida del TMA via LORET): rumbo 321.4, vel 320.0 kt, vr 1621 ft/min
+2025-12-02 16:10:41,391 [INFO] Ejecutando evento 2025-12-02 06:12:53.578005+01:00 (AFR1738 tramo 5: final 07R)
+2025-12-02 16:10:41,392 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 5: final 07R): rumbo 136.5, vel 150.0 kt, vr -3000 ft/min
+2025-12-02 16:10:41,406 [INFO] Ejecutando evento 2025-12-02 06:13:02.637449+01:00 (DLH1421 tramo 2: descenso sobre costa)
+2025-12-02 16:10:41,407 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 2: descenso sobre costa): rumbo 84.8, vel 230.0 kt, vr -1691 ft/min
+2025-12-02 16:10:41,466 [INFO] Ejecutando evento 2025-12-02 06:13:38.626250+01:00 (RYR221 tramo 4: salida FIR via GIRON)
+2025-12-02 16:10:41,467 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 4: salida FIR via GIRON): rumbo 84.1, vel 300.0 kt, vr 2473 ft/min
+2025-12-02 16:10:41,471 [INFO] Ejecutando evento 2025-12-02 06:13:42.127579+01:00 (EZY8104 tramo 4: tramo a downwind norte)
+2025-12-02 16:10:41,473 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 4: tramo a downwind norte): rumbo 208.6, vel 200.0 kt, vr -209 ft/min
+2025-12-02 16:10:41,481 [INFO] Ejecutando evento 2025-12-02 06:13:47.758937+01:00 (Eliminacion de IBE432)
+2025-12-02 16:10:41,482 [INFO] Aeronave IBE432 eliminada.
+2025-12-02 16:10:41,502 [INFO] Ejecutando evento 2025-12-02 06:14:00.161156+01:00 (VY6502 tramo 4: salida del TMA rumbo LORET)
+2025-12-02 16:10:41,503 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 4: salida del TMA rumbo LORET): rumbo 321.4, vel 320.0 kt, vr 1891 ft/min
+2025-12-02 16:10:41,558 [INFO] Ejecutando evento 2025-12-02 06:14:34.138878+01:00 (RYR611 tramo 3: IAF UBAGA)
+2025-12-02 16:10:41,560 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 3: IAF UBAGA): rumbo 15.3, vel 220.0 kt, vr -1071 ft/min
+2025-12-02 16:10:41,627 [INFO] Ejecutando evento 2025-12-02 06:15:15.660334+01:00 (Eliminacion de RYR221)
+2025-12-02 16:10:41,629 [INFO] Aeronave RYR221 eliminada.
+2025-12-02 16:10:41,711 [INFO] Ejecutando evento 2025-12-02 06:16:06.004770+01:00 (EZY8104 tramo 5: tramo base 07L)
+2025-12-02 16:10:41,713 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 5: tramo base 07L): rumbo 173.4, vel 190.0 kt, vr -806 ft/min
+2025-12-02 16:10:41,745 [INFO] Ejecutando evento 2025-12-02 06:16:26.171338+01:00 (RYR611 tramo 4: rumbo a SLL para espera)
+2025-12-02 16:10:41,747 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 4: rumbo a SLL para espera): rumbo 350.5, vel 200.0 kt, vr -698 ft/min
+2025-12-02 16:10:41,758 [INFO] Ejecutando evento 2025-12-02 06:16:34.100899+01:00 (Eliminacion de VLG201)
+2025-12-02 16:10:41,760 [INFO] Aeronave VLG201 eliminada.
+2025-12-02 16:10:41,760 [INFO] Ejecutando evento 2025-12-02 06:16:35.466847+01:00 (DLH1421 tramo 3: IAF UBAGA)
+2025-12-02 16:10:41,762 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 3: IAF UBAGA): rumbo 15.3, vel 210.0 kt, vr -1534 ft/min
+2025-12-02 16:10:41,835 [INFO] Ejecutando evento 2025-12-02 06:17:20.440574+01:00 (EZY8104 tramo 6: intercepta localizador ILS 07L)
+2025-12-02 16:10:41,837 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 6: intercepta localizador ILS 07L): rumbo 153.4, vel 180.0 kt, vr -1489 ft/min
+2025-12-02 16:10:41,872 [INFO] Ejecutando evento 2025-12-02 06:17:42.228550+01:00 (Eliminacion de VY6502)
+2025-12-02 16:10:41,873 [INFO] Aeronave VY6502 eliminada.
+2025-12-02 16:10:41,902 [INFO] Ejecutando evento 2025-12-02 06:18:00.728045+01:00 (EZY8104 tramo 7: tramo final de aproximacion)
+2025-12-02 16:10:41,904 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 7: tramo final de aproximacion): rumbo 291.8, vel 170.0 kt, vr -1167 ft/min
+2025-12-02 16:10:41,956 [INFO] Ejecutando evento 2025-12-02 06:18:32.834186+01:00 (DLH1421 tramo 4: tramo intermedio SLL)
+2025-12-02 16:10:41,958 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 4: tramo intermedio SLL): rumbo 350.5, vel 190.0 kt, vr -332 ft/min
+2025-12-02 16:10:41,988 [INFO] Ejecutando evento 2025-12-02 06:18:52.146222+01:00 (EZY8104 tramo 8: final ILS 07L)
+2025-12-02 16:10:41,990 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 8: final ILS 07L): rumbo 116.9, vel 140.0 kt, vr -1520 ft/min
+2025-12-02 16:10:42,032 [INFO] Ejecutando evento 2025-12-02 06:19:18.092270+01:00 (RYR611 hold tramo outbound)
+2025-12-02 16:10:42,034 [INFO] Actualizacion enviada para RYR611 (RYR611 hold tramo outbound): rumbo 246.0, vel 180.0 kt, vr 0 ft/min
+2025-12-02 16:10:42,106 [INFO] Ejecutando evento 2025-12-02 06:20:03.092270+01:00 (RYR611 hold tramo inbound)
+2025-12-02 16:10:42,108 [INFO] Actualizacion enviada para RYR611 (RYR611 hold tramo inbound): rumbo 66.0, vel 180.0 kt, vr 0 ft/min
+2025-12-02 16:10:42,181 [INFO] Ejecutando evento 2025-12-02 06:20:48.092270+01:00 (RYR611 tramo 5: abandonando hold hacia DOBRO)
+2025-12-02 16:10:42,183 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 5: abandonando hold hacia DOBRO): rumbo 206.1, vel 170.0 kt, vr -512 ft/min
+2025-12-02 16:10:42,258 [INFO] Ejecutando evento 2025-12-02 06:21:33.803589+01:00 (DLH1421 tramo 5: downwind norte)
+2025-12-02 16:10:42,259 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 5: downwind norte): rumbo 208.6, vel 185.0 kt, vr -193 ft/min
+2025-12-02 16:10:42,517 [INFO] Ejecutando evento 2025-12-02 06:24:09.346498+01:00 (DLH1421 tramo 6: tramo base 07L)
+2025-12-02 16:10:42,519 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 6: tramo base 07L): rumbo 173.4, vel 175.0 kt, vr -520 ft/min
+2025-12-02 16:10:42,652 [INFO] Ejecutando evento 2025-12-02 06:25:30.162514+01:00 (DLH1421 tramo 7: intercepta ILS 07L)
+2025-12-02 16:10:42,653 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 7: intercepta ILS 07L): rumbo 153.4, vel 165.0 kt, vr -1092 ft/min
+2025-12-02 16:10:42,669 [INFO] Ejecutando evento 2025-12-02 06:25:40.952086+01:00 (RYR611 tramo 6: downwind norte)
+2025-12-02 16:10:42,671 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 6: downwind norte): rumbo 10.6, vel 180.0 kt, vr 1228 ft/min
+2025-12-02 16:10:42,725 [INFO] Ejecutando evento 2025-12-02 06:26:14.112483+01:00 (DLH1421 tramo 8: tramo final de aproximacion)
+2025-12-02 16:10:42,726 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 8: tramo final de aproximacion): rumbo 291.8, vel 160.0 kt, vr -549 ft/min
+2025-12-02 16:10:42,816 [INFO] Ejecutando evento 2025-12-02 06:27:08.744296+01:00 (DLH1421 tramo 9: final pista 07L)
+2025-12-02 16:10:42,818 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 9: final pista 07L): rumbo 116.9, vel 150.0 kt, vr -1629 ft/min
+2025-12-02 16:10:42,832 [INFO] Ejecutando evento 2025-12-02 06:27:18.693403+01:00 (RYR611 tramo 7: tramo base)
+2025-12-02 16:10:42,834 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 7: tramo base): rumbo 173.4, vel 170.0 kt, vr -505 ft/min
+2025-12-02 16:10:42,971 [INFO] Ejecutando evento 2025-12-02 06:28:41.886360+01:00 (RYR611 tramo 8: captura localizador ILS 07L)
+2025-12-02 16:10:42,973 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 8: captura localizador ILS 07L): rumbo 153.4, vel 160.0 kt, vr -1059 ft/min
+2025-12-02 16:10:43,047 [INFO] Ejecutando evento 2025-12-02 06:29:27.209765+01:00 (RYR611 tramo 9: final ILS 07L)
+2025-12-02 16:10:43,048 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 9: final ILS 07L): rumbo 126.3, vel 140.0 kt, vr -3000 ft/min
+2025-12-02 16:22:26,352 [INFO] Total de eventos programados: 61
+2025-12-02 16:22:26,353 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+2025-12-02 16:22:26,356 [INFO] Creado DLH1421 con hex BC84A9 en intento 1
+2025-12-02 16:22:26,603 [INFO] Ejecutando evento 2025-12-02 05:57:00+01:00 (Creacion de EZY8104)
+2025-12-02 16:22:26,605 [INFO] Creado EZY8104 con hex 566594 en intento 1
+2025-12-02 16:22:26,853 [INFO] Ejecutando evento 2025-12-02 05:57:30+01:00 (Creacion de AFR1738)
+2025-12-02 16:22:26,855 [INFO] Creado AFR1738 con hex 42FFBF en intento 1
+2025-12-02 16:22:27,603 [INFO] Ejecutando evento 2025-12-02 05:59:00+01:00 (Creacion de VLG201)
+2025-12-02 16:22:27,605 [INFO] Creado VLG201 con hex E3A73B en intento 1
+2025-12-02 16:22:28,103 [INFO] Ejecutando evento 2025-12-02 06:00:00+01:00 (VLG201 tramo 1: despegue y ascenso a NELSO)
+2025-12-02 16:22:28,105 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 1: despegue y ascenso a NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 16:22:28,228 [INFO] Ejecutando evento 2025-12-02 06:00:15+01:00 (Creacion de IBE432)
+2025-12-02 16:22:28,230 [INFO] Creado IBE432 con hex C45831 en intento 1
+2025-12-02 16:22:28,478 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (IBE432 tramo 1: ascenso hacia MASNU)
+2025-12-02 16:22:28,480 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 1: ascenso hacia MASNU): rumbo 41.9, vel 190.0 kt, vr 833 ft/min
+2025-12-02 16:22:28,480 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (Creacion de VY6502)
+2025-12-02 16:22:28,481 [INFO] Creado VY6502 con hex 48788F en intento 1
+2025-12-02 16:22:28,770 [INFO] Ejecutando evento 2025-12-02 06:01:20+01:00 (Creacion de RYR221)
+2025-12-02 16:22:28,772 [INFO] Creado RYR221 con hex BE9EAC en intento 1
+2025-12-02 16:22:28,853 [INFO] Ejecutando evento 2025-12-02 06:01:30+01:00 (VY6502 tramo 1: salida costera NELSO)
+2025-12-02 16:22:28,855 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 1: salida costera NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 16:22:29,012 [INFO] Ejecutando evento 2025-12-02 06:01:49.056293+01:00 (VLG201 tramo 2: rumbo oeste hacia TARRA)
+2025-12-02 16:22:29,014 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 2: rumbo oeste hacia TARRA): rumbo 254.2, vel 250.0 kt, vr 682 ft/min
+2025-12-02 16:22:29,228 [INFO] Ejecutando evento 2025-12-02 06:02:15+01:00 (RYR221 tramo 1: ascenso inicial hacia MASNU)
+2025-12-02 16:22:29,230 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 1: ascenso inicial hacia MASNU): rumbo 41.9, vel 200.0 kt, vr 877 ft/min
+2025-12-02 16:22:29,603 [INFO] Ejecutando evento 2025-12-02 06:03:00+01:00 (DLH1421 tramo 1: LORET a SITGE)
+2025-12-02 16:22:29,605 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 1: LORET a SITGE): rumbo 103.8, vel 250.0 kt, vr -299 ft/min
+2025-12-02 16:22:29,762 [INFO] Ejecutando evento 2025-12-02 06:03:19.056293+01:00 (VY6502 tramo 2: viraje hacia SITGE)
+2025-12-02 16:22:29,764 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 2: viraje hacia SITGE): rumbo 270.1, vel 240.0 kt, vr 886 ft/min
+2025-12-02 16:22:30,103 [INFO] Ejecutando evento 2025-12-02 06:04:00+01:00 (EZY8104 tramo 1: KENAS a BAMES)
+2025-12-02 16:22:30,105 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 1: KENAS a BAMES): rumbo 223.2, vel 250.0 kt, vr -670 ft/min
+2025-12-02 16:22:30,353 [INFO] Ejecutando evento 2025-12-02 06:04:30+01:00 (Creacion de RYR611)
+2025-12-02 16:22:30,355 [INFO] Creado RYR611 con hex 322B43 en intento 1
+2025-12-02 16:22:30,603 [INFO] Ejecutando evento 2025-12-02 06:05:00+01:00 (RYR611 tramo 1: TGA a SITGE)
+2025-12-02 16:22:30,605 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 1: TGA a SITGE): rumbo 79.4, vel 280.0 kt, vr -810 ft/min
+2025-12-02 16:22:30,879 [INFO] Ejecutando evento 2025-12-02 06:05:33.175599+01:00 (IBE432 tramo 2: ruta norte a BAMES)
+2025-12-02 16:22:30,881 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 2: ruta norte a BAMES): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 16:22:31,103 [INFO] Ejecutando evento 2025-12-02 06:06:00+01:00 (AFR1738 tramo 1: MASNU a SLL)
+2025-12-02 16:22:31,105 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 1: MASNU a SLL): rumbo 284.2, vel 220.0 kt, vr -1216 ft/min
+2025-12-02 16:22:31,509 [INFO] Ejecutando evento 2025-12-02 06:06:48.766819+01:00 (RYR221 tramo 2: seguimiento costa norte)
+2025-12-02 16:22:31,512 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 2: seguimiento costa norte): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 16:22:31,597 [INFO] Ejecutando evento 2025-12-02 06:06:59.236178+01:00 (EZY8104 tramo 2: descenso hacia MASNU)
+2025-12-02 16:22:31,599 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 2: descenso hacia MASNU): rumbo 194.8, vel 230.0 kt, vr -726 ft/min
+2025-12-02 16:22:32,019 [INFO] Ejecutando evento 2025-12-02 06:07:49.983784+01:00 (VY6502 tramo 3: ascenso sobre TGA)
+2025-12-02 16:22:32,021 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 3: ascenso sobre TGA): rumbo 259.8, vel 280.0 kt, vr 810 ft/min
+2025-12-02 16:22:32,336 [INFO] Ejecutando evento 2025-12-02 06:08:28.000006+01:00 (AFR1738 tramo 2: downwind norte)
+2025-12-02 16:22:32,338 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 2: downwind norte): rumbo 208.6, vel 200.0 kt, vr -417 ft/min
+2025-12-02 16:22:32,679 [INFO] Ejecutando evento 2025-12-02 06:09:09.127978+01:00 (VLG201 tramo 3: cruce de TGA)
+2025-12-02 16:22:32,682 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 3: cruce de TGA): rumbo 280.8, vel 280.0 kt, vr 1077 ft/min
+2025-12-02 16:22:32,859 [INFO] Ejecutando evento 2025-12-02 06:09:30.692551+01:00 (IBE432 tramo 3: intercepta KENAS)
+2025-12-02 16:22:32,861 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 3: intercepta KENAS): rumbo 43.0, vel 280.0 kt, vr 2250 ft/min
+2025-12-02 16:22:33,489 [INFO] Ejecutando evento 2025-12-02 06:10:46.283771+01:00 (RYR221 tramo 3: cruce Girona TMA)
+2025-12-02 16:22:33,491 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 3: cruce Girona TMA): rumbo 43.0, vel 260.0 kt, vr 1393 ft/min
+2025-12-02 16:22:33,535 [INFO] Ejecutando evento 2025-12-02 06:10:51.877197+01:00 (AFR1738 tramo 3: tramo base 07R)
+2025-12-02 16:22:33,537 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 3: tramo base 07R): rumbo 163.9, vel 185.0 kt, vr -759 ft/min
+2025-12-02 16:22:33,662 [INFO] Ejecutando evento 2025-12-02 06:11:07.079954+01:00 (EZY8104 tramo 3: SLL inicial)
+2025-12-02 16:22:33,664 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 3: SLL inicial): rumbo 284.2, vel 210.0 kt, vr -387 ft/min
+2025-12-02 16:22:33,688 [INFO] Ejecutando evento 2025-12-02 06:11:10.177372+01:00 (RYR611 tramo 2: aproximacion via SARGO)
+2025-12-02 16:22:33,690 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 2: aproximacion via SARGO): rumbo 84.8, vel 240.0 kt, vr -1765 ft/min
+2025-12-02 16:22:34,192 [INFO] Ejecutando evento 2025-12-02 06:12:10.724853+01:00 (IBE432 tramo 4: salida a GIRON)
+2025-12-02 16:22:34,194 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 4: salida a GIRON): rumbo 84.1, vel 300.0 kt, vr 3000 ft/min
+2025-12-02 16:22:34,194 [INFO] Ejecutando evento 2025-12-02 06:12:10.920683+01:00 (AFR1738 tramo 4: captura localizador 07R)
+2025-12-02 16:22:34,195 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 4: captura localizador 07R): rumbo 153.4, vel 170.0 kt, vr -1125 ft/min
+2025-12-02 16:22:34,537 [INFO] Ejecutando evento 2025-12-02 06:12:52.033505+01:00 (VLG201 tramo 4: salida del TMA via LORET)
+2025-12-02 16:22:34,539 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 4: salida del TMA via LORET): rumbo 321.4, vel 320.0 kt, vr 1621 ft/min
+2025-12-02 16:22:34,549 [INFO] Ejecutando evento 2025-12-02 06:12:53.578005+01:00 (AFR1738 tramo 5: final 07R)
+2025-12-02 16:22:34,551 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 5: final 07R): rumbo 136.5, vel 150.0 kt, vr -3000 ft/min
+2025-12-02 16:22:34,625 [INFO] Ejecutando evento 2025-12-02 06:13:02.637449+01:00 (DLH1421 tramo 2: descenso sobre costa)
+2025-12-02 16:22:34,627 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 2: descenso sobre costa): rumbo 84.8, vel 230.0 kt, vr -1691 ft/min
+2025-12-02 16:22:34,925 [INFO] Ejecutando evento 2025-12-02 06:13:38.626250+01:00 (RYR221 tramo 4: salida FIR via GIRON)
+2025-12-02 16:22:34,927 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 4: salida FIR via GIRON): rumbo 84.1, vel 300.0 kt, vr 2473 ft/min
+2025-12-02 16:22:34,954 [INFO] Ejecutando evento 2025-12-02 06:13:42.127579+01:00 (EZY8104 tramo 4: tramo a downwind norte)
+2025-12-02 16:22:34,956 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 4: tramo a downwind norte): rumbo 208.6, vel 200.0 kt, vr -209 ft/min
+2025-12-02 16:22:35,001 [INFO] Ejecutando evento 2025-12-02 06:13:47.758937+01:00 (Eliminacion de IBE432)
+2025-12-02 16:22:35,003 [INFO] Aeronave IBE432 eliminada.
+2025-12-02 16:22:35,104 [INFO] Ejecutando evento 2025-12-02 06:14:00.161156+01:00 (VY6502 tramo 4: salida del TMA rumbo LORET)
+2025-12-02 16:22:35,106 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 4: salida del TMA rumbo LORET): rumbo 321.4, vel 320.0 kt, vr 1891 ft/min
+2025-12-02 16:22:35,387 [INFO] Ejecutando evento 2025-12-02 06:14:34.138878+01:00 (RYR611 tramo 3: IAF UBAGA)
+2025-12-02 16:22:35,391 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 3: IAF UBAGA): rumbo 15.3, vel 220.0 kt, vr -1071 ft/min
+2025-12-02 16:22:35,733 [INFO] Ejecutando evento 2025-12-02 06:15:15.660334+01:00 (Eliminacion de RYR221)
+2025-12-02 16:22:35,736 [INFO] Aeronave RYR221 eliminada.
+2025-12-02 16:22:36,153 [INFO] Ejecutando evento 2025-12-02 06:16:06.004770+01:00 (EZY8104 tramo 5: tramo base 07L)
+2025-12-02 16:22:36,155 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 5: tramo base 07L): rumbo 173.4, vel 190.0 kt, vr -806 ft/min
+2025-12-02 16:22:36,321 [INFO] Ejecutando evento 2025-12-02 06:16:26.171338+01:00 (RYR611 tramo 4: rumbo a SLL para espera)
+2025-12-02 16:22:36,323 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 4: rumbo a SLL para espera): rumbo 350.5, vel 200.0 kt, vr -698 ft/min
+2025-12-02 16:22:36,387 [INFO] Ejecutando evento 2025-12-02 06:16:34.100899+01:00 (Eliminacion de VLG201)
+2025-12-02 16:22:36,389 [INFO] Aeronave VLG201 eliminada.
+2025-12-02 16:22:36,398 [INFO] Ejecutando evento 2025-12-02 06:16:35.466847+01:00 (DLH1421 tramo 3: IAF UBAGA)
+2025-12-02 16:22:36,400 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 3: IAF UBAGA): rumbo 15.3, vel 210.0 kt, vr -1534 ft/min
+2025-12-02 16:22:39,518 [INFO] Ejecutando evento 2025-12-02 06:17:20.440574+01:00 (EZY8104 tramo 6: intercepta localizador ILS 07L)
+2025-12-02 16:22:39,520 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 6: intercepta localizador ILS 07L): rumbo 153.4, vel 180.0 kt, vr -1489 ft/min
+2025-12-02 16:22:39,700 [INFO] Ejecutando evento 2025-12-02 06:17:42.228550+01:00 (Eliminacion de VY6502)
+2025-12-02 16:22:39,702 [INFO] Aeronave VY6502 eliminada.
+2025-12-02 16:22:39,854 [INFO] Ejecutando evento 2025-12-02 06:18:00.728045+01:00 (EZY8104 tramo 7: tramo final de aproximacion)
+2025-12-02 16:22:39,856 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 7: tramo final de aproximacion): rumbo 291.8, vel 170.0 kt, vr -1167 ft/min
+2025-12-02 16:22:40,122 [INFO] Ejecutando evento 2025-12-02 06:18:32.834186+01:00 (DLH1421 tramo 4: tramo intermedio SLL)
+2025-12-02 16:22:40,124 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 4: tramo intermedio SLL): rumbo 350.5, vel 190.0 kt, vr -332 ft/min
+2025-12-02 16:22:40,283 [INFO] Ejecutando evento 2025-12-02 06:18:52.146222+01:00 (EZY8104 tramo 8: final ILS 07L)
+2025-12-02 16:22:40,284 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 8: final ILS 07L): rumbo 116.9, vel 140.0 kt, vr -1520 ft/min
+2025-12-02 16:22:40,499 [INFO] Ejecutando evento 2025-12-02 06:19:18.092270+01:00 (RYR611 hold tramo outbound)
+2025-12-02 16:22:40,501 [INFO] Actualizacion enviada para RYR611 (RYR611 hold tramo outbound): rumbo 246.0, vel 180.0 kt, vr 0 ft/min
+2025-12-02 16:22:40,874 [INFO] Ejecutando evento 2025-12-02 06:20:03.092270+01:00 (RYR611 hold tramo inbound)
+2025-12-02 16:22:40,876 [INFO] Actualizacion enviada para RYR611 (RYR611 hold tramo inbound): rumbo 66.0, vel 180.0 kt, vr 0 ft/min
+2025-12-02 16:22:41,249 [INFO] Ejecutando evento 2025-12-02 06:20:48.092270+01:00 (RYR611 tramo 5: abandonando hold hacia DOBRO)
+2025-12-02 16:22:41,251 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 5: abandonando hold hacia DOBRO): rumbo 206.1, vel 170.0 kt, vr -512 ft/min
+2025-12-02 16:22:41,630 [INFO] Ejecutando evento 2025-12-02 06:21:33.803589+01:00 (DLH1421 tramo 5: downwind norte)
+2025-12-02 16:22:41,632 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 5: downwind norte): rumbo 208.6, vel 185.0 kt, vr -193 ft/min
+2025-12-02 16:22:42,926 [INFO] Ejecutando evento 2025-12-02 06:24:09.346498+01:00 (DLH1421 tramo 6: tramo base 07L)
+2025-12-02 16:22:42,928 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 6: tramo base 07L): rumbo 173.4, vel 175.0 kt, vr -520 ft/min
+2025-12-02 16:22:43,600 [INFO] Ejecutando evento 2025-12-02 06:25:30.162514+01:00 (DLH1421 tramo 7: intercepta ILS 07L)
+2025-12-02 16:22:43,602 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 7: intercepta ILS 07L): rumbo 153.4, vel 165.0 kt, vr -1092 ft/min
+2025-12-02 16:22:43,689 [INFO] Ejecutando evento 2025-12-02 06:25:40.952086+01:00 (RYR611 tramo 6: downwind norte)
+2025-12-02 16:22:43,692 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 6: downwind norte): rumbo 10.6, vel 180.0 kt, vr 1228 ft/min
+2025-12-02 16:22:43,966 [INFO] Ejecutando evento 2025-12-02 06:26:14.112483+01:00 (DLH1421 tramo 8: tramo final de aproximacion)
+2025-12-02 16:22:43,968 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 8: tramo final de aproximacion): rumbo 291.8, vel 160.0 kt, vr -549 ft/min
+2025-12-02 16:22:44,421 [INFO] Ejecutando evento 2025-12-02 06:27:08.744296+01:00 (DLH1421 tramo 9: final pista 07L)
+2025-12-02 16:22:44,423 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 9: final pista 07L): rumbo 116.9, vel 150.0 kt, vr -1629 ft/min
+2025-12-02 16:22:44,504 [INFO] Ejecutando evento 2025-12-02 06:27:18.693403+01:00 (RYR611 tramo 7: tramo base)
+2025-12-02 16:22:44,506 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 7: tramo base): rumbo 173.4, vel 170.0 kt, vr -505 ft/min
+2025-12-02 16:22:45,197 [INFO] Ejecutando evento 2025-12-02 06:28:41.886360+01:00 (RYR611 tramo 8: captura localizador ILS 07L)
+2025-12-02 16:22:45,199 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 8: captura localizador ILS 07L): rumbo 153.4, vel 160.0 kt, vr -1059 ft/min
+2025-12-02 16:22:45,575 [INFO] Ejecutando evento 2025-12-02 06:29:27.209765+01:00 (RYR611 tramo 9: final ILS 07L)
+2025-12-02 16:22:45,577 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 9: final ILS 07L): rumbo 126.3, vel 140.0 kt, vr -3000 ft/min
+2025-12-02 16:37:54,449 [INFO] Total de eventos programados: 61
+2025-12-02 16:37:54,449 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+2025-12-02 16:37:54,452 [INFO] Creado DLH1421 con hex AB0783 en intento 1
+2025-12-02 16:37:54,699 [INFO] Ejecutando evento 2025-12-02 05:57:00+01:00 (Creacion de EZY8104)
+2025-12-02 16:37:54,701 [INFO] Creado EZY8104 con hex D665A3 en intento 1
+2025-12-02 16:37:54,949 [INFO] Ejecutando evento 2025-12-02 05:57:30+01:00 (Creacion de AFR1738)
+2025-12-02 16:37:54,951 [INFO] Creado AFR1738 con hex 4CB553 en intento 1
+2025-12-02 16:37:55,699 [INFO] Ejecutando evento 2025-12-02 05:59:00+01:00 (Creacion de VLG201)
+2025-12-02 16:37:55,701 [INFO] Creado VLG201 con hex 375524 en intento 1
+2025-12-02 16:37:56,199 [INFO] Ejecutando evento 2025-12-02 06:00:00+01:00 (VLG201 tramo 1: despegue y ascenso a NELSO)
+2025-12-02 16:37:56,201 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 1: despegue y ascenso a NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 16:37:56,324 [INFO] Ejecutando evento 2025-12-02 06:00:15+01:00 (Creacion de IBE432)
+2025-12-02 16:37:56,326 [INFO] Creado IBE432 con hex BE28C6 en intento 1
+2025-12-02 16:37:56,574 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (IBE432 tramo 1: ascenso hacia MASNU)
+2025-12-02 16:37:56,576 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 1: ascenso hacia MASNU): rumbo 41.9, vel 190.0 kt, vr 833 ft/min
+2025-12-02 16:37:56,576 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (Creacion de VY6502)
+2025-12-02 16:37:56,577 [INFO] Creado VY6502 con hex A99390 en intento 1
+2025-12-02 16:37:56,866 [INFO] Ejecutando evento 2025-12-02 06:01:20+01:00 (Creacion de RYR221)
+2025-12-02 16:37:56,868 [INFO] Creado RYR221 con hex 574534 en intento 1
+2025-12-02 16:37:56,949 [INFO] Ejecutando evento 2025-12-02 06:01:30+01:00 (VY6502 tramo 1: salida costera NELSO)
+2025-12-02 16:37:56,951 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 1: salida costera NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 16:37:57,108 [INFO] Ejecutando evento 2025-12-02 06:01:49.056293+01:00 (VLG201 tramo 2: rumbo oeste hacia TARRA)
+2025-12-02 16:37:57,109 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 2: rumbo oeste hacia TARRA): rumbo 254.2, vel 250.0 kt, vr 682 ft/min
+2025-12-02 16:37:57,324 [INFO] Ejecutando evento 2025-12-02 06:02:15+01:00 (RYR221 tramo 1: ascenso inicial hacia MASNU)
+2025-12-02 16:37:57,326 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 1: ascenso inicial hacia MASNU): rumbo 41.9, vel 200.0 kt, vr 877 ft/min
+2025-12-02 16:37:57,699 [INFO] Ejecutando evento 2025-12-02 06:03:00+01:00 (DLH1421 tramo 1: LORET a SITGE)
+2025-12-02 16:37:57,701 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 1: LORET a SITGE): rumbo 103.8, vel 250.0 kt, vr -299 ft/min
+2025-12-02 16:37:57,858 [INFO] Ejecutando evento 2025-12-02 06:03:19.056293+01:00 (VY6502 tramo 2: viraje hacia SITGE)
+2025-12-02 16:37:57,860 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 2: viraje hacia SITGE): rumbo 270.1, vel 240.0 kt, vr 886 ft/min
+2025-12-02 16:37:58,199 [INFO] Ejecutando evento 2025-12-02 06:04:00+01:00 (EZY8104 tramo 1: KENAS a BAMES)
+2025-12-02 16:37:58,201 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 1: KENAS a BAMES): rumbo 223.2, vel 250.0 kt, vr -670 ft/min
+2025-12-02 16:37:58,449 [INFO] Ejecutando evento 2025-12-02 06:04:30+01:00 (Creacion de RYR611)
+2025-12-02 16:37:58,462 [INFO] Creado RYR611 con hex 40E299 en intento 1
+2025-12-02 16:37:58,699 [INFO] Ejecutando evento 2025-12-02 06:05:00+01:00 (RYR611 tramo 1: TGA a SITGE)
+2025-12-02 16:37:58,701 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 1: TGA a SITGE): rumbo 79.4, vel 280.0 kt, vr -810 ft/min
+2025-12-02 16:37:58,975 [INFO] Ejecutando evento 2025-12-02 06:05:33.175599+01:00 (IBE432 tramo 2: ruta norte a BAMES)
+2025-12-02 16:37:58,977 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 2: ruta norte a BAMES): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 16:37:59,199 [INFO] Ejecutando evento 2025-12-02 06:06:00+01:00 (AFR1738 tramo 1: MASNU a SLL)
+2025-12-02 16:37:59,201 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 1: MASNU a SLL): rumbo 284.2, vel 220.0 kt, vr -1216 ft/min
+2025-12-02 16:37:59,605 [INFO] Ejecutando evento 2025-12-02 06:06:48.766819+01:00 (RYR221 tramo 2: seguimiento costa norte)
+2025-12-02 16:37:59,607 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 2: seguimiento costa norte): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 16:37:59,693 [INFO] Ejecutando evento 2025-12-02 06:06:59.236178+01:00 (EZY8104 tramo 2: descenso hacia MASNU)
+2025-12-02 16:37:59,694 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 2: descenso hacia MASNU): rumbo 194.8, vel 230.0 kt, vr -726 ft/min
+2025-12-02 16:38:00,116 [INFO] Ejecutando evento 2025-12-02 06:07:49.983784+01:00 (VY6502 tramo 3: ascenso sobre TGA)
+2025-12-02 16:38:00,117 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 3: ascenso sobre TGA): rumbo 259.8, vel 280.0 kt, vr 810 ft/min
+2025-12-02 16:38:00,432 [INFO] Ejecutando evento 2025-12-02 06:08:28.000006+01:00 (AFR1738 tramo 2: downwind norte)
+2025-12-02 16:38:00,434 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 2: downwind norte): rumbo 208.6, vel 200.0 kt, vr -417 ft/min
+2025-12-02 16:38:00,775 [INFO] Ejecutando evento 2025-12-02 06:09:09.127978+01:00 (VLG201 tramo 3: cruce de TGA)
+2025-12-02 16:38:00,777 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 3: cruce de TGA): rumbo 280.8, vel 280.0 kt, vr 1077 ft/min
+2025-12-02 16:38:00,955 [INFO] Ejecutando evento 2025-12-02 06:09:30.692551+01:00 (IBE432 tramo 3: intercepta KENAS)
+2025-12-02 16:38:00,957 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 3: intercepta KENAS): rumbo 43.0, vel 280.0 kt, vr 2250 ft/min
+2025-12-02 16:38:04,087 [INFO] Ejecutando evento 2025-12-02 06:10:46.283771+01:00 (RYR221 tramo 3: cruce Girona TMA)
+2025-12-02 16:38:04,089 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 3: cruce Girona TMA): rumbo 43.0, vel 260.0 kt, vr 1393 ft/min
+2025-12-02 16:38:04,133 [INFO] Ejecutando evento 2025-12-02 06:10:51.877197+01:00 (AFR1738 tramo 3: tramo base 07R)
+2025-12-02 16:38:04,135 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 3: tramo base 07R): rumbo 163.9, vel 185.0 kt, vr -759 ft/min
+2025-12-02 16:38:04,260 [INFO] Ejecutando evento 2025-12-02 06:11:07.079954+01:00 (EZY8104 tramo 3: SLL inicial)
+2025-12-02 16:38:04,262 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 3: SLL inicial): rumbo 284.2, vel 210.0 kt, vr -387 ft/min
+2025-12-02 16:38:04,286 [INFO] Ejecutando evento 2025-12-02 06:11:10.177372+01:00 (RYR611 tramo 2: aproximacion via SARGO)
+2025-12-02 16:38:04,288 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 2: aproximacion via SARGO): rumbo 84.8, vel 240.0 kt, vr -1765 ft/min
+2025-12-02 16:38:04,790 [INFO] Ejecutando evento 2025-12-02 06:12:10.724853+01:00 (IBE432 tramo 4: salida a GIRON)
+2025-12-02 16:38:04,793 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 4: salida a GIRON): rumbo 84.1, vel 300.0 kt, vr 3000 ft/min
+2025-12-02 16:38:04,793 [INFO] Ejecutando evento 2025-12-02 06:12:10.920683+01:00 (AFR1738 tramo 4: captura localizador 07R)
+2025-12-02 16:38:04,794 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 4: captura localizador 07R): rumbo 153.4, vel 170.0 kt, vr -1125 ft/min
+2025-12-02 16:38:05,134 [INFO] Ejecutando evento 2025-12-02 06:12:52.033505+01:00 (VLG201 tramo 4: salida del TMA via LORET)
+2025-12-02 16:38:05,136 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 4: salida del TMA via LORET): rumbo 321.4, vel 320.0 kt, vr 1621 ft/min
+2025-12-02 16:38:05,147 [INFO] Ejecutando evento 2025-12-02 06:12:53.578005+01:00 (AFR1738 tramo 5: final 07R)
+2025-12-02 16:38:05,149 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 5: final 07R): rumbo 136.5, vel 150.0 kt, vr -3000 ft/min
+2025-12-02 16:38:05,223 [INFO] Ejecutando evento 2025-12-02 06:13:02.637449+01:00 (DLH1421 tramo 2: descenso sobre costa)
+2025-12-02 16:38:05,225 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 2: descenso sobre costa): rumbo 84.8, vel 230.0 kt, vr -1691 ft/min
+2025-12-02 16:38:05,523 [INFO] Ejecutando evento 2025-12-02 06:13:38.626250+01:00 (RYR221 tramo 4: salida FIR via GIRON)
+2025-12-02 16:38:05,525 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 4: salida FIR via GIRON): rumbo 84.1, vel 300.0 kt, vr 2473 ft/min
+2025-12-02 16:38:05,552 [INFO] Ejecutando evento 2025-12-02 06:13:42.127579+01:00 (EZY8104 tramo 4: tramo a downwind norte)
+2025-12-02 16:38:05,554 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 4: tramo a downwind norte): rumbo 208.6, vel 200.0 kt, vr -209 ft/min
+2025-12-02 16:38:05,599 [INFO] Ejecutando evento 2025-12-02 06:13:47.758937+01:00 (Eliminacion de IBE432)
+2025-12-02 16:38:05,601 [INFO] Aeronave IBE432 eliminada.
+2025-12-02 16:38:05,702 [INFO] Ejecutando evento 2025-12-02 06:14:00.161156+01:00 (VY6502 tramo 4: salida del TMA rumbo LORET)
+2025-12-02 16:38:05,704 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 4: salida del TMA rumbo LORET): rumbo 321.4, vel 320.0 kt, vr 1891 ft/min
+2025-12-02 16:38:05,985 [INFO] Ejecutando evento 2025-12-02 06:14:34.138878+01:00 (RYR611 tramo 3: IAF UBAGA)
+2025-12-02 16:38:05,987 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 3: IAF UBAGA): rumbo 15.3, vel 220.0 kt, vr -1071 ft/min
+2025-12-02 16:38:06,331 [INFO] Ejecutando evento 2025-12-02 06:15:15.660334+01:00 (Eliminacion de RYR221)
+2025-12-02 16:38:06,333 [INFO] Aeronave RYR221 eliminada.
+2025-12-02 16:38:06,751 [INFO] Ejecutando evento 2025-12-02 06:16:06.004770+01:00 (EZY8104 tramo 5: tramo base 07L)
+2025-12-02 16:38:06,753 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 5: tramo base 07L): rumbo 173.4, vel 190.0 kt, vr -806 ft/min
+2025-12-02 16:38:06,919 [INFO] Ejecutando evento 2025-12-02 06:16:26.171338+01:00 (RYR611 tramo 4: rumbo a SLL para espera)
+2025-12-02 16:38:06,921 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 4: rumbo a SLL para espera): rumbo 350.5, vel 200.0 kt, vr -698 ft/min
+2025-12-02 16:38:06,985 [INFO] Ejecutando evento 2025-12-02 06:16:34.100899+01:00 (Eliminacion de VLG201)
+2025-12-02 16:38:06,987 [INFO] Aeronave VLG201 eliminada.
+2025-12-02 16:38:06,996 [INFO] Ejecutando evento 2025-12-02 06:16:35.466847+01:00 (DLH1421 tramo 3: IAF UBAGA)
+2025-12-02 16:38:06,998 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 3: IAF UBAGA): rumbo 15.3, vel 210.0 kt, vr -1534 ft/min
+2025-12-02 16:38:07,371 [INFO] Ejecutando evento 2025-12-02 06:17:20.440574+01:00 (EZY8104 tramo 6: intercepta localizador ILS 07L)
+2025-12-02 16:38:07,373 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 6: intercepta localizador ILS 07L): rumbo 153.4, vel 180.0 kt, vr -1489 ft/min
+2025-12-02 16:38:07,553 [INFO] Ejecutando evento 2025-12-02 06:17:42.228550+01:00 (Eliminacion de VY6502)
+2025-12-02 16:38:07,555 [INFO] Aeronave VY6502 eliminada.
+2025-12-02 16:38:07,707 [INFO] Ejecutando evento 2025-12-02 06:18:00.728045+01:00 (EZY8104 tramo 7: tramo final de aproximacion)
+2025-12-02 16:38:07,709 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 7: tramo final de aproximacion): rumbo 291.8, vel 170.0 kt, vr -1167 ft/min
+2025-12-02 16:38:07,974 [INFO] Ejecutando evento 2025-12-02 06:18:32.834186+01:00 (DLH1421 tramo 4: tramo intermedio SLL)
+2025-12-02 16:38:07,976 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 4: tramo intermedio SLL): rumbo 350.5, vel 190.0 kt, vr -332 ft/min
+2025-12-02 16:38:08,135 [INFO] Ejecutando evento 2025-12-02 06:18:52.146222+01:00 (EZY8104 tramo 8: final ILS 07L)
+2025-12-02 16:38:08,137 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 8: final ILS 07L): rumbo 116.9, vel 140.0 kt, vr -1520 ft/min
+2025-12-02 16:38:08,352 [INFO] Ejecutando evento 2025-12-02 06:19:18.092270+01:00 (RYR611 hold tramo outbound)
+2025-12-02 16:38:08,353 [INFO] Actualizacion enviada para RYR611 (RYR611 hold tramo outbound): rumbo 246.0, vel 180.0 kt, vr 0 ft/min
+2025-12-02 16:38:08,727 [INFO] Ejecutando evento 2025-12-02 06:20:03.092270+01:00 (RYR611 hold tramo inbound)
+2025-12-02 16:38:08,728 [INFO] Actualizacion enviada para RYR611 (RYR611 hold tramo inbound): rumbo 66.0, vel 180.0 kt, vr 0 ft/min
+2025-12-02 16:38:09,102 [INFO] Ejecutando evento 2025-12-02 06:20:48.092270+01:00 (RYR611 tramo 5: abandonando hold hacia DOBRO)
+2025-12-02 16:38:09,103 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 5: abandonando hold hacia DOBRO): rumbo 206.1, vel 170.0 kt, vr -512 ft/min
+2025-12-02 16:38:09,483 [INFO] Ejecutando evento 2025-12-02 06:21:33.803589+01:00 (DLH1421 tramo 5: downwind norte)
+2025-12-02 16:38:09,484 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 5: downwind norte): rumbo 208.6, vel 185.0 kt, vr -193 ft/min
+2025-12-02 16:38:10,779 [INFO] Ejecutando evento 2025-12-02 06:24:09.346498+01:00 (DLH1421 tramo 6: tramo base 07L)
+2025-12-02 16:38:10,781 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 6: tramo base 07L): rumbo 173.4, vel 175.0 kt, vr -520 ft/min
+2025-12-02 16:38:11,452 [INFO] Ejecutando evento 2025-12-02 06:25:30.162514+01:00 (DLH1421 tramo 7: intercepta ILS 07L)
+2025-12-02 16:38:11,454 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 7: intercepta ILS 07L): rumbo 153.4, vel 165.0 kt, vr -1092 ft/min
+2025-12-02 16:38:11,542 [INFO] Ejecutando evento 2025-12-02 06:25:40.952086+01:00 (RYR611 tramo 6: downwind norte)
+2025-12-02 16:38:11,544 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 6: downwind norte): rumbo 10.6, vel 180.0 kt, vr 1228 ft/min
+2025-12-02 16:38:11,818 [INFO] Ejecutando evento 2025-12-02 06:26:14.112483+01:00 (DLH1421 tramo 8: tramo final de aproximacion)
+2025-12-02 16:38:11,820 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 8: tramo final de aproximacion): rumbo 291.8, vel 160.0 kt, vr -549 ft/min
+2025-12-02 16:38:12,274 [INFO] Ejecutando evento 2025-12-02 06:27:08.744296+01:00 (DLH1421 tramo 9: final pista 07L)
+2025-12-02 16:38:12,275 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 9: final pista 07L): rumbo 116.9, vel 150.0 kt, vr -1629 ft/min
+2025-12-02 16:38:12,357 [INFO] Ejecutando evento 2025-12-02 06:27:18.693403+01:00 (RYR611 tramo 7: tramo base)
+2025-12-02 16:38:12,358 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 7: tramo base): rumbo 173.4, vel 170.0 kt, vr -505 ft/min
+2025-12-02 16:38:13,050 [INFO] Ejecutando evento 2025-12-02 06:28:41.886360+01:00 (RYR611 tramo 8: captura localizador ILS 07L)
+2025-12-02 16:38:13,052 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 8: captura localizador ILS 07L): rumbo 153.4, vel 160.0 kt, vr -1059 ft/min
+2025-12-02 16:38:13,428 [INFO] Ejecutando evento 2025-12-02 06:29:27.209765+01:00 (RYR611 tramo 9: final ILS 07L)
+2025-12-02 16:38:13,429 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 9: final ILS 07L): rumbo 126.3, vel 140.0 kt, vr -3000 ft/min
+2025-12-02 16:42:28,333 [INFO] Total de eventos programados: 61
+2025-12-02 16:42:28,333 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+2025-12-02 16:42:28,337 [INFO] Creado DLH1421 con hex E5A221 en intento 1
+2025-12-02 16:42:28,584 [INFO] Ejecutando evento 2025-12-02 05:57:00+01:00 (Creacion de EZY8104)
+2025-12-02 16:42:28,586 [INFO] Creado EZY8104 con hex C440E0 en intento 1
+2025-12-02 16:42:28,833 [INFO] Ejecutando evento 2025-12-02 05:57:30+01:00 (Creacion de AFR1738)
+2025-12-02 16:42:28,835 [INFO] Creado AFR1738 con hex 1F451E en intento 1
+2025-12-02 16:42:29,584 [INFO] Ejecutando evento 2025-12-02 05:59:00+01:00 (Creacion de VLG201)
+2025-12-02 16:42:29,585 [INFO] Creado VLG201 con hex 0016FC en intento 1
+2025-12-02 16:42:30,084 [INFO] Ejecutando evento 2025-12-02 06:00:00+01:00 (VLG201 tramo 1: despegue y ascenso a NELSO)
+2025-12-02 16:42:30,085 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 1: despegue y ascenso a NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 16:42:30,209 [INFO] Ejecutando evento 2025-12-02 06:00:15+01:00 (Creacion de IBE432)
+2025-12-02 16:42:30,211 [INFO] Creado IBE432 con hex 9D4AD0 en intento 1
+2025-12-02 16:42:30,458 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (IBE432 tramo 1: ascenso hacia MASNU)
+2025-12-02 16:42:30,460 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 1: ascenso hacia MASNU): rumbo 41.9, vel 190.0 kt, vr 833 ft/min
+2025-12-02 16:42:30,460 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (Creacion de VY6502)
+2025-12-02 16:42:30,462 [INFO] Creado VY6502 con hex D7B08C en intento 1
+2025-12-02 16:42:30,750 [INFO] Ejecutando evento 2025-12-02 06:01:20+01:00 (Creacion de RYR221)
+2025-12-02 16:42:30,752 [INFO] Creado RYR221 con hex 44202D en intento 1
+2025-12-02 16:42:30,834 [INFO] Ejecutando evento 2025-12-02 06:01:30+01:00 (VY6502 tramo 1: salida costera NELSO)
+2025-12-02 16:42:30,835 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 1: salida costera NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 16:42:30,992 [INFO] Ejecutando evento 2025-12-02 06:01:49.056293+01:00 (VLG201 tramo 2: rumbo oeste hacia TARRA)
+2025-12-02 16:42:30,994 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 2: rumbo oeste hacia TARRA): rumbo 254.2, vel 250.0 kt, vr 682 ft/min
+2025-12-02 16:42:31,209 [INFO] Ejecutando evento 2025-12-02 06:02:15+01:00 (RYR221 tramo 1: ascenso inicial hacia MASNU)
+2025-12-02 16:42:31,210 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 1: ascenso inicial hacia MASNU): rumbo 41.9, vel 200.0 kt, vr 877 ft/min
+2025-12-02 16:42:31,584 [INFO] Ejecutando evento 2025-12-02 06:03:00+01:00 (DLH1421 tramo 1: LORET a SITGE)
+2025-12-02 16:42:31,585 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 1: LORET a SITGE): rumbo 103.8, vel 250.0 kt, vr -299 ft/min
+2025-12-02 16:42:31,742 [INFO] Ejecutando evento 2025-12-02 06:03:19.056293+01:00 (VY6502 tramo 2: viraje hacia SITGE)
+2025-12-02 16:42:31,744 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 2: viraje hacia SITGE): rumbo 270.1, vel 240.0 kt, vr 886 ft/min
+2025-12-02 16:42:32,084 [INFO] Ejecutando evento 2025-12-02 06:04:00+01:00 (EZY8104 tramo 1: KENAS a BAMES)
+2025-12-02 16:42:32,085 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 1: KENAS a BAMES): rumbo 223.2, vel 250.0 kt, vr -670 ft/min
+2025-12-02 16:42:32,334 [INFO] Ejecutando evento 2025-12-02 06:04:30+01:00 (Creacion de RYR611)
+2025-12-02 16:42:32,336 [INFO] Creado RYR611 con hex 706F30 en intento 1
+2025-12-02 16:42:32,584 [INFO] Ejecutando evento 2025-12-02 06:05:00+01:00 (RYR611 tramo 1: TGA a SITGE)
+2025-12-02 16:42:32,585 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 1: TGA a SITGE): rumbo 79.4, vel 280.0 kt, vr -810 ft/min
+2025-12-02 16:42:32,860 [INFO] Ejecutando evento 2025-12-02 06:05:33.175599+01:00 (IBE432 tramo 2: ruta norte a BAMES)
+2025-12-02 16:42:32,862 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 2: ruta norte a BAMES): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 16:42:33,084 [INFO] Ejecutando evento 2025-12-02 06:06:00+01:00 (AFR1738 tramo 1: MASNU a SLL)
+2025-12-02 16:42:33,085 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 1: MASNU a SLL): rumbo 284.2, vel 220.0 kt, vr -1216 ft/min
+2025-12-02 16:42:33,490 [INFO] Ejecutando evento 2025-12-02 06:06:48.766819+01:00 (RYR221 tramo 2: seguimiento costa norte)
+2025-12-02 16:42:33,492 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 2: seguimiento costa norte): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 16:42:33,577 [INFO] Ejecutando evento 2025-12-02 06:06:59.236178+01:00 (EZY8104 tramo 2: descenso hacia MASNU)
+2025-12-02 16:42:33,580 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 2: descenso hacia MASNU): rumbo 194.8, vel 230.0 kt, vr -726 ft/min
+2025-12-02 16:42:34,000 [INFO] Ejecutando evento 2025-12-02 06:07:49.983784+01:00 (VY6502 tramo 3: ascenso sobre TGA)
+2025-12-02 16:42:34,002 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 3: ascenso sobre TGA): rumbo 259.8, vel 280.0 kt, vr 810 ft/min
+2025-12-02 16:42:34,317 [INFO] Ejecutando evento 2025-12-02 06:08:28.000006+01:00 (AFR1738 tramo 2: downwind norte)
+2025-12-02 16:42:34,319 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 2: downwind norte): rumbo 208.6, vel 200.0 kt, vr -417 ft/min
+2025-12-02 16:42:34,660 [INFO] Ejecutando evento 2025-12-02 06:09:09.127978+01:00 (VLG201 tramo 3: cruce de TGA)
+2025-12-02 16:42:34,661 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 3: cruce de TGA): rumbo 280.8, vel 280.0 kt, vr 1077 ft/min
+2025-12-02 16:42:34,839 [INFO] Ejecutando evento 2025-12-02 06:09:30.692551+01:00 (IBE432 tramo 3: intercepta KENAS)
+2025-12-02 16:42:34,841 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 3: intercepta KENAS): rumbo 43.0, vel 280.0 kt, vr 2250 ft/min
+2025-12-02 16:42:35,469 [INFO] Ejecutando evento 2025-12-02 06:10:46.283771+01:00 (RYR221 tramo 3: cruce Girona TMA)
+2025-12-02 16:42:35,471 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 3: cruce Girona TMA): rumbo 43.0, vel 260.0 kt, vr 1393 ft/min
+2025-12-02 16:42:35,516 [INFO] Ejecutando evento 2025-12-02 06:10:51.877197+01:00 (AFR1738 tramo 3: tramo base 07R)
+2025-12-02 16:42:35,517 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 3: tramo base 07R): rumbo 163.9, vel 185.0 kt, vr -759 ft/min
+2025-12-02 16:42:35,643 [INFO] Ejecutando evento 2025-12-02 06:11:07.079954+01:00 (EZY8104 tramo 3: SLL inicial)
+2025-12-02 16:42:35,645 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 3: SLL inicial): rumbo 284.2, vel 210.0 kt, vr -387 ft/min
+2025-12-02 16:42:35,668 [INFO] Ejecutando evento 2025-12-02 06:11:10.177372+01:00 (RYR611 tramo 2: aproximacion via SARGO)
+2025-12-02 16:42:35,671 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 2: aproximacion via SARGO): rumbo 84.8, vel 240.0 kt, vr -1765 ft/min
+2025-12-02 16:42:36,173 [INFO] Ejecutando evento 2025-12-02 06:12:10.724853+01:00 (IBE432 tramo 4: salida a GIRON)
+2025-12-02 16:42:36,175 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 4: salida a GIRON): rumbo 84.1, vel 300.0 kt, vr 3000 ft/min
+2025-12-02 16:42:36,175 [INFO] Ejecutando evento 2025-12-02 06:12:10.920683+01:00 (AFR1738 tramo 4: captura localizador 07R)
+2025-12-02 16:42:36,176 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 4: captura localizador 07R): rumbo 153.4, vel 170.0 kt, vr -1125 ft/min
+2025-12-02 16:42:36,517 [INFO] Ejecutando evento 2025-12-02 06:12:52.033505+01:00 (VLG201 tramo 4: salida del TMA via LORET)
+2025-12-02 16:42:36,519 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 4: salida del TMA via LORET): rumbo 321.4, vel 320.0 kt, vr 1621 ft/min
+2025-12-02 16:42:36,530 [INFO] Ejecutando evento 2025-12-02 06:12:53.578005+01:00 (AFR1738 tramo 5: final 07R)
+2025-12-02 16:42:36,532 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 5: final 07R): rumbo 136.5, vel 150.0 kt, vr -3000 ft/min
+2025-12-02 16:42:36,606 [INFO] Ejecutando evento 2025-12-02 06:13:02.637449+01:00 (DLH1421 tramo 2: descenso sobre costa)
+2025-12-02 16:42:36,608 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 2: descenso sobre costa): rumbo 84.8, vel 230.0 kt, vr -1691 ft/min
+2025-12-02 16:42:36,905 [INFO] Ejecutando evento 2025-12-02 06:13:38.626250+01:00 (RYR221 tramo 4: salida FIR via GIRON)
+2025-12-02 16:42:36,907 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 4: salida FIR via GIRON): rumbo 84.1, vel 300.0 kt, vr 2473 ft/min
+2025-12-02 16:42:36,935 [INFO] Ejecutando evento 2025-12-02 06:13:42.127579+01:00 (EZY8104 tramo 4: tramo a downwind norte)
+2025-12-02 16:42:36,936 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 4: tramo a downwind norte): rumbo 208.6, vel 200.0 kt, vr -209 ft/min
+2025-12-02 16:42:36,982 [INFO] Ejecutando evento 2025-12-02 06:13:47.758937+01:00 (Eliminacion de IBE432)
+2025-12-02 16:42:36,983 [INFO] Aeronave IBE432 eliminada.
+2025-12-02 16:42:37,085 [INFO] Ejecutando evento 2025-12-02 06:14:00.161156+01:00 (VY6502 tramo 4: salida del TMA rumbo LORET)
+2025-12-02 16:42:37,087 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 4: salida del TMA rumbo LORET): rumbo 321.4, vel 320.0 kt, vr 1891 ft/min
+2025-12-02 16:42:37,368 [INFO] Ejecutando evento 2025-12-02 06:14:34.138878+01:00 (RYR611 tramo 3: IAF UBAGA)
+2025-12-02 16:42:37,370 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 3: IAF UBAGA): rumbo 15.3, vel 220.0 kt, vr -1071 ft/min
+2025-12-02 16:42:37,714 [INFO] Ejecutando evento 2025-12-02 06:15:15.660334+01:00 (Eliminacion de RYR221)
+2025-12-02 16:42:37,716 [INFO] Aeronave RYR221 eliminada.
+2025-12-02 16:42:38,134 [INFO] Ejecutando evento 2025-12-02 06:16:06.004770+01:00 (EZY8104 tramo 5: tramo base 07L)
+2025-12-02 16:42:38,136 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 5: tramo base 07L): rumbo 173.4, vel 190.0 kt, vr -806 ft/min
+2025-12-02 16:42:38,302 [INFO] Ejecutando evento 2025-12-02 06:16:26.171338+01:00 (RYR611 tramo 4: rumbo a SLL para espera)
+2025-12-02 16:42:38,306 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 4: rumbo a SLL para espera): rumbo 350.5, vel 200.0 kt, vr -698 ft/min
+2025-12-02 16:42:38,368 [INFO] Ejecutando evento 2025-12-02 06:16:34.100899+01:00 (Eliminacion de VLG201)
+2025-12-02 16:42:38,370 [INFO] Aeronave VLG201 eliminada.
+2025-12-02 16:42:38,379 [INFO] Ejecutando evento 2025-12-02 06:16:35.466847+01:00 (DLH1421 tramo 3: IAF UBAGA)
+2025-12-02 16:42:38,382 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 3: IAF UBAGA): rumbo 15.3, vel 210.0 kt, vr -1534 ft/min
+2025-12-02 16:42:38,754 [INFO] Ejecutando evento 2025-12-02 06:17:20.440574+01:00 (EZY8104 tramo 6: intercepta localizador ILS 07L)
+2025-12-02 16:42:38,756 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 6: intercepta localizador ILS 07L): rumbo 153.4, vel 180.0 kt, vr -1489 ft/min
+2025-12-02 16:42:38,935 [INFO] Ejecutando evento 2025-12-02 06:17:42.228550+01:00 (Eliminacion de VY6502)
+2025-12-02 16:42:38,938 [INFO] Aeronave VY6502 eliminada.
+2025-12-02 16:42:39,090 [INFO] Ejecutando evento 2025-12-02 06:18:00.728045+01:00 (EZY8104 tramo 7: tramo final de aproximacion)
+2025-12-02 16:42:39,092 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 7: tramo final de aproximacion): rumbo 291.8, vel 170.0 kt, vr -1167 ft/min
+2025-12-02 16:42:39,357 [INFO] Ejecutando evento 2025-12-02 06:18:32.834186+01:00 (DLH1421 tramo 4: tramo intermedio SLL)
+2025-12-02 16:42:39,359 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 4: tramo intermedio SLL): rumbo 350.5, vel 190.0 kt, vr -332 ft/min
+2025-12-02 16:42:39,518 [INFO] Ejecutando evento 2025-12-02 06:18:52.146222+01:00 (EZY8104 tramo 8: final ILS 07L)
+2025-12-02 16:42:39,520 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 8: final ILS 07L): rumbo 116.9, vel 140.0 kt, vr -1520 ft/min
+2025-12-02 16:42:39,734 [INFO] Ejecutando evento 2025-12-02 06:19:18.092270+01:00 (RYR611 hold tramo outbound)
+2025-12-02 16:42:39,736 [INFO] Actualizacion enviada para RYR611 (RYR611 hold tramo outbound): rumbo 246.0, vel 180.0 kt, vr 0 ft/min
+2025-12-02 16:42:40,109 [INFO] Ejecutando evento 2025-12-02 06:20:03.092270+01:00 (RYR611 hold tramo inbound)
+2025-12-02 16:42:40,111 [INFO] Actualizacion enviada para RYR611 (RYR611 hold tramo inbound): rumbo 66.0, vel 180.0 kt, vr 0 ft/min
+2025-12-02 16:42:40,485 [INFO] Ejecutando evento 2025-12-02 06:20:48.092270+01:00 (RYR611 tramo 5: abandonando hold hacia DOBRO)
+2025-12-02 16:42:40,488 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 5: abandonando hold hacia DOBRO): rumbo 206.1, vel 170.0 kt, vr -512 ft/min
+2025-12-02 16:42:40,865 [INFO] Ejecutando evento 2025-12-02 06:21:33.803589+01:00 (DLH1421 tramo 5: downwind norte)
+2025-12-02 16:42:40,867 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 5: downwind norte): rumbo 208.6, vel 185.0 kt, vr -193 ft/min
+2025-12-02 16:42:44,652 [INFO] Ejecutando evento 2025-12-02 06:24:09.346498+01:00 (DLH1421 tramo 6: tramo base 07L)
+2025-12-02 16:42:44,653 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 6: tramo base 07L): rumbo 173.4, vel 175.0 kt, vr -520 ft/min
+2025-12-02 16:42:45,325 [INFO] Ejecutando evento 2025-12-02 06:25:30.162514+01:00 (DLH1421 tramo 7: intercepta ILS 07L)
+2025-12-02 16:42:45,327 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 7: intercepta ILS 07L): rumbo 153.4, vel 165.0 kt, vr -1092 ft/min
+2025-12-02 16:42:45,415 [INFO] Ejecutando evento 2025-12-02 06:25:40.952086+01:00 (RYR611 tramo 6: downwind norte)
+2025-12-02 16:42:45,417 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 6: downwind norte): rumbo 10.6, vel 180.0 kt, vr 1228 ft/min
+2025-12-02 16:42:45,691 [INFO] Ejecutando evento 2025-12-02 06:26:14.112483+01:00 (DLH1421 tramo 8: tramo final de aproximacion)
+2025-12-02 16:42:45,694 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 8: tramo final de aproximacion): rumbo 291.8, vel 160.0 kt, vr -549 ft/min
+2025-12-02 16:42:46,147 [INFO] Ejecutando evento 2025-12-02 06:27:08.744296+01:00 (DLH1421 tramo 9: final pista 07L)
+2025-12-02 16:42:46,148 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 9: final pista 07L): rumbo 116.9, vel 150.0 kt, vr -1629 ft/min
+2025-12-02 16:42:46,229 [INFO] Ejecutando evento 2025-12-02 06:27:18.693403+01:00 (RYR611 tramo 7: tramo base)
+2025-12-02 16:42:46,231 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 7: tramo base): rumbo 173.4, vel 170.0 kt, vr -505 ft/min
+2025-12-02 16:42:46,923 [INFO] Ejecutando evento 2025-12-02 06:28:41.886360+01:00 (RYR611 tramo 8: captura localizador ILS 07L)
+2025-12-02 16:42:46,925 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 8: captura localizador ILS 07L): rumbo 153.4, vel 160.0 kt, vr -1059 ft/min
+2025-12-02 16:42:47,300 [INFO] Ejecutando evento 2025-12-02 06:29:27.209765+01:00 (RYR611 tramo 9: final ILS 07L)
+2025-12-02 16:42:47,302 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 9: final ILS 07L): rumbo 126.3, vel 140.0 kt, vr -3000 ft/min
+2025-12-02 16:47:55,406 [INFO] Total de eventos programados: 61
+2025-12-02 16:47:55,406 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+2025-12-02 16:47:55,409 [INFO] Creado DLH1421 con hex A8F1C2 en intento 1
+2025-12-02 16:47:55,656 [INFO] Ejecutando evento 2025-12-02 05:57:00+01:00 (Creacion de EZY8104)
+2025-12-02 16:47:55,658 [INFO] Creado EZY8104 con hex 820604 en intento 1
+2025-12-02 16:47:55,906 [INFO] Ejecutando evento 2025-12-02 05:57:30+01:00 (Creacion de AFR1738)
+2025-12-02 16:47:55,908 [INFO] Creado AFR1738 con hex 1422C5 en intento 1
+2025-12-02 16:47:56,656 [INFO] Ejecutando evento 2025-12-02 05:59:00+01:00 (Creacion de VLG201)
+2025-12-02 16:47:56,659 [INFO] Creado VLG201 con hex 0B62FB en intento 1
+2025-12-02 16:47:57,156 [INFO] Ejecutando evento 2025-12-02 06:00:00+01:00 (VLG201 tramo 1: despegue y ascenso a NELSO)
+2025-12-02 16:47:57,158 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 1: despegue y ascenso a NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 16:47:57,281 [INFO] Ejecutando evento 2025-12-02 06:00:15+01:00 (Creacion de IBE432)
+2025-12-02 16:47:57,284 [INFO] Creado IBE432 con hex 14DA31 en intento 1
+2025-12-02 16:47:57,531 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (IBE432 tramo 1: ascenso hacia MASNU)
+2025-12-02 16:47:57,533 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 1: ascenso hacia MASNU): rumbo 41.9, vel 190.0 kt, vr 833 ft/min
+2025-12-02 16:47:57,533 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (Creacion de VY6502)
+2025-12-02 16:47:57,534 [INFO] Creado VY6502 con hex 7CDA56 en intento 1
+2025-12-02 16:47:57,823 [INFO] Ejecutando evento 2025-12-02 06:01:20+01:00 (Creacion de RYR221)
+2025-12-02 16:47:57,825 [INFO] Creado RYR221 con hex 441E4B en intento 1
+2025-12-02 16:47:57,906 [INFO] Ejecutando evento 2025-12-02 06:01:30+01:00 (VY6502 tramo 1: salida costera NELSO)
+2025-12-02 16:47:57,908 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 1: salida costera NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 16:47:58,065 [INFO] Ejecutando evento 2025-12-02 06:01:49.056293+01:00 (VLG201 tramo 2: rumbo oeste hacia TARRA)
+2025-12-02 16:47:58,067 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 2: rumbo oeste hacia TARRA): rumbo 254.2, vel 250.0 kt, vr 682 ft/min
+2025-12-02 16:47:58,281 [INFO] Ejecutando evento 2025-12-02 06:02:15+01:00 (RYR221 tramo 1: ascenso inicial hacia MASNU)
+2025-12-02 16:47:58,283 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 1: ascenso inicial hacia MASNU): rumbo 41.9, vel 200.0 kt, vr 877 ft/min
+2025-12-02 16:47:58,656 [INFO] Ejecutando evento 2025-12-02 06:03:00+01:00 (DLH1421 tramo 1: LORET a SITGE)
+2025-12-02 16:47:58,658 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 1: LORET a SITGE): rumbo 103.8, vel 250.0 kt, vr -299 ft/min
+2025-12-02 16:47:58,815 [INFO] Ejecutando evento 2025-12-02 06:03:19.056293+01:00 (VY6502 tramo 2: viraje hacia SITGE)
+2025-12-02 16:47:58,817 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 2: viraje hacia SITGE): rumbo 270.1, vel 240.0 kt, vr 886 ft/min
+2025-12-02 16:47:59,156 [INFO] Ejecutando evento 2025-12-02 06:04:00+01:00 (EZY8104 tramo 1: KENAS a BAMES)
+2025-12-02 16:47:59,158 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 1: KENAS a BAMES): rumbo 223.2, vel 250.0 kt, vr -670 ft/min
+2025-12-02 16:47:59,406 [INFO] Ejecutando evento 2025-12-02 06:04:30+01:00 (Creacion de RYR611)
+2025-12-02 16:47:59,420 [INFO] Creado RYR611 con hex 667D0F en intento 1
+2025-12-02 16:47:59,656 [INFO] Ejecutando evento 2025-12-02 06:05:00+01:00 (RYR611 tramo 1: TGA a SITGE)
+2025-12-02 16:47:59,658 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 1: TGA a SITGE): rumbo 79.4, vel 280.0 kt, vr -810 ft/min
+2025-12-02 16:47:59,933 [INFO] Ejecutando evento 2025-12-02 06:05:33.175599+01:00 (IBE432 tramo 2: ruta norte a BAMES)
+2025-12-02 16:47:59,935 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 2: ruta norte a BAMES): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 16:48:00,156 [INFO] Ejecutando evento 2025-12-02 06:06:00+01:00 (AFR1738 tramo 1: MASNU a SLL)
+2025-12-02 16:48:00,158 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 1: MASNU a SLL): rumbo 284.2, vel 220.0 kt, vr -1216 ft/min
+2025-12-02 16:48:00,563 [INFO] Ejecutando evento 2025-12-02 06:06:48.766819+01:00 (RYR221 tramo 2: seguimiento costa norte)
+2025-12-02 16:48:00,565 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 2: seguimiento costa norte): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 16:48:00,650 [INFO] Ejecutando evento 2025-12-02 06:06:59.236178+01:00 (EZY8104 tramo 2: descenso hacia MASNU)
+2025-12-02 16:48:00,652 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 2: descenso hacia MASNU): rumbo 194.8, vel 230.0 kt, vr -726 ft/min
+2025-12-02 16:48:01,073 [INFO] Ejecutando evento 2025-12-02 06:07:49.983784+01:00 (VY6502 tramo 3: ascenso sobre TGA)
+2025-12-02 16:48:01,075 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 3: ascenso sobre TGA): rumbo 259.8, vel 280.0 kt, vr 810 ft/min
+2025-12-02 16:48:01,390 [INFO] Ejecutando evento 2025-12-02 06:08:28.000006+01:00 (AFR1738 tramo 2: downwind norte)
+2025-12-02 16:48:01,391 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 2: downwind norte): rumbo 208.6, vel 200.0 kt, vr -417 ft/min
+2025-12-02 16:48:01,732 [INFO] Ejecutando evento 2025-12-02 06:09:09.127978+01:00 (VLG201 tramo 3: cruce de TGA)
+2025-12-02 16:48:01,734 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 3: cruce de TGA): rumbo 280.8, vel 280.0 kt, vr 1077 ft/min
+2025-12-02 16:48:01,913 [INFO] Ejecutando evento 2025-12-02 06:09:30.692551+01:00 (IBE432 tramo 3: intercepta KENAS)
+2025-12-02 16:48:01,914 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 3: intercepta KENAS): rumbo 43.0, vel 280.0 kt, vr 2250 ft/min
+2025-12-02 16:48:02,542 [INFO] Ejecutando evento 2025-12-02 06:10:46.283771+01:00 (RYR221 tramo 3: cruce Girona TMA)
+2025-12-02 16:48:02,544 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 3: cruce Girona TMA): rumbo 43.0, vel 260.0 kt, vr 1393 ft/min
+2025-12-02 16:48:02,589 [INFO] Ejecutando evento 2025-12-02 06:10:51.877197+01:00 (AFR1738 tramo 3: tramo base 07R)
+2025-12-02 16:48:02,591 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 3: tramo base 07R): rumbo 163.9, vel 185.0 kt, vr -759 ft/min
+2025-12-02 16:48:02,715 [INFO] Ejecutando evento 2025-12-02 06:11:07.079954+01:00 (EZY8104 tramo 3: SLL inicial)
+2025-12-02 16:48:02,718 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 3: SLL inicial): rumbo 284.2, vel 210.0 kt, vr -387 ft/min
+2025-12-02 16:48:02,741 [INFO] Ejecutando evento 2025-12-02 06:11:10.177372+01:00 (RYR611 tramo 2: aproximacion via SARGO)
+2025-12-02 16:48:02,743 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 2: aproximacion via SARGO): rumbo 84.8, vel 240.0 kt, vr -1765 ft/min
+2025-12-02 16:48:03,246 [INFO] Ejecutando evento 2025-12-02 06:12:10.724853+01:00 (IBE432 tramo 4: salida a GIRON)
+2025-12-02 16:48:03,248 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 4: salida a GIRON): rumbo 84.1, vel 300.0 kt, vr 3000 ft/min
+2025-12-02 16:48:03,248 [INFO] Ejecutando evento 2025-12-02 06:12:10.920683+01:00 (AFR1738 tramo 4: captura localizador 07R)
+2025-12-02 16:48:03,249 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 4: captura localizador 07R): rumbo 153.4, vel 170.0 kt, vr -1125 ft/min
+2025-12-02 16:48:03,590 [INFO] Ejecutando evento 2025-12-02 06:12:52.033505+01:00 (VLG201 tramo 4: salida del TMA via LORET)
+2025-12-02 16:48:03,592 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 4: salida del TMA via LORET): rumbo 321.4, vel 320.0 kt, vr 1621 ft/min
+2025-12-02 16:48:03,603 [INFO] Ejecutando evento 2025-12-02 06:12:53.578005+01:00 (AFR1738 tramo 5: final 07R)
+2025-12-02 16:48:03,605 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 5: final 07R): rumbo 136.5, vel 150.0 kt, vr -3000 ft/min
+2025-12-02 16:48:03,678 [INFO] Ejecutando evento 2025-12-02 06:13:02.637449+01:00 (DLH1421 tramo 2: descenso sobre costa)
+2025-12-02 16:48:03,680 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 2: descenso sobre costa): rumbo 84.8, vel 230.0 kt, vr -1691 ft/min
+2025-12-02 16:48:03,978 [INFO] Ejecutando evento 2025-12-02 06:13:38.626250+01:00 (RYR221 tramo 4: salida FIR via GIRON)
+2025-12-02 16:48:03,980 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 4: salida FIR via GIRON): rumbo 84.1, vel 300.0 kt, vr 2473 ft/min
+2025-12-02 16:48:04,007 [INFO] Ejecutando evento 2025-12-02 06:13:42.127579+01:00 (EZY8104 tramo 4: tramo a downwind norte)
+2025-12-02 16:48:04,009 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 4: tramo a downwind norte): rumbo 208.6, vel 200.0 kt, vr -209 ft/min
+2025-12-02 16:48:04,054 [INFO] Ejecutando evento 2025-12-02 06:13:47.758937+01:00 (Eliminacion de IBE432)
+2025-12-02 16:48:04,056 [INFO] Aeronave IBE432 eliminada.
+2025-12-02 16:48:04,158 [INFO] Ejecutando evento 2025-12-02 06:14:00.161156+01:00 (VY6502 tramo 4: salida del TMA rumbo LORET)
+2025-12-02 16:48:04,160 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 4: salida del TMA rumbo LORET): rumbo 321.4, vel 320.0 kt, vr 1891 ft/min
+2025-12-02 16:48:04,443 [INFO] Ejecutando evento 2025-12-02 06:14:34.138878+01:00 (RYR611 tramo 3: IAF UBAGA)
+2025-12-02 16:48:04,447 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 3: IAF UBAGA): rumbo 15.3, vel 220.0 kt, vr -1071 ft/min
+2025-12-02 16:48:04,787 [INFO] Ejecutando evento 2025-12-02 06:15:15.660334+01:00 (Eliminacion de RYR221)
+2025-12-02 16:48:04,789 [INFO] Aeronave RYR221 eliminada.
+2025-12-02 16:48:05,206 [INFO] Ejecutando evento 2025-12-02 06:16:06.004770+01:00 (EZY8104 tramo 5: tramo base 07L)
+2025-12-02 16:48:05,209 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 5: tramo base 07L): rumbo 173.4, vel 190.0 kt, vr -806 ft/min
+2025-12-02 16:48:05,375 [INFO] Ejecutando evento 2025-12-02 06:16:26.171338+01:00 (RYR611 tramo 4: rumbo a SLL para espera)
+2025-12-02 16:48:05,376 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 4: rumbo a SLL para espera): rumbo 350.5, vel 200.0 kt, vr -698 ft/min
+2025-12-02 16:48:05,441 [INFO] Ejecutando evento 2025-12-02 06:16:34.100899+01:00 (Eliminacion de VLG201)
+2025-12-02 16:48:05,443 [INFO] Aeronave VLG201 eliminada.
+2025-12-02 16:48:05,452 [INFO] Ejecutando evento 2025-12-02 06:16:35.466847+01:00 (DLH1421 tramo 3: IAF UBAGA)
+2025-12-02 16:48:05,454 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 3: IAF UBAGA): rumbo 15.3, vel 210.0 kt, vr -1534 ft/min
+2025-12-02 16:48:05,827 [INFO] Ejecutando evento 2025-12-02 06:17:20.440574+01:00 (EZY8104 tramo 6: intercepta localizador ILS 07L)
+2025-12-02 16:48:05,829 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 6: intercepta localizador ILS 07L): rumbo 153.4, vel 180.0 kt, vr -1489 ft/min
+2025-12-02 16:48:06,008 [INFO] Ejecutando evento 2025-12-02 06:17:42.228550+01:00 (Eliminacion de VY6502)
+2025-12-02 16:48:06,010 [INFO] Aeronave VY6502 eliminada.
+2025-12-02 16:48:06,162 [INFO] Ejecutando evento 2025-12-02 06:18:00.728045+01:00 (EZY8104 tramo 7: tramo final de aproximacion)
+2025-12-02 16:48:06,164 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 7: tramo final de aproximacion): rumbo 291.8, vel 170.0 kt, vr -1167 ft/min
+2025-12-02 16:48:06,430 [INFO] Ejecutando evento 2025-12-02 06:18:32.834186+01:00 (DLH1421 tramo 4: tramo intermedio SLL)
+2025-12-02 16:48:06,432 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 4: tramo intermedio SLL): rumbo 350.5, vel 190.0 kt, vr -332 ft/min
+2025-12-02 16:48:06,591 [INFO] Ejecutando evento 2025-12-02 06:18:52.146222+01:00 (EZY8104 tramo 8: final ILS 07L)
+2025-12-02 16:48:06,593 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 8: final ILS 07L): rumbo 116.9, vel 140.0 kt, vr -1520 ft/min
+2025-12-02 16:48:06,807 [INFO] Ejecutando evento 2025-12-02 06:19:18.092270+01:00 (RYR611 hold tramo outbound)
+2025-12-02 16:48:06,809 [INFO] Actualizacion enviada para RYR611 (RYR611 hold tramo outbound): rumbo 246.0, vel 180.0 kt, vr 0 ft/min
+2025-12-02 16:48:07,182 [INFO] Ejecutando evento 2025-12-02 06:20:03.092270+01:00 (RYR611 hold tramo inbound)
+2025-12-02 16:48:07,184 [INFO] Actualizacion enviada para RYR611 (RYR611 hold tramo inbound): rumbo 66.0, vel 180.0 kt, vr 0 ft/min
+2025-12-02 16:48:07,557 [INFO] Ejecutando evento 2025-12-02 06:20:48.092270+01:00 (RYR611 tramo 5: abandonando hold hacia DOBRO)
+2025-12-02 16:48:07,559 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 5: abandonando hold hacia DOBRO): rumbo 206.1, vel 170.0 kt, vr -512 ft/min
+2025-12-02 16:48:07,938 [INFO] Ejecutando evento 2025-12-02 06:21:33.803589+01:00 (DLH1421 tramo 5: downwind norte)
+2025-12-02 16:48:07,940 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 5: downwind norte): rumbo 208.6, vel 185.0 kt, vr -193 ft/min
+2025-12-02 16:48:09,234 [INFO] Ejecutando evento 2025-12-02 06:24:09.346498+01:00 (DLH1421 tramo 6: tramo base 07L)
+2025-12-02 16:48:09,236 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 6: tramo base 07L): rumbo 173.4, vel 175.0 kt, vr -520 ft/min
+2025-12-02 16:48:09,908 [INFO] Ejecutando evento 2025-12-02 06:25:30.162514+01:00 (DLH1421 tramo 7: intercepta ILS 07L)
+2025-12-02 16:48:09,910 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 7: intercepta ILS 07L): rumbo 153.4, vel 165.0 kt, vr -1092 ft/min
+2025-12-02 16:48:09,998 [INFO] Ejecutando evento 2025-12-02 06:25:40.952086+01:00 (RYR611 tramo 6: downwind norte)
+2025-12-02 16:48:10,000 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 6: downwind norte): rumbo 10.6, vel 180.0 kt, vr 1228 ft/min
+2025-12-02 16:48:10,274 [INFO] Ejecutando evento 2025-12-02 06:26:14.112483+01:00 (DLH1421 tramo 8: tramo final de aproximacion)
+2025-12-02 16:48:10,276 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 8: tramo final de aproximacion): rumbo 291.8, vel 160.0 kt, vr -549 ft/min
+2025-12-02 16:48:10,729 [INFO] Ejecutando evento 2025-12-02 06:27:08.744296+01:00 (DLH1421 tramo 9: final pista 07L)
+2025-12-02 16:48:10,731 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 9: final pista 07L): rumbo 116.9, vel 150.0 kt, vr -1629 ft/min
+2025-12-02 16:48:10,812 [INFO] Ejecutando evento 2025-12-02 06:27:18.693403+01:00 (RYR611 tramo 7: tramo base)
+2025-12-02 16:48:10,814 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 7: tramo base): rumbo 173.4, vel 170.0 kt, vr -505 ft/min
+2025-12-02 16:48:14,108 [INFO] Ejecutando evento 2025-12-02 06:28:41.886360+01:00 (RYR611 tramo 8: captura localizador ILS 07L)
+2025-12-02 16:48:14,111 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 8: captura localizador ILS 07L): rumbo 153.4, vel 160.0 kt, vr -1059 ft/min
+2025-12-02 16:48:14,486 [INFO] Ejecutando evento 2025-12-02 06:29:27.209765+01:00 (RYR611 tramo 9: final ILS 07L)
+2025-12-02 16:48:14,488 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 9: final ILS 07L): rumbo 126.3, vel 140.0 kt, vr -3000 ft/min
+2025-12-02 17:02:29,256 [INFO] Total de eventos programados: 61
+2025-12-02 17:02:29,257 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+2025-12-02 17:02:29,262 [INFO] Creado DLH1421 con hex 48E429 en intento 1
+2025-12-02 17:02:29,507 [INFO] Ejecutando evento 2025-12-02 05:57:00+01:00 (Creacion de EZY8104)
+2025-12-02 17:02:29,511 [INFO] Creado EZY8104 con hex A1B2E0 en intento 1
+2025-12-02 17:02:29,757 [INFO] Ejecutando evento 2025-12-02 05:57:30+01:00 (Creacion de AFR1738)
+2025-12-02 17:02:29,760 [INFO] Creado AFR1738 con hex C307F1 en intento 1
+2025-12-02 17:02:30,507 [INFO] Ejecutando evento 2025-12-02 05:59:00+01:00 (Creacion de VLG201)
+2025-12-02 17:02:30,511 [INFO] Creado VLG201 con hex 476A09 en intento 1
+2025-12-02 17:02:31,007 [INFO] Ejecutando evento 2025-12-02 06:00:00+01:00 (VLG201 tramo 1: despegue y ascenso a NELSO)
+2025-12-02 17:02:31,010 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 1: despegue y ascenso a NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 17:02:31,132 [INFO] Ejecutando evento 2025-12-02 06:00:15+01:00 (Creacion de IBE432)
+2025-12-02 17:02:31,136 [INFO] Creado IBE432 con hex 76DE6C en intento 1
+2025-12-02 17:02:31,382 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (IBE432 tramo 1: ascenso hacia MASNU)
+2025-12-02 17:02:31,385 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 1: ascenso hacia MASNU): rumbo 41.9, vel 190.0 kt, vr 833 ft/min
+2025-12-02 17:02:31,386 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (Creacion de VY6502)
+2025-12-02 17:02:31,389 [INFO] Creado VY6502 con hex 1F67A8 en intento 1
+2025-12-02 17:02:31,674 [INFO] Ejecutando evento 2025-12-02 06:01:20+01:00 (Creacion de RYR221)
+2025-12-02 17:02:31,677 [INFO] Creado RYR221 con hex EA0FEF en intento 1
+2025-12-02 17:02:31,757 [INFO] Ejecutando evento 2025-12-02 06:01:30+01:00 (VY6502 tramo 1: salida costera NELSO)
+2025-12-02 17:02:31,760 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 1: salida costera NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 17:02:31,916 [INFO] Ejecutando evento 2025-12-02 06:01:49.056293+01:00 (VLG201 tramo 2: rumbo oeste hacia TARRA)
+2025-12-02 17:02:31,919 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 2: rumbo oeste hacia TARRA): rumbo 254.2, vel 250.0 kt, vr 682 ft/min
+2025-12-02 17:02:32,132 [INFO] Ejecutando evento 2025-12-02 06:02:15+01:00 (RYR221 tramo 1: ascenso inicial hacia MASNU)
+2025-12-02 17:02:32,135 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 1: ascenso inicial hacia MASNU): rumbo 41.9, vel 200.0 kt, vr 877 ft/min
+2025-12-02 17:02:32,507 [INFO] Ejecutando evento 2025-12-02 06:03:00+01:00 (DLH1421 tramo 1: LORET a SITGE)
+2025-12-02 17:02:32,510 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 1: LORET a SITGE): rumbo 103.8, vel 250.0 kt, vr -299 ft/min
+2025-12-02 17:02:32,666 [INFO] Ejecutando evento 2025-12-02 06:03:19.056293+01:00 (VY6502 tramo 2: viraje hacia SITGE)
+2025-12-02 17:02:32,669 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 2: viraje hacia SITGE): rumbo 270.1, vel 240.0 kt, vr 886 ft/min
+2025-12-02 17:02:33,007 [INFO] Ejecutando evento 2025-12-02 06:04:00+01:00 (EZY8104 tramo 1: KENAS a BAMES)
+2025-12-02 17:02:33,010 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 1: KENAS a BAMES): rumbo 223.2, vel 250.0 kt, vr -670 ft/min
+2025-12-02 17:02:33,257 [INFO] Ejecutando evento 2025-12-02 06:04:30+01:00 (Creacion de RYR611)
+2025-12-02 17:02:33,261 [INFO] Creado RYR611 con hex 4EFF7F en intento 1
+2025-12-02 17:02:33,507 [INFO] Ejecutando evento 2025-12-02 06:05:00+01:00 (RYR611 tramo 1: TGA a SITGE)
+2025-12-02 17:02:33,510 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 1: TGA a SITGE): rumbo 79.4, vel 280.0 kt, vr -810 ft/min
+2025-12-02 17:02:33,784 [INFO] Ejecutando evento 2025-12-02 06:05:33.175599+01:00 (IBE432 tramo 2: ruta norte a BAMES)
+2025-12-02 17:02:33,787 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 2: ruta norte a BAMES): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 17:02:34,007 [INFO] Ejecutando evento 2025-12-02 06:06:00+01:00 (AFR1738 tramo 1: MASNU a SLL)
+2025-12-02 17:02:34,010 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 1: MASNU a SLL): rumbo 284.2, vel 220.0 kt, vr -1216 ft/min
+2025-12-02 17:02:34,414 [INFO] Ejecutando evento 2025-12-02 06:06:48.766819+01:00 (RYR221 tramo 2: seguimiento costa norte)
+2025-12-02 17:02:34,417 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 2: seguimiento costa norte): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 17:02:34,501 [INFO] Ejecutando evento 2025-12-02 06:06:59.236178+01:00 (EZY8104 tramo 2: descenso hacia MASNU)
+2025-12-02 17:02:34,504 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 2: descenso hacia MASNU): rumbo 194.8, vel 230.0 kt, vr -726 ft/min
+2025-12-02 17:02:34,924 [INFO] Ejecutando evento 2025-12-02 06:07:49.983784+01:00 (VY6502 tramo 3: ascenso sobre TGA)
+2025-12-02 17:02:34,927 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 3: ascenso sobre TGA): rumbo 259.8, vel 280.0 kt, vr 810 ft/min
+2025-12-02 17:02:35,241 [INFO] Ejecutando evento 2025-12-02 06:08:28.000006+01:00 (AFR1738 tramo 2: downwind norte)
+2025-12-02 17:02:35,244 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 2: downwind norte): rumbo 208.6, vel 200.0 kt, vr -417 ft/min
+2025-12-02 17:02:35,583 [INFO] Ejecutando evento 2025-12-02 06:09:09.127978+01:00 (VLG201 tramo 3: cruce de TGA)
+2025-12-02 17:02:35,586 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 3: cruce de TGA): rumbo 280.8, vel 280.0 kt, vr 1077 ft/min
+2025-12-02 17:02:35,763 [INFO] Ejecutando evento 2025-12-02 06:09:30.692551+01:00 (IBE432 tramo 3: intercepta KENAS)
+2025-12-02 17:02:35,765 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 3: intercepta KENAS): rumbo 43.0, vel 280.0 kt, vr 2250 ft/min
+2025-12-02 17:02:36,393 [INFO] Ejecutando evento 2025-12-02 06:10:46.283771+01:00 (RYR221 tramo 3: cruce Girona TMA)
+2025-12-02 17:02:36,396 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 3: cruce Girona TMA): rumbo 43.0, vel 260.0 kt, vr 1393 ft/min
+2025-12-02 17:02:36,440 [INFO] Ejecutando evento 2025-12-02 06:10:51.877197+01:00 (AFR1738 tramo 3: tramo base 07R)
+2025-12-02 17:02:36,442 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 3: tramo base 07R): rumbo 163.9, vel 185.0 kt, vr -759 ft/min
+2025-12-02 17:02:36,566 [INFO] Ejecutando evento 2025-12-02 06:11:07.079954+01:00 (EZY8104 tramo 3: SLL inicial)
+2025-12-02 17:02:36,569 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 3: SLL inicial): rumbo 284.2, vel 210.0 kt, vr -387 ft/min
+2025-12-02 17:02:36,592 [INFO] Ejecutando evento 2025-12-02 06:11:10.177372+01:00 (RYR611 tramo 2: aproximacion via SARGO)
+2025-12-02 17:02:36,594 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 2: aproximacion via SARGO): rumbo 84.8, vel 240.0 kt, vr -1765 ft/min
+2025-12-02 17:02:37,097 [INFO] Ejecutando evento 2025-12-02 06:12:10.724853+01:00 (IBE432 tramo 4: salida a GIRON)
+2025-12-02 17:02:37,100 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 4: salida a GIRON): rumbo 84.1, vel 300.0 kt, vr 3000 ft/min
+2025-12-02 17:02:37,100 [INFO] Ejecutando evento 2025-12-02 06:12:10.920683+01:00 (AFR1738 tramo 4: captura localizador 07R)
+2025-12-02 17:02:37,102 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 4: captura localizador 07R): rumbo 153.4, vel 170.0 kt, vr -1125 ft/min
+2025-12-02 17:02:37,441 [INFO] Ejecutando evento 2025-12-02 06:12:52.033505+01:00 (VLG201 tramo 4: salida del TMA via LORET)
+2025-12-02 17:02:37,444 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 4: salida del TMA via LORET): rumbo 321.4, vel 320.0 kt, vr 1621 ft/min
+2025-12-02 17:02:37,454 [INFO] Ejecutando evento 2025-12-02 06:12:53.578005+01:00 (AFR1738 tramo 5: final 07R)
+2025-12-02 17:02:37,456 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 5: final 07R): rumbo 136.5, vel 150.0 kt, vr -3000 ft/min
+2025-12-02 17:02:37,529 [INFO] Ejecutando evento 2025-12-02 06:13:02.637449+01:00 (DLH1421 tramo 2: descenso sobre costa)
+2025-12-02 17:02:37,532 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 2: descenso sobre costa): rumbo 84.8, vel 230.0 kt, vr -1691 ft/min
+2025-12-02 17:02:37,829 [INFO] Ejecutando evento 2025-12-02 06:13:38.626250+01:00 (RYR221 tramo 4: salida FIR via GIRON)
+2025-12-02 17:02:37,832 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 4: salida FIR via GIRON): rumbo 84.1, vel 300.0 kt, vr 2473 ft/min
+2025-12-02 17:02:37,858 [INFO] Ejecutando evento 2025-12-02 06:13:42.127579+01:00 (EZY8104 tramo 4: tramo a downwind norte)
+2025-12-02 17:02:37,861 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 4: tramo a downwind norte): rumbo 208.6, vel 200.0 kt, vr -209 ft/min
+2025-12-02 17:02:37,905 [INFO] Ejecutando evento 2025-12-02 06:13:47.758937+01:00 (Eliminacion de IBE432)
+2025-12-02 17:02:37,908 [INFO] Aeronave IBE432 eliminada.
+2025-12-02 17:02:38,009 [INFO] Ejecutando evento 2025-12-02 06:14:00.161156+01:00 (VY6502 tramo 4: salida del TMA rumbo LORET)
+2025-12-02 17:02:38,011 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 4: salida del TMA rumbo LORET): rumbo 321.4, vel 320.0 kt, vr 1891 ft/min
+2025-12-02 17:02:38,292 [INFO] Ejecutando evento 2025-12-02 06:14:34.138878+01:00 (RYR611 tramo 3: IAF UBAGA)
+2025-12-02 17:02:38,295 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 3: IAF UBAGA): rumbo 15.3, vel 220.0 kt, vr -1071 ft/min
+2025-12-02 17:02:38,638 [INFO] Ejecutando evento 2025-12-02 06:15:15.660334+01:00 (Eliminacion de RYR221)
+2025-12-02 17:02:38,641 [INFO] Aeronave RYR221 eliminada.
+2025-12-02 17:02:39,057 [INFO] Ejecutando evento 2025-12-02 06:16:06.004770+01:00 (EZY8104 tramo 5: tramo base 07L)
+2025-12-02 17:02:39,060 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 5: tramo base 07L): rumbo 173.4, vel 190.0 kt, vr -806 ft/min
+2025-12-02 17:02:39,225 [INFO] Ejecutando evento 2025-12-02 06:16:26.171338+01:00 (RYR611 tramo 4: rumbo a SLL para espera)
+2025-12-02 17:02:39,228 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 4: rumbo a SLL para espera): rumbo 350.5, vel 200.0 kt, vr -698 ft/min
+2025-12-02 17:02:39,291 [INFO] Ejecutando evento 2025-12-02 06:16:34.100899+01:00 (Eliminacion de VLG201)
+2025-12-02 17:02:39,295 [INFO] Aeronave VLG201 eliminada.
+2025-12-02 17:02:39,303 [INFO] Ejecutando evento 2025-12-02 06:16:35.466847+01:00 (DLH1421 tramo 3: IAF UBAGA)
+2025-12-02 17:02:39,305 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 3: IAF UBAGA): rumbo 15.3, vel 210.0 kt, vr -1534 ft/min
+2025-12-02 17:02:39,677 [INFO] Ejecutando evento 2025-12-02 06:17:20.440574+01:00 (EZY8104 tramo 6: intercepta localizador ILS 07L)
+2025-12-02 17:02:39,680 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 6: intercepta localizador ILS 07L): rumbo 153.4, vel 180.0 kt, vr -1489 ft/min
+2025-12-02 17:02:39,859 [INFO] Ejecutando evento 2025-12-02 06:17:42.228550+01:00 (Eliminacion de VY6502)
+2025-12-02 17:02:39,862 [INFO] Aeronave VY6502 eliminada.
+2025-12-02 17:02:40,013 [INFO] Ejecutando evento 2025-12-02 06:18:00.728045+01:00 (EZY8104 tramo 7: tramo final de aproximacion)
+2025-12-02 17:02:40,016 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 7: tramo final de aproximacion): rumbo 291.8, vel 170.0 kt, vr -1167 ft/min
+2025-12-02 17:02:40,281 [INFO] Ejecutando evento 2025-12-02 06:18:32.834186+01:00 (DLH1421 tramo 4: tramo intermedio SLL)
+2025-12-02 17:02:40,283 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 4: tramo intermedio SLL): rumbo 350.5, vel 190.0 kt, vr -332 ft/min
+2025-12-02 17:02:40,442 [INFO] Ejecutando evento 2025-12-02 06:18:52.146222+01:00 (EZY8104 tramo 8: final ILS 07L)
+2025-12-02 17:02:40,444 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 8: final ILS 07L): rumbo 116.9, vel 140.0 kt, vr -1520 ft/min
+2025-12-02 17:02:40,658 [INFO] Ejecutando evento 2025-12-02 06:19:18.092270+01:00 (RYR611 hold tramo outbound)
+2025-12-02 17:02:40,660 [INFO] Actualizacion enviada para RYR611 (RYR611 hold tramo outbound): rumbo 246.0, vel 180.0 kt, vr 0 ft/min
+2025-12-02 17:02:41,033 [INFO] Ejecutando evento 2025-12-02 06:20:03.092270+01:00 (RYR611 hold tramo inbound)
+2025-12-02 17:02:41,036 [INFO] Actualizacion enviada para RYR611 (RYR611 hold tramo inbound): rumbo 66.0, vel 180.0 kt, vr 0 ft/min
+2025-12-02 17:02:41,408 [INFO] Ejecutando evento 2025-12-02 06:20:48.092270+01:00 (RYR611 tramo 5: abandonando hold hacia DOBRO)
+2025-12-02 17:02:41,411 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 5: abandonando hold hacia DOBRO): rumbo 206.1, vel 170.0 kt, vr -512 ft/min
+2025-12-02 17:02:41,789 [INFO] Ejecutando evento 2025-12-02 06:21:33.803589+01:00 (DLH1421 tramo 5: downwind norte)
+2025-12-02 17:02:41,792 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 5: downwind norte): rumbo 208.6, vel 185.0 kt, vr -193 ft/min
+2025-12-02 17:02:43,085 [INFO] Ejecutando evento 2025-12-02 06:24:09.346498+01:00 (DLH1421 tramo 6: tramo base 07L)
+2025-12-02 17:02:43,089 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 6: tramo base 07L): rumbo 173.4, vel 175.0 kt, vr -520 ft/min
+2025-12-02 17:02:43,759 [INFO] Ejecutando evento 2025-12-02 06:25:30.162514+01:00 (DLH1421 tramo 7: intercepta ILS 07L)
+2025-12-02 17:02:43,762 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 7: intercepta ILS 07L): rumbo 153.4, vel 165.0 kt, vr -1092 ft/min
+2025-12-02 17:02:43,848 [INFO] Ejecutando evento 2025-12-02 06:25:40.952086+01:00 (RYR611 tramo 6: downwind norte)
+2025-12-02 17:02:43,851 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 6: downwind norte): rumbo 10.6, vel 180.0 kt, vr 1228 ft/min
+2025-12-02 17:02:44,125 [INFO] Ejecutando evento 2025-12-02 06:26:14.112483+01:00 (DLH1421 tramo 8: tramo final de aproximacion)
+2025-12-02 17:02:44,127 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 8: tramo final de aproximacion): rumbo 291.8, vel 160.0 kt, vr -549 ft/min
+2025-12-02 17:02:44,580 [INFO] Ejecutando evento 2025-12-02 06:27:08.744296+01:00 (DLH1421 tramo 9: final pista 07L)
+2025-12-02 17:02:44,583 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 9: final pista 07L): rumbo 116.9, vel 150.0 kt, vr -1629 ft/min
+2025-12-02 17:02:44,663 [INFO] Ejecutando evento 2025-12-02 06:27:18.693403+01:00 (RYR611 tramo 7: tramo base)
+2025-12-02 17:02:44,667 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 7: tramo base): rumbo 173.4, vel 170.0 kt, vr -505 ft/min
+2025-12-02 17:02:45,356 [INFO] Ejecutando evento 2025-12-02 06:28:41.886360+01:00 (RYR611 tramo 8: captura localizador ILS 07L)
+2025-12-02 17:02:45,360 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 8: captura localizador ILS 07L): rumbo 153.4, vel 160.0 kt, vr -1059 ft/min
+2025-12-02 17:02:45,734 [INFO] Ejecutando evento 2025-12-02 06:29:27.209765+01:00 (RYR611 tramo 9: final ILS 07L)
+2025-12-02 17:02:45,737 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 9: final ILS 07L): rumbo 126.3, vel 140.0 kt, vr -3000 ft/min
+2025-12-02 17:10:04,413 [INFO] Total de eventos programados: 61
+2025-12-02 17:10:04,414 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+2025-12-02 17:10:04,419 [INFO] Creado DLH1421 con hex 6DC221 en intento 1
+2025-12-02 17:10:04,664 [INFO] Ejecutando evento 2025-12-02 05:57:00+01:00 (Creacion de EZY8104)
+2025-12-02 17:10:04,668 [INFO] Creado EZY8104 con hex AF0650 en intento 1
+2025-12-02 17:10:04,914 [INFO] Ejecutando evento 2025-12-02 05:57:30+01:00 (Creacion de AFR1738)
+2025-12-02 17:10:04,917 [INFO] Creado AFR1738 con hex 73C4F6 en intento 1
+2025-12-02 17:10:05,664 [INFO] Ejecutando evento 2025-12-02 05:59:00+01:00 (Creacion de VLG201)
+2025-12-02 17:10:05,667 [INFO] Creado VLG201 con hex CE6021 en intento 1
+2025-12-02 17:10:06,164 [INFO] Ejecutando evento 2025-12-02 06:00:00+01:00 (VLG201 tramo 1: despegue y ascenso a NELSO)
+2025-12-02 17:10:06,167 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 1: despegue y ascenso a NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 17:10:06,289 [INFO] Ejecutando evento 2025-12-02 06:00:15+01:00 (Creacion de IBE432)
+2025-12-02 17:10:06,292 [INFO] Creado IBE432 con hex 09BD76 en intento 1
+2025-12-02 17:10:06,539 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (IBE432 tramo 1: ascenso hacia MASNU)
+2025-12-02 17:10:06,542 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 1: ascenso hacia MASNU): rumbo 41.9, vel 190.0 kt, vr 833 ft/min
+2025-12-02 17:10:06,542 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (Creacion de VY6502)
+2025-12-02 17:10:06,545 [INFO] Creado VY6502 con hex 12D13A en intento 1
+2025-12-02 17:10:06,831 [INFO] Ejecutando evento 2025-12-02 06:01:20+01:00 (Creacion de RYR221)
+2025-12-02 17:10:06,834 [INFO] Creado RYR221 con hex 82EA57 en intento 1
+2025-12-02 17:10:06,914 [INFO] Ejecutando evento 2025-12-02 06:01:30+01:00 (VY6502 tramo 1: salida costera NELSO)
+2025-12-02 17:10:06,917 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 1: salida costera NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 17:10:07,073 [INFO] Ejecutando evento 2025-12-02 06:01:49.056293+01:00 (VLG201 tramo 2: rumbo oeste hacia TARRA)
+2025-12-02 17:10:07,076 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 2: rumbo oeste hacia TARRA): rumbo 254.2, vel 250.0 kt, vr 682 ft/min
+2025-12-02 17:10:07,289 [INFO] Ejecutando evento 2025-12-02 06:02:15+01:00 (RYR221 tramo 1: ascenso inicial hacia MASNU)
+2025-12-02 17:10:07,292 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 1: ascenso inicial hacia MASNU): rumbo 41.9, vel 200.0 kt, vr 877 ft/min
+2025-12-02 17:10:07,664 [INFO] Ejecutando evento 2025-12-02 06:03:00+01:00 (DLH1421 tramo 1: LORET a SITGE)
+2025-12-02 17:10:07,667 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 1: LORET a SITGE): rumbo 103.8, vel 250.0 kt, vr -299 ft/min
+2025-12-02 17:10:07,823 [INFO] Ejecutando evento 2025-12-02 06:03:19.056293+01:00 (VY6502 tramo 2: viraje hacia SITGE)
+2025-12-02 17:10:07,825 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 2: viraje hacia SITGE): rumbo 270.1, vel 240.0 kt, vr 886 ft/min
+2025-12-02 17:10:08,164 [INFO] Ejecutando evento 2025-12-02 06:04:00+01:00 (EZY8104 tramo 1: KENAS a BAMES)
+2025-12-02 17:10:08,166 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 1: KENAS a BAMES): rumbo 223.2, vel 250.0 kt, vr -670 ft/min
+2025-12-02 17:10:08,414 [INFO] Ejecutando evento 2025-12-02 06:04:30+01:00 (Creacion de RYR611)
+2025-12-02 17:10:08,417 [INFO] Creado RYR611 con hex 11A155 en intento 1
+2025-12-02 17:10:08,664 [INFO] Ejecutando evento 2025-12-02 06:05:00+01:00 (RYR611 tramo 1: TGA a SITGE)
+2025-12-02 17:10:08,666 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 1: TGA a SITGE): rumbo 79.4, vel 280.0 kt, vr -810 ft/min
+2025-12-02 17:10:08,940 [INFO] Ejecutando evento 2025-12-02 06:05:33.175599+01:00 (IBE432 tramo 2: ruta norte a BAMES)
+2025-12-02 17:10:08,943 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 2: ruta norte a BAMES): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 17:10:09,164 [INFO] Ejecutando evento 2025-12-02 06:06:00+01:00 (AFR1738 tramo 1: MASNU a SLL)
+2025-12-02 17:10:09,167 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 1: MASNU a SLL): rumbo 284.2, vel 220.0 kt, vr -1216 ft/min
+2025-12-02 17:10:09,570 [INFO] Ejecutando evento 2025-12-02 06:06:48.766819+01:00 (RYR221 tramo 2: seguimiento costa norte)
+2025-12-02 17:10:09,573 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 2: seguimiento costa norte): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 17:10:09,657 [INFO] Ejecutando evento 2025-12-02 06:06:59.236178+01:00 (EZY8104 tramo 2: descenso hacia MASNU)
+2025-12-02 17:10:09,660 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 2: descenso hacia MASNU): rumbo 194.8, vel 230.0 kt, vr -726 ft/min
+2025-12-02 17:10:10,080 [INFO] Ejecutando evento 2025-12-02 06:07:49.983784+01:00 (VY6502 tramo 3: ascenso sobre TGA)
+2025-12-02 17:10:10,083 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 3: ascenso sobre TGA): rumbo 259.8, vel 280.0 kt, vr 810 ft/min
+2025-12-02 17:10:10,397 [INFO] Ejecutando evento 2025-12-02 06:08:28.000006+01:00 (AFR1738 tramo 2: downwind norte)
+2025-12-02 17:10:10,401 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 2: downwind norte): rumbo 208.6, vel 200.0 kt, vr -417 ft/min
+2025-12-02 17:10:10,740 [INFO] Ejecutando evento 2025-12-02 06:09:09.127978+01:00 (VLG201 tramo 3: cruce de TGA)
+2025-12-02 17:10:10,744 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 3: cruce de TGA): rumbo 280.8, vel 280.0 kt, vr 1077 ft/min
+2025-12-02 17:10:10,919 [INFO] Ejecutando evento 2025-12-02 06:09:30.692551+01:00 (IBE432 tramo 3: intercepta KENAS)
+2025-12-02 17:10:10,923 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 3: intercepta KENAS): rumbo 43.0, vel 280.0 kt, vr 2250 ft/min
+2025-12-02 17:10:11,549 [INFO] Ejecutando evento 2025-12-02 06:10:46.283771+01:00 (RYR221 tramo 3: cruce Girona TMA)
+2025-12-02 17:10:11,553 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 3: cruce Girona TMA): rumbo 43.0, vel 260.0 kt, vr 1393 ft/min
+2025-12-02 17:10:11,596 [INFO] Ejecutando evento 2025-12-02 06:10:51.877197+01:00 (AFR1738 tramo 3: tramo base 07R)
+2025-12-02 17:10:11,599 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 3: tramo base 07R): rumbo 163.9, vel 185.0 kt, vr -759 ft/min
+2025-12-02 17:10:11,723 [INFO] Ejecutando evento 2025-12-02 06:11:07.079954+01:00 (EZY8104 tramo 3: SLL inicial)
+2025-12-02 17:10:11,725 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 3: SLL inicial): rumbo 284.2, vel 210.0 kt, vr -387 ft/min
+2025-12-02 17:10:11,748 [INFO] Ejecutando evento 2025-12-02 06:11:10.177372+01:00 (RYR611 tramo 2: aproximacion via SARGO)
+2025-12-02 17:10:11,751 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 2: aproximacion via SARGO): rumbo 84.8, vel 240.0 kt, vr -1765 ft/min
+2025-12-02 17:10:12,253 [INFO] Ejecutando evento 2025-12-02 06:12:10.724853+01:00 (IBE432 tramo 4: salida a GIRON)
+2025-12-02 17:10:12,256 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 4: salida a GIRON): rumbo 84.1, vel 300.0 kt, vr 3000 ft/min
+2025-12-02 17:10:12,257 [INFO] Ejecutando evento 2025-12-02 06:12:10.920683+01:00 (AFR1738 tramo 4: captura localizador 07R)
+2025-12-02 17:10:12,259 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 4: captura localizador 07R): rumbo 153.4, vel 170.0 kt, vr -1125 ft/min
+2025-12-02 17:10:12,597 [INFO] Ejecutando evento 2025-12-02 06:12:52.033505+01:00 (VLG201 tramo 4: salida del TMA via LORET)
+2025-12-02 17:10:12,601 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 4: salida del TMA via LORET): rumbo 321.4, vel 320.0 kt, vr 1621 ft/min
+2025-12-02 17:10:12,610 [INFO] Ejecutando evento 2025-12-02 06:12:53.578005+01:00 (AFR1738 tramo 5: final 07R)
+2025-12-02 17:10:12,613 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 5: final 07R): rumbo 136.5, vel 150.0 kt, vr -3000 ft/min
+2025-12-02 17:10:12,686 [INFO] Ejecutando evento 2025-12-02 06:13:02.637449+01:00 (DLH1421 tramo 2: descenso sobre costa)
+2025-12-02 17:10:12,688 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 2: descenso sobre costa): rumbo 84.8, vel 230.0 kt, vr -1691 ft/min
+2025-12-02 17:10:12,986 [INFO] Ejecutando evento 2025-12-02 06:13:38.626250+01:00 (RYR221 tramo 4: salida FIR via GIRON)
+2025-12-02 17:10:12,989 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 4: salida FIR via GIRON): rumbo 84.1, vel 300.0 kt, vr 2473 ft/min
+2025-12-02 17:10:13,015 [INFO] Ejecutando evento 2025-12-02 06:13:42.127579+01:00 (EZY8104 tramo 4: tramo a downwind norte)
+2025-12-02 17:10:13,018 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 4: tramo a downwind norte): rumbo 208.6, vel 200.0 kt, vr -209 ft/min
+2025-12-02 17:10:13,062 [INFO] Ejecutando evento 2025-12-02 06:13:47.758937+01:00 (Eliminacion de IBE432)
+2025-12-02 17:10:13,064 [INFO] Aeronave IBE432 eliminada.
+2025-12-02 17:10:13,165 [INFO] Ejecutando evento 2025-12-02 06:14:00.161156+01:00 (VY6502 tramo 4: salida del TMA rumbo LORET)
+2025-12-02 17:10:13,168 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 4: salida del TMA rumbo LORET): rumbo 321.4, vel 320.0 kt, vr 1891 ft/min
+2025-12-02 17:10:13,448 [INFO] Ejecutando evento 2025-12-02 06:14:34.138878+01:00 (RYR611 tramo 3: IAF UBAGA)
+2025-12-02 17:10:13,451 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 3: IAF UBAGA): rumbo 15.3, vel 220.0 kt, vr -1071 ft/min
+2025-12-02 17:10:13,794 [INFO] Ejecutando evento 2025-12-02 06:15:15.660334+01:00 (Eliminacion de RYR221)
+2025-12-02 17:10:13,797 [INFO] Aeronave RYR221 eliminada.
+2025-12-02 17:10:14,214 [INFO] Ejecutando evento 2025-12-02 06:16:06.004770+01:00 (EZY8104 tramo 5: tramo base 07L)
+2025-12-02 17:10:14,217 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 5: tramo base 07L): rumbo 173.4, vel 190.0 kt, vr -806 ft/min
+2025-12-02 17:10:14,382 [INFO] Ejecutando evento 2025-12-02 06:16:26.171338+01:00 (RYR611 tramo 4: rumbo a SLL para espera)
+2025-12-02 17:10:14,384 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 4: rumbo a SLL para espera): rumbo 350.5, vel 200.0 kt, vr -698 ft/min
+2025-12-02 17:10:14,448 [INFO] Ejecutando evento 2025-12-02 06:16:34.100899+01:00 (Eliminacion de VLG201)
+2025-12-02 17:10:14,451 [INFO] Aeronave VLG201 eliminada.
+2025-12-02 17:10:14,459 [INFO] Ejecutando evento 2025-12-02 06:16:35.466847+01:00 (DLH1421 tramo 3: IAF UBAGA)
+2025-12-02 17:10:14,462 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 3: IAF UBAGA): rumbo 15.3, vel 210.0 kt, vr -1534 ft/min
+2025-12-02 17:10:14,834 [INFO] Ejecutando evento 2025-12-02 06:17:20.440574+01:00 (EZY8104 tramo 6: intercepta localizador ILS 07L)
+2025-12-02 17:10:14,838 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 6: intercepta localizador ILS 07L): rumbo 153.4, vel 180.0 kt, vr -1489 ft/min
+2025-12-02 17:10:15,016 [INFO] Ejecutando evento 2025-12-02 06:17:42.228550+01:00 (Eliminacion de VY6502)
+2025-12-02 17:10:15,018 [INFO] Aeronave VY6502 eliminada.
+2025-12-02 17:10:15,170 [INFO] Ejecutando evento 2025-12-02 06:18:00.728045+01:00 (EZY8104 tramo 7: tramo final de aproximacion)
+2025-12-02 17:10:15,173 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 7: tramo final de aproximacion): rumbo 291.8, vel 170.0 kt, vr -1167 ft/min
+2025-12-02 17:10:15,437 [INFO] Ejecutando evento 2025-12-02 06:18:32.834186+01:00 (DLH1421 tramo 4: tramo intermedio SLL)
+2025-12-02 17:10:15,440 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 4: tramo intermedio SLL): rumbo 350.5, vel 190.0 kt, vr -332 ft/min
+2025-12-02 17:10:15,598 [INFO] Ejecutando evento 2025-12-02 06:18:52.146222+01:00 (EZY8104 tramo 8: final ILS 07L)
+2025-12-02 17:10:15,601 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 8: final ILS 07L): rumbo 116.9, vel 140.0 kt, vr -1520 ft/min
+2025-12-02 17:10:15,815 [INFO] Ejecutando evento 2025-12-02 06:19:18.092270+01:00 (RYR611 hold tramo outbound)
+2025-12-02 17:10:15,817 [INFO] Actualizacion enviada para RYR611 (RYR611 hold tramo outbound): rumbo 246.0, vel 180.0 kt, vr 0 ft/min
+2025-12-02 17:10:16,190 [INFO] Ejecutando evento 2025-12-02 06:20:03.092270+01:00 (RYR611 hold tramo inbound)
+2025-12-02 17:10:16,192 [INFO] Actualizacion enviada para RYR611 (RYR611 hold tramo inbound): rumbo 66.0, vel 180.0 kt, vr 0 ft/min
+2025-12-02 17:10:16,565 [INFO] Ejecutando evento 2025-12-02 06:20:48.092270+01:00 (RYR611 tramo 5: abandonando hold hacia DOBRO)
+2025-12-02 17:10:16,567 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 5: abandonando hold hacia DOBRO): rumbo 206.1, vel 170.0 kt, vr -512 ft/min
+2025-12-02 17:10:16,945 [INFO] Ejecutando evento 2025-12-02 06:21:33.803589+01:00 (DLH1421 tramo 5: downwind norte)
+2025-12-02 17:10:16,948 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 5: downwind norte): rumbo 208.6, vel 185.0 kt, vr -193 ft/min
+2025-12-02 17:10:18,242 [INFO] Ejecutando evento 2025-12-02 06:24:09.346498+01:00 (DLH1421 tramo 6: tramo base 07L)
+2025-12-02 17:10:18,245 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 6: tramo base 07L): rumbo 173.4, vel 175.0 kt, vr -520 ft/min
+2025-12-02 17:10:18,915 [INFO] Ejecutando evento 2025-12-02 06:25:30.162514+01:00 (DLH1421 tramo 7: intercepta ILS 07L)
+2025-12-02 17:10:18,918 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 7: intercepta ILS 07L): rumbo 153.4, vel 165.0 kt, vr -1092 ft/min
+2025-12-02 17:10:19,005 [INFO] Ejecutando evento 2025-12-02 06:25:40.952086+01:00 (RYR611 tramo 6: downwind norte)
+2025-12-02 17:10:19,008 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 6: downwind norte): rumbo 10.6, vel 180.0 kt, vr 1228 ft/min
+2025-12-02 17:10:19,281 [INFO] Ejecutando evento 2025-12-02 06:26:14.112483+01:00 (DLH1421 tramo 8: tramo final de aproximacion)
+2025-12-02 17:10:19,284 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 8: tramo final de aproximacion): rumbo 291.8, vel 160.0 kt, vr -549 ft/min
+2025-12-02 17:10:19,737 [INFO] Ejecutando evento 2025-12-02 06:27:08.744296+01:00 (DLH1421 tramo 9: final pista 07L)
+2025-12-02 17:10:19,739 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 9: final pista 07L): rumbo 116.9, vel 150.0 kt, vr -1629 ft/min
+2025-12-02 17:10:19,820 [INFO] Ejecutando evento 2025-12-02 06:27:18.693403+01:00 (RYR611 tramo 7: tramo base)
+2025-12-02 17:10:19,822 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 7: tramo base): rumbo 173.4, vel 170.0 kt, vr -505 ft/min
+2025-12-02 17:10:23,441 [INFO] Ejecutando evento 2025-12-02 06:28:41.886360+01:00 (RYR611 tramo 8: captura localizador ILS 07L)
+2025-12-02 17:10:23,445 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 8: captura localizador ILS 07L): rumbo 153.4, vel 160.0 kt, vr -1059 ft/min
+2025-12-02 17:10:23,819 [INFO] Ejecutando evento 2025-12-02 06:29:27.209765+01:00 (RYR611 tramo 9: final ILS 07L)
+2025-12-02 17:10:23,823 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 9: final ILS 07L): rumbo 126.3, vel 140.0 kt, vr -3000 ft/min
+2025-12-02 17:19:07,205 [INFO] Total de eventos programados: 61
+2025-12-02 17:19:07,206 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+2025-12-02 17:19:07,213 [INFO] Creado DLH1421 con hex 4A936C en intento 1
+2025-12-02 17:19:07,456 [INFO] Ejecutando evento 2025-12-02 05:57:00+01:00 (Creacion de EZY8104)
+2025-12-02 17:19:07,460 [INFO] Creado EZY8104 con hex 1A65DF en intento 1
+2025-12-02 17:19:07,706 [INFO] Ejecutando evento 2025-12-02 05:57:30+01:00 (Creacion de AFR1738)
+2025-12-02 17:19:07,709 [INFO] Creado AFR1738 con hex AF3769 en intento 1
+2025-12-02 17:19:08,456 [INFO] Ejecutando evento 2025-12-02 05:59:00+01:00 (Creacion de VLG201)
+2025-12-02 17:19:08,459 [INFO] Creado VLG201 con hex 697D91 en intento 1
+2025-12-02 17:19:08,956 [INFO] Ejecutando evento 2025-12-02 06:00:00+01:00 (VLG201 tramo 1: despegue y ascenso a NELSO)
+2025-12-02 17:19:08,959 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 1: despegue y ascenso a NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 17:19:09,081 [INFO] Ejecutando evento 2025-12-02 06:00:15+01:00 (Creacion de IBE432)
+2025-12-02 17:19:09,085 [INFO] Creado IBE432 con hex B1911A en intento 1
+2025-12-02 17:19:09,331 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (IBE432 tramo 1: ascenso hacia MASNU)
+2025-12-02 17:19:09,334 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 1: ascenso hacia MASNU): rumbo 41.9, vel 190.0 kt, vr 833 ft/min
+2025-12-02 17:19:09,334 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (Creacion de VY6502)
+2025-12-02 17:19:09,337 [INFO] Creado VY6502 con hex 691757 en intento 1
+2025-12-02 17:19:09,623 [INFO] Ejecutando evento 2025-12-02 06:01:20+01:00 (Creacion de RYR221)
+2025-12-02 17:19:09,626 [INFO] Creado RYR221 con hex 8FED2A en intento 1
+2025-12-02 17:19:09,706 [INFO] Ejecutando evento 2025-12-02 06:01:30+01:00 (VY6502 tramo 1: salida costera NELSO)
+2025-12-02 17:19:09,709 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 1: salida costera NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 17:19:09,865 [INFO] Ejecutando evento 2025-12-02 06:01:49.056293+01:00 (VLG201 tramo 2: rumbo oeste hacia TARRA)
+2025-12-02 17:19:09,868 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 2: rumbo oeste hacia TARRA): rumbo 254.2, vel 250.0 kt, vr 682 ft/min
+2025-12-02 17:19:10,081 [INFO] Ejecutando evento 2025-12-02 06:02:15+01:00 (RYR221 tramo 1: ascenso inicial hacia MASNU)
+2025-12-02 17:19:10,084 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 1: ascenso inicial hacia MASNU): rumbo 41.9, vel 200.0 kt, vr 877 ft/min
+2025-12-02 17:19:10,456 [INFO] Ejecutando evento 2025-12-02 06:03:00+01:00 (DLH1421 tramo 1: LORET a SITGE)
+2025-12-02 17:19:10,459 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 1: LORET a SITGE): rumbo 103.8, vel 250.0 kt, vr -299 ft/min
+2025-12-02 17:19:10,615 [INFO] Ejecutando evento 2025-12-02 06:03:19.056293+01:00 (VY6502 tramo 2: viraje hacia SITGE)
+2025-12-02 17:19:10,618 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 2: viraje hacia SITGE): rumbo 270.1, vel 240.0 kt, vr 886 ft/min
+2025-12-02 17:19:10,956 [INFO] Ejecutando evento 2025-12-02 06:04:00+01:00 (EZY8104 tramo 1: KENAS a BAMES)
+2025-12-02 17:19:10,960 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 1: KENAS a BAMES): rumbo 223.2, vel 250.0 kt, vr -670 ft/min
+2025-12-02 17:19:11,207 [INFO] Ejecutando evento 2025-12-02 06:04:30+01:00 (Creacion de RYR611)
+2025-12-02 17:19:11,210 [INFO] Creado RYR611 con hex 709850 en intento 1
+2025-12-02 17:19:11,456 [INFO] Ejecutando evento 2025-12-02 06:05:00+01:00 (RYR611 tramo 1: TGA a SITGE)
+2025-12-02 17:19:11,459 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 1: TGA a SITGE): rumbo 79.4, vel 280.0 kt, vr -810 ft/min
+2025-12-02 17:19:11,733 [INFO] Ejecutando evento 2025-12-02 06:05:33.175599+01:00 (IBE432 tramo 2: ruta norte a BAMES)
+2025-12-02 17:19:11,736 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 2: ruta norte a BAMES): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 17:19:11,956 [INFO] Ejecutando evento 2025-12-02 06:06:00+01:00 (AFR1738 tramo 1: MASNU a SLL)
+2025-12-02 17:19:11,960 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 1: MASNU a SLL): rumbo 284.2, vel 220.0 kt, vr -1216 ft/min
+2025-12-02 17:19:12,363 [INFO] Ejecutando evento 2025-12-02 06:06:48.766819+01:00 (RYR221 tramo 2: seguimiento costa norte)
+2025-12-02 17:19:12,366 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 2: seguimiento costa norte): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 17:19:12,450 [INFO] Ejecutando evento 2025-12-02 06:06:59.236178+01:00 (EZY8104 tramo 2: descenso hacia MASNU)
+2025-12-02 17:19:12,453 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 2: descenso hacia MASNU): rumbo 194.8, vel 230.0 kt, vr -726 ft/min
+2025-12-02 17:19:12,873 [INFO] Ejecutando evento 2025-12-02 06:07:49.983784+01:00 (VY6502 tramo 3: ascenso sobre TGA)
+2025-12-02 17:19:12,876 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 3: ascenso sobre TGA): rumbo 259.8, vel 280.0 kt, vr 810 ft/min
+2025-12-02 17:19:13,190 [INFO] Ejecutando evento 2025-12-02 06:08:28.000006+01:00 (AFR1738 tramo 2: downwind norte)
+2025-12-02 17:19:13,192 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 2: downwind norte): rumbo 208.6, vel 200.0 kt, vr -417 ft/min
+2025-12-02 17:19:13,532 [INFO] Ejecutando evento 2025-12-02 06:09:09.127978+01:00 (VLG201 tramo 3: cruce de TGA)
+2025-12-02 17:19:13,535 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 3: cruce de TGA): rumbo 280.8, vel 280.0 kt, vr 1077 ft/min
+2025-12-02 17:19:13,712 [INFO] Ejecutando evento 2025-12-02 06:09:30.692551+01:00 (IBE432 tramo 3: intercepta KENAS)
+2025-12-02 17:19:13,715 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 3: intercepta KENAS): rumbo 43.0, vel 280.0 kt, vr 2250 ft/min
+2025-12-02 17:19:14,342 [INFO] Ejecutando evento 2025-12-02 06:10:46.283771+01:00 (RYR221 tramo 3: cruce Girona TMA)
+2025-12-02 17:19:14,345 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 3: cruce Girona TMA): rumbo 43.0, vel 260.0 kt, vr 1393 ft/min
+2025-12-02 17:19:14,389 [INFO] Ejecutando evento 2025-12-02 06:10:51.877197+01:00 (AFR1738 tramo 3: tramo base 07R)
+2025-12-02 17:19:14,391 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 3: tramo base 07R): rumbo 163.9, vel 185.0 kt, vr -759 ft/min
+2025-12-02 17:19:14,515 [INFO] Ejecutando evento 2025-12-02 06:11:07.079954+01:00 (EZY8104 tramo 3: SLL inicial)
+2025-12-02 17:19:14,518 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 3: SLL inicial): rumbo 284.2, vel 210.0 kt, vr -387 ft/min
+2025-12-02 17:19:14,541 [INFO] Ejecutando evento 2025-12-02 06:11:10.177372+01:00 (RYR611 tramo 2: aproximacion via SARGO)
+2025-12-02 17:19:14,544 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 2: aproximacion via SARGO): rumbo 84.8, vel 240.0 kt, vr -1765 ft/min
+2025-12-02 17:19:15,046 [INFO] Ejecutando evento 2025-12-02 06:12:10.724853+01:00 (IBE432 tramo 4: salida a GIRON)
+2025-12-02 17:19:15,049 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 4: salida a GIRON): rumbo 84.1, vel 300.0 kt, vr 3000 ft/min
+2025-12-02 17:19:15,049 [INFO] Ejecutando evento 2025-12-02 06:12:10.920683+01:00 (AFR1738 tramo 4: captura localizador 07R)
+2025-12-02 17:19:15,051 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 4: captura localizador 07R): rumbo 153.4, vel 170.0 kt, vr -1125 ft/min
+2025-12-02 17:19:15,390 [INFO] Ejecutando evento 2025-12-02 06:12:52.033505+01:00 (VLG201 tramo 4: salida del TMA via LORET)
+2025-12-02 17:19:15,392 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 4: salida del TMA via LORET): rumbo 321.4, vel 320.0 kt, vr 1621 ft/min
+2025-12-02 17:19:15,403 [INFO] Ejecutando evento 2025-12-02 06:12:53.578005+01:00 (AFR1738 tramo 5: final 07R)
+2025-12-02 17:19:15,405 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 5: final 07R): rumbo 136.5, vel 150.0 kt, vr -3000 ft/min
+2025-12-02 17:19:15,478 [INFO] Ejecutando evento 2025-12-02 06:13:02.637449+01:00 (DLH1421 tramo 2: descenso sobre costa)
+2025-12-02 17:19:15,481 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 2: descenso sobre costa): rumbo 84.8, vel 230.0 kt, vr -1691 ft/min
+2025-12-02 17:19:15,778 [INFO] Ejecutando evento 2025-12-02 06:13:38.626250+01:00 (RYR221 tramo 4: salida FIR via GIRON)
+2025-12-02 17:19:15,781 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 4: salida FIR via GIRON): rumbo 84.1, vel 300.0 kt, vr 2473 ft/min
+2025-12-02 17:19:15,808 [INFO] Ejecutando evento 2025-12-02 06:13:42.127579+01:00 (EZY8104 tramo 4: tramo a downwind norte)
+2025-12-02 17:19:15,810 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 4: tramo a downwind norte): rumbo 208.6, vel 200.0 kt, vr -209 ft/min
+2025-12-02 17:19:15,854 [INFO] Ejecutando evento 2025-12-02 06:13:47.758937+01:00 (Eliminacion de IBE432)
+2025-12-02 17:19:15,857 [INFO] Aeronave IBE432 eliminada.
+2025-12-02 17:19:15,958 [INFO] Ejecutando evento 2025-12-02 06:14:00.161156+01:00 (VY6502 tramo 4: salida del TMA rumbo LORET)
+2025-12-02 17:19:15,960 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 4: salida del TMA rumbo LORET): rumbo 321.4, vel 320.0 kt, vr 1891 ft/min
+2025-12-02 17:19:16,241 [INFO] Ejecutando evento 2025-12-02 06:14:34.138878+01:00 (RYR611 tramo 3: IAF UBAGA)
+2025-12-02 17:19:16,244 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 3: IAF UBAGA): rumbo 15.3, vel 220.0 kt, vr -1071 ft/min
+2025-12-02 17:19:16,587 [INFO] Ejecutando evento 2025-12-02 06:15:15.660334+01:00 (Eliminacion de RYR221)
+2025-12-02 17:19:16,590 [INFO] Aeronave RYR221 eliminada.
+2025-12-02 17:19:17,006 [INFO] Ejecutando evento 2025-12-02 06:16:06.004770+01:00 (EZY8104 tramo 5: tramo base 07L)
+2025-12-02 17:19:17,009 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 5: tramo base 07L): rumbo 173.4, vel 190.0 kt, vr -806 ft/min
+2025-12-02 17:19:17,174 [INFO] Ejecutando evento 2025-12-02 06:16:26.171338+01:00 (RYR611 tramo 4: rumbo a SLL para espera)
+2025-12-02 17:19:17,178 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 4: rumbo a SLL para espera): rumbo 350.5, vel 200.0 kt, vr -698 ft/min
+2025-12-02 17:19:17,241 [INFO] Ejecutando evento 2025-12-02 06:16:34.100899+01:00 (Eliminacion de VLG201)
+2025-12-02 17:19:17,243 [INFO] Aeronave VLG201 eliminada.
+2025-12-02 17:19:17,252 [INFO] Ejecutando evento 2025-12-02 06:16:35.466847+01:00 (DLH1421 tramo 3: IAF UBAGA)
+2025-12-02 17:19:17,254 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 3: IAF UBAGA): rumbo 15.3, vel 210.0 kt, vr -1534 ft/min
+2025-12-02 17:19:17,627 [INFO] Ejecutando evento 2025-12-02 06:17:20.440574+01:00 (EZY8104 tramo 6: intercepta localizador ILS 07L)
+2025-12-02 17:19:17,629 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 6: intercepta localizador ILS 07L): rumbo 153.4, vel 180.0 kt, vr -1489 ft/min
+2025-12-02 17:19:17,808 [INFO] Ejecutando evento 2025-12-02 06:17:42.228550+01:00 (Eliminacion de VY6502)
+2025-12-02 17:19:17,812 [INFO] Aeronave VY6502 eliminada.
+2025-12-02 17:19:17,963 [INFO] Ejecutando evento 2025-12-02 06:18:00.728045+01:00 (EZY8104 tramo 7: tramo final de aproximacion)
+2025-12-02 17:19:17,965 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 7: tramo final de aproximacion): rumbo 291.8, vel 170.0 kt, vr -1167 ft/min
+2025-12-02 17:19:20,517 [INFO] Ejecutando evento 2025-12-02 06:18:32.834186+01:00 (DLH1421 tramo 4: tramo intermedio SLL)
+2025-12-02 17:19:20,519 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 4: tramo intermedio SLL): rumbo 350.5, vel 190.0 kt, vr -332 ft/min
+2025-12-02 17:19:20,678 [INFO] Ejecutando evento 2025-12-02 06:18:52.146222+01:00 (EZY8104 tramo 8: final ILS 07L)
+2025-12-02 17:19:20,680 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 8: final ILS 07L): rumbo 116.9, vel 140.0 kt, vr -1520 ft/min
+2025-12-02 17:19:20,894 [INFO] Ejecutando evento 2025-12-02 06:19:18.092270+01:00 (RYR611 hold tramo outbound)
+2025-12-02 17:19:20,897 [INFO] Actualizacion enviada para RYR611 (RYR611 hold tramo outbound): rumbo 246.0, vel 180.0 kt, vr 0 ft/min
+2025-12-02 17:19:21,269 [INFO] Ejecutando evento 2025-12-02 06:20:03.092270+01:00 (RYR611 hold tramo inbound)
+2025-12-02 17:19:21,272 [INFO] Actualizacion enviada para RYR611 (RYR611 hold tramo inbound): rumbo 66.0, vel 180.0 kt, vr 0 ft/min
+2025-12-02 17:19:21,644 [INFO] Ejecutando evento 2025-12-02 06:20:48.092270+01:00 (RYR611 tramo 5: abandonando hold hacia DOBRO)
+2025-12-02 17:19:21,647 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 5: abandonando hold hacia DOBRO): rumbo 206.1, vel 170.0 kt, vr -512 ft/min
+2025-12-02 17:19:22,025 [INFO] Ejecutando evento 2025-12-02 06:21:33.803589+01:00 (DLH1421 tramo 5: downwind norte)
+2025-12-02 17:19:22,027 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 5: downwind norte): rumbo 208.6, vel 185.0 kt, vr -193 ft/min
+2025-12-02 17:19:23,321 [INFO] Ejecutando evento 2025-12-02 06:24:09.346498+01:00 (DLH1421 tramo 6: tramo base 07L)
+2025-12-02 17:19:23,323 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 6: tramo base 07L): rumbo 173.4, vel 175.0 kt, vr -520 ft/min
+2025-12-02 17:19:23,994 [INFO] Ejecutando evento 2025-12-02 06:25:30.162514+01:00 (DLH1421 tramo 7: intercepta ILS 07L)
+2025-12-02 17:19:23,998 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 7: intercepta ILS 07L): rumbo 153.4, vel 165.0 kt, vr -1092 ft/min
+2025-12-02 17:19:24,084 [INFO] Ejecutando evento 2025-12-02 06:25:40.952086+01:00 (RYR611 tramo 6: downwind norte)
+2025-12-02 17:19:24,088 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 6: downwind norte): rumbo 10.6, vel 180.0 kt, vr 1228 ft/min
+2025-12-02 17:19:24,361 [INFO] Ejecutando evento 2025-12-02 06:26:14.112483+01:00 (DLH1421 tramo 8: tramo final de aproximacion)
+2025-12-02 17:19:24,364 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 8: tramo final de aproximacion): rumbo 291.8, vel 160.0 kt, vr -549 ft/min
+2025-12-02 17:19:24,816 [INFO] Ejecutando evento 2025-12-02 06:27:08.744296+01:00 (DLH1421 tramo 9: final pista 07L)
+2025-12-02 17:19:24,819 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 9: final pista 07L): rumbo 116.9, vel 150.0 kt, vr -1629 ft/min
+2025-12-02 17:19:24,899 [INFO] Ejecutando evento 2025-12-02 06:27:18.693403+01:00 (RYR611 tramo 7: tramo base)
+2025-12-02 17:19:24,901 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 7: tramo base): rumbo 173.4, vel 170.0 kt, vr -505 ft/min
+2025-12-02 17:19:25,592 [INFO] Ejecutando evento 2025-12-02 06:28:41.886360+01:00 (RYR611 tramo 8: captura localizador ILS 07L)
+2025-12-02 17:19:25,594 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 8: captura localizador ILS 07L): rumbo 153.4, vel 160.0 kt, vr -1059 ft/min
+2025-12-02 17:19:25,970 [INFO] Ejecutando evento 2025-12-02 06:29:27.209765+01:00 (RYR611 tramo 9: final ILS 07L)
+2025-12-02 17:19:25,972 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 9: final ILS 07L): rumbo 126.3, vel 140.0 kt, vr -3000 ft/min
+2025-12-02 17:31:31,296 [INFO] Total de eventos programados: 61
+2025-12-02 17:31:31,296 [INFO] Ejecutando evento 2025-12-02 05:56:30+01:00 (Creacion de DLH1421)
+2025-12-02 17:31:31,302 [INFO] Creado DLH1421 con hex 8C2352 en intento 1
+2025-12-02 17:31:31,547 [INFO] Ejecutando evento 2025-12-02 05:57:00+01:00 (Creacion de EZY8104)
+2025-12-02 17:31:31,550 [INFO] Creado EZY8104 con hex D77F69 en intento 1
+2025-12-02 17:31:34,376 [INFO] Ejecutando evento 2025-12-02 05:57:30+01:00 (Creacion de AFR1738)
+2025-12-02 17:31:34,380 [INFO] Creado AFR1738 con hex 749849 en intento 1
+2025-12-02 17:31:35,127 [INFO] Ejecutando evento 2025-12-02 05:59:00+01:00 (Creacion de VLG201)
+2025-12-02 17:31:35,130 [INFO] Creado VLG201 con hex 2435F3 en intento 1
+2025-12-02 17:31:35,626 [INFO] Ejecutando evento 2025-12-02 06:00:00+01:00 (VLG201 tramo 1: despegue y ascenso a NELSO)
+2025-12-02 17:31:35,629 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 1: despegue y ascenso a NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 17:31:35,751 [INFO] Ejecutando evento 2025-12-02 06:00:15+01:00 (Creacion de IBE432)
+2025-12-02 17:31:35,754 [INFO] Creado IBE432 con hex 73214E en intento 1
+2025-12-02 17:31:36,001 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (IBE432 tramo 1: ascenso hacia MASNU)
+2025-12-02 17:31:36,005 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 1: ascenso hacia MASNU): rumbo 41.9, vel 190.0 kt, vr 833 ft/min
+2025-12-02 17:31:36,005 [INFO] Ejecutando evento 2025-12-02 06:00:45+01:00 (Creacion de VY6502)
+2025-12-02 17:31:36,008 [INFO] Creado VY6502 con hex E82243 en intento 1
+2025-12-02 17:31:36,293 [INFO] Ejecutando evento 2025-12-02 06:01:20+01:00 (Creacion de RYR221)
+2025-12-02 17:31:36,297 [INFO] Creado RYR221 con hex F46366 en intento 1
+2025-12-02 17:31:36,376 [INFO] Ejecutando evento 2025-12-02 06:01:30+01:00 (VY6502 tramo 1: salida costera NELSO)
+2025-12-02 17:31:36,380 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 1: salida costera NELSO): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-02 17:31:36,535 [INFO] Ejecutando evento 2025-12-02 06:01:49.056293+01:00 (VLG201 tramo 2: rumbo oeste hacia TARRA)
+2025-12-02 17:31:36,538 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 2: rumbo oeste hacia TARRA): rumbo 254.2, vel 250.0 kt, vr 682 ft/min
+2025-12-02 17:31:36,751 [INFO] Ejecutando evento 2025-12-02 06:02:15+01:00 (RYR221 tramo 1: ascenso inicial hacia MASNU)
+2025-12-02 17:31:36,754 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 1: ascenso inicial hacia MASNU): rumbo 41.9, vel 200.0 kt, vr 877 ft/min
+2025-12-02 17:31:37,126 [INFO] Ejecutando evento 2025-12-02 06:03:00+01:00 (DLH1421 tramo 1: LORET a SITGE)
+2025-12-02 17:31:37,129 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 1: LORET a SITGE): rumbo 103.8, vel 250.0 kt, vr -299 ft/min
+2025-12-02 17:31:37,285 [INFO] Ejecutando evento 2025-12-02 06:03:19.056293+01:00 (VY6502 tramo 2: viraje hacia SITGE)
+2025-12-02 17:31:37,288 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 2: viraje hacia SITGE): rumbo 270.1, vel 240.0 kt, vr 886 ft/min
+2025-12-02 17:31:37,627 [INFO] Ejecutando evento 2025-12-02 06:04:00+01:00 (EZY8104 tramo 1: KENAS a BAMES)
+2025-12-02 17:31:37,630 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 1: KENAS a BAMES): rumbo 223.2, vel 250.0 kt, vr -670 ft/min
+2025-12-02 17:31:37,877 [INFO] Ejecutando evento 2025-12-02 06:04:30+01:00 (Creacion de RYR611)
+2025-12-02 17:31:37,880 [INFO] Creado RYR611 con hex BCC404 en intento 1
+2025-12-02 17:31:38,126 [INFO] Ejecutando evento 2025-12-02 06:05:00+01:00 (RYR611 tramo 1: TGA a SITGE)
+2025-12-02 17:31:38,129 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 1: TGA a SITGE): rumbo 79.4, vel 280.0 kt, vr -810 ft/min
+2025-12-02 17:31:38,403 [INFO] Ejecutando evento 2025-12-02 06:05:33.175599+01:00 (IBE432 tramo 2: ruta norte a BAMES)
+2025-12-02 17:31:38,405 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 2: ruta norte a BAMES): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 17:31:38,626 [INFO] Ejecutando evento 2025-12-02 06:06:00+01:00 (AFR1738 tramo 1: MASNU a SLL)
+2025-12-02 17:31:38,629 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 1: MASNU a SLL): rumbo 284.2, vel 220.0 kt, vr -1216 ft/min
+2025-12-02 17:31:39,033 [INFO] Ejecutando evento 2025-12-02 06:06:48.766819+01:00 (RYR221 tramo 2: seguimiento costa norte)
+2025-12-02 17:31:39,035 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 2: seguimiento costa norte): rumbo 14.8, vel 240.0 kt, vr 1263 ft/min
+2025-12-02 17:31:39,120 [INFO] Ejecutando evento 2025-12-02 06:06:59.236178+01:00 (EZY8104 tramo 2: descenso hacia MASNU)
+2025-12-02 17:31:39,123 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 2: descenso hacia MASNU): rumbo 194.8, vel 230.0 kt, vr -726 ft/min
+2025-12-02 17:31:39,543 [INFO] Ejecutando evento 2025-12-02 06:07:49.983784+01:00 (VY6502 tramo 3: ascenso sobre TGA)
+2025-12-02 17:31:39,546 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 3: ascenso sobre TGA): rumbo 259.8, vel 280.0 kt, vr 810 ft/min
+2025-12-02 17:31:39,860 [INFO] Ejecutando evento 2025-12-02 06:08:28.000006+01:00 (AFR1738 tramo 2: downwind norte)
+2025-12-02 17:31:39,863 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 2: downwind norte): rumbo 208.6, vel 200.0 kt, vr -417 ft/min
+2025-12-02 17:31:40,203 [INFO] Ejecutando evento 2025-12-02 06:09:09.127978+01:00 (VLG201 tramo 3: cruce de TGA)
+2025-12-02 17:31:40,205 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 3: cruce de TGA): rumbo 280.8, vel 280.0 kt, vr 1077 ft/min
+2025-12-02 17:31:40,382 [INFO] Ejecutando evento 2025-12-02 06:09:30.692551+01:00 (IBE432 tramo 3: intercepta KENAS)
+2025-12-02 17:31:40,385 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 3: intercepta KENAS): rumbo 43.0, vel 280.0 kt, vr 2250 ft/min
+2025-12-02 17:31:41,012 [INFO] Ejecutando evento 2025-12-02 06:10:46.283771+01:00 (RYR221 tramo 3: cruce Girona TMA)
+2025-12-02 17:31:41,015 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 3: cruce Girona TMA): rumbo 43.0, vel 260.0 kt, vr 1393 ft/min
+2025-12-02 17:31:41,059 [INFO] Ejecutando evento 2025-12-02 06:10:51.877197+01:00 (AFR1738 tramo 3: tramo base 07R)
+2025-12-02 17:31:41,061 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 3: tramo base 07R): rumbo 163.9, vel 185.0 kt, vr -759 ft/min
+2025-12-02 17:31:41,185 [INFO] Ejecutando evento 2025-12-02 06:11:07.079954+01:00 (EZY8104 tramo 3: SLL inicial)
+2025-12-02 17:31:41,188 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 3: SLL inicial): rumbo 284.2, vel 210.0 kt, vr -387 ft/min
+2025-12-02 17:31:41,211 [INFO] Ejecutando evento 2025-12-02 06:11:10.177372+01:00 (RYR611 tramo 2: aproximacion via SARGO)
+2025-12-02 17:31:41,215 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 2: aproximacion via SARGO): rumbo 84.8, vel 240.0 kt, vr -1765 ft/min
+2025-12-02 17:31:41,716 [INFO] Ejecutando evento 2025-12-02 06:12:10.724853+01:00 (IBE432 tramo 4: salida a GIRON)
+2025-12-02 17:31:41,718 [INFO] Actualizacion enviada para IBE432 (IBE432 tramo 4: salida a GIRON): rumbo 84.1, vel 300.0 kt, vr 3000 ft/min
+2025-12-02 17:31:41,719 [INFO] Ejecutando evento 2025-12-02 06:12:10.920683+01:00 (AFR1738 tramo 4: captura localizador 07R)
+2025-12-02 17:31:41,721 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 4: captura localizador 07R): rumbo 153.4, vel 170.0 kt, vr -1125 ft/min
+2025-12-02 17:31:42,060 [INFO] Ejecutando evento 2025-12-02 06:12:52.033505+01:00 (VLG201 tramo 4: salida del TMA via LORET)
+2025-12-02 17:31:42,063 [INFO] Actualizacion enviada para VLG201 (VLG201 tramo 4: salida del TMA via LORET): rumbo 321.4, vel 320.0 kt, vr 1621 ft/min
+2025-12-02 17:31:42,073 [INFO] Ejecutando evento 2025-12-02 06:12:53.578005+01:00 (AFR1738 tramo 5: final 07R)
+2025-12-02 17:31:42,075 [INFO] Actualizacion enviada para AFR1738 (AFR1738 tramo 5: final 07R): rumbo 136.5, vel 150.0 kt, vr -3000 ft/min
+2025-12-02 17:31:42,149 [INFO] Ejecutando evento 2025-12-02 06:13:02.637449+01:00 (DLH1421 tramo 2: descenso sobre costa)
+2025-12-02 17:31:42,151 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 2: descenso sobre costa): rumbo 84.8, vel 230.0 kt, vr -1691 ft/min
+2025-12-02 17:31:42,448 [INFO] Ejecutando evento 2025-12-02 06:13:38.626250+01:00 (RYR221 tramo 4: salida FIR via GIRON)
+2025-12-02 17:31:42,451 [INFO] Actualizacion enviada para RYR221 (RYR221 tramo 4: salida FIR via GIRON): rumbo 84.1, vel 300.0 kt, vr 2473 ft/min
+2025-12-02 17:31:42,477 [INFO] Ejecutando evento 2025-12-02 06:13:42.127579+01:00 (EZY8104 tramo 4: tramo a downwind norte)
+2025-12-02 17:31:42,480 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 4: tramo a downwind norte): rumbo 208.6, vel 200.0 kt, vr -209 ft/min
+2025-12-02 17:31:42,524 [INFO] Ejecutando evento 2025-12-02 06:13:47.758937+01:00 (Eliminacion de IBE432)
+2025-12-02 17:31:42,527 [INFO] Aeronave IBE432 eliminada.
+2025-12-02 17:31:42,628 [INFO] Ejecutando evento 2025-12-02 06:14:00.161156+01:00 (VY6502 tramo 4: salida del TMA rumbo LORET)
+2025-12-02 17:31:42,637 [INFO] Actualizacion enviada para VY6502 (VY6502 tramo 4: salida del TMA rumbo LORET): rumbo 321.4, vel 320.0 kt, vr 1891 ft/min
+2025-12-02 17:31:42,911 [INFO] Ejecutando evento 2025-12-02 06:14:34.138878+01:00 (RYR611 tramo 3: IAF UBAGA)
+2025-12-02 17:31:42,914 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 3: IAF UBAGA): rumbo 15.3, vel 220.0 kt, vr -1071 ft/min
+2025-12-02 17:31:43,257 [INFO] Ejecutando evento 2025-12-02 06:15:15.660334+01:00 (Eliminacion de RYR221)
+2025-12-02 17:31:43,260 [INFO] Aeronave RYR221 eliminada.
+2025-12-02 17:31:43,676 [INFO] Ejecutando evento 2025-12-02 06:16:06.004770+01:00 (EZY8104 tramo 5: tramo base 07L)
+2025-12-02 17:31:43,679 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 5: tramo base 07L): rumbo 173.4, vel 190.0 kt, vr -806 ft/min
+2025-12-02 17:31:43,845 [INFO] Ejecutando evento 2025-12-02 06:16:26.171338+01:00 (RYR611 tramo 4: rumbo a SLL para espera)
+2025-12-02 17:31:43,847 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 4: rumbo a SLL para espera): rumbo 350.5, vel 200.0 kt, vr -698 ft/min
+2025-12-02 17:31:43,911 [INFO] Ejecutando evento 2025-12-02 06:16:34.100899+01:00 (Eliminacion de VLG201)
+2025-12-02 17:31:43,914 [INFO] Aeronave VLG201 eliminada.
+2025-12-02 17:31:43,922 [INFO] Ejecutando evento 2025-12-02 06:16:35.466847+01:00 (DLH1421 tramo 3: IAF UBAGA)
+2025-12-02 17:31:43,924 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 3: IAF UBAGA): rumbo 15.3, vel 210.0 kt, vr -1534 ft/min
+2025-12-02 17:31:44,297 [INFO] Ejecutando evento 2025-12-02 06:17:20.440574+01:00 (EZY8104 tramo 6: intercepta localizador ILS 07L)
+2025-12-02 17:31:44,299 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 6: intercepta localizador ILS 07L): rumbo 153.4, vel 180.0 kt, vr -1489 ft/min
+2025-12-02 17:31:44,478 [INFO] Ejecutando evento 2025-12-02 06:17:42.228550+01:00 (Eliminacion de VY6502)
+2025-12-02 17:31:44,481 [INFO] Aeronave VY6502 eliminada.
+2025-12-02 17:31:44,633 [INFO] Ejecutando evento 2025-12-02 06:18:00.728045+01:00 (EZY8104 tramo 7: tramo final de aproximacion)
+2025-12-02 17:31:44,635 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 7: tramo final de aproximacion): rumbo 291.8, vel 170.0 kt, vr -1167 ft/min
+2025-12-02 17:31:44,900 [INFO] Ejecutando evento 2025-12-02 06:18:32.834186+01:00 (DLH1421 tramo 4: tramo intermedio SLL)
+2025-12-02 17:31:44,903 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 4: tramo intermedio SLL): rumbo 350.5, vel 190.0 kt, vr -332 ft/min
+2025-12-02 17:31:45,061 [INFO] Ejecutando evento 2025-12-02 06:18:52.146222+01:00 (EZY8104 tramo 8: final ILS 07L)
+2025-12-02 17:31:45,064 [INFO] Actualizacion enviada para EZY8104 (EZY8104 tramo 8: final ILS 07L): rumbo 116.9, vel 140.0 kt, vr -1520 ft/min
+2025-12-02 17:31:45,277 [INFO] Ejecutando evento 2025-12-02 06:19:18.092270+01:00 (RYR611 hold tramo outbound)
+2025-12-02 17:31:45,280 [INFO] Actualizacion enviada para RYR611 (RYR611 hold tramo outbound): rumbo 246.0, vel 180.0 kt, vr 0 ft/min
+2025-12-02 17:31:45,652 [INFO] Ejecutando evento 2025-12-02 06:20:03.092270+01:00 (RYR611 hold tramo inbound)
+2025-12-02 17:31:45,655 [INFO] Actualizacion enviada para RYR611 (RYR611 hold tramo inbound): rumbo 66.0, vel 180.0 kt, vr 0 ft/min
+2025-12-02 17:31:46,027 [INFO] Ejecutando evento 2025-12-02 06:20:48.092270+01:00 (RYR611 tramo 5: abandonando hold hacia DOBRO)
+2025-12-02 17:31:46,030 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 5: abandonando hold hacia DOBRO): rumbo 206.1, vel 170.0 kt, vr -512 ft/min
+2025-12-02 17:31:46,408 [INFO] Ejecutando evento 2025-12-02 06:21:33.803589+01:00 (DLH1421 tramo 5: downwind norte)
+2025-12-02 17:31:46,411 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 5: downwind norte): rumbo 208.6, vel 185.0 kt, vr -193 ft/min
+2025-12-02 17:31:47,704 [INFO] Ejecutando evento 2025-12-02 06:24:09.346498+01:00 (DLH1421 tramo 6: tramo base 07L)
+2025-12-02 17:31:47,707 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 6: tramo base 07L): rumbo 173.4, vel 175.0 kt, vr -520 ft/min
+2025-12-02 17:31:48,378 [INFO] Ejecutando evento 2025-12-02 06:25:30.162514+01:00 (DLH1421 tramo 7: intercepta ILS 07L)
+2025-12-02 17:31:48,381 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 7: intercepta ILS 07L): rumbo 153.4, vel 165.0 kt, vr -1092 ft/min
+2025-12-02 17:31:48,468 [INFO] Ejecutando evento 2025-12-02 06:25:40.952086+01:00 (RYR611 tramo 6: downwind norte)
+2025-12-02 17:31:48,471 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 6: downwind norte): rumbo 10.6, vel 180.0 kt, vr 1228 ft/min
+2025-12-02 17:31:48,744 [INFO] Ejecutando evento 2025-12-02 06:26:14.112483+01:00 (DLH1421 tramo 8: tramo final de aproximacion)
+2025-12-02 17:31:48,747 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 8: tramo final de aproximacion): rumbo 291.8, vel 160.0 kt, vr -549 ft/min
+2025-12-02 17:31:49,199 [INFO] Ejecutando evento 2025-12-02 06:27:08.744296+01:00 (DLH1421 tramo 9: final pista 07L)
+2025-12-02 17:31:49,202 [INFO] Actualizacion enviada para DLH1421 (DLH1421 tramo 9: final pista 07L): rumbo 116.9, vel 150.0 kt, vr -1629 ft/min
+2025-12-02 17:31:49,282 [INFO] Ejecutando evento 2025-12-02 06:27:18.693403+01:00 (RYR611 tramo 7: tramo base)
+2025-12-02 17:31:49,285 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 7: tramo base): rumbo 173.4, vel 170.0 kt, vr -505 ft/min
+2025-12-02 17:31:49,976 [INFO] Ejecutando evento 2025-12-02 06:28:41.886360+01:00 (RYR611 tramo 8: captura localizador ILS 07L)
+2025-12-02 17:31:49,978 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 8: captura localizador ILS 07L): rumbo 153.4, vel 160.0 kt, vr -1059 ft/min
+2025-12-02 17:31:50,353 [INFO] Ejecutando evento 2025-12-02 06:29:27.209765+01:00 (RYR611 tramo 9: final ILS 07L)
+2025-12-02 17:31:50,356 [INFO] Actualizacion enviada para RYR611 (RYR611 tramo 9: final ILS 07L): rumbo 126.3, vel 140.0 kt, vr -3000 ft/min

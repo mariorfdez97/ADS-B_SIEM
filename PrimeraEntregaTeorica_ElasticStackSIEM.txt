@@ -1,0 +1,744 @@
+Rodríguez Fernández, Mario
+
+
+MARIO RODRÍGUEZ FERNÁNDEZ                 9 DE OCTUBRE, 2025
+
+
+
+
+    DETECCIÓN DE ANOMALÍAS EN TRÁFICO
+AÉREO ADS-B SIMULADO MEDIANTE ELASTIC
+                         STACK (SIEM)
+
+                             PRIMERA ENTREGA TEÓRICA
+                                     ADMINISTRACIÓN DE SISTEMAS
+
+
+
+
+                                                     UO296136
+                                                                                                       Rodríguez Fernández, Mario
+
+
+CONTENIDO
+
+1.   Introducción y justificación ...................................................................................................3
+
+2.   Fundamentos del Elastic Stack, aplicación y relación con la asignatura..................................5
+
+3.   Objetivos y análisis de requisitos ...........................................................................................7
+
+         3.1 Despliegue de Elastic Stack ........................................................................................7
+
+         3.2 Ingesta y normalización de datos ADS-B ......................................................................7
+
+         3.3 Detección de anomalías de seguridad .........................................................................8
+
+         3.4 Dashboards y Visualización.........................................................................................9
+
+         3.5 Requisitos Técnicos y de Calidad ................................................................................9
+
+4.   Simulación de tráfico ADS-B................................................................................................ 10
+
+         4.1 Adaptación de Co-ATC al contexto de LEBL ............................................................... 10
+
+         4.2 Orquestador de tráfico simulado ............................................................................... 11
+
+         4.3 Escenario nominal y ajustes de ritmo......................................................................... 12
+
+         4.5 Flujo completo y relación con Elastic Stack ............................................................... 12
+
+5.   Descripción de la arquitectura y módulos del sistema.......................................................... 13
+
+         5.1 Simulador Co-ATC (Backend tráfico aéreo) ................................................................ 13
+
+         5.2 Filebeat (Beat de recolección) ................................................................................... 13
+
+         5.3 Logstash (pipeline de ingesta) ................................................................................... 15
+
+         5.4 Elasticsearch (nodo de datos) ................................................................................... 15
+
+         5.5 Kibana (interfaz SIEM): .............................................................................................. 16
+
+6.   Conclusiones y pasos siguientes ......................................................................................... 18
+
+7.   Referencias y bibliografía .................................................................................................... 19
+
+
+
+
+                                                                 2
+Rodríguez Fernández, Mario
+
+
+
+   1.      INTRODUCCIÓN Y JUSTIFICACIÓN
+
+La gestión de eventos e información de seguridad (SIEM) basada en Elastic Stack se ha consolidado
+como una solución flexible y potente para centralizar logs, correlacionar datos y visualizar alertas
+en tiempo real, un conjunto de herramientas potente en entornos críticos como la aviación. En la
+industria aeronáutica se generan volúmenes masivos de datos (planificación de vuelos, telemetría,
+mantenimiento, etc.), cuyo análisis en tiempo real es clave para mejorar la eficiencia operativa y la
+seguridad. Elastic Stack – conformado por Elasticsearch, Logstash, Beats y Kibana – permite
+almacenar y consultar grandes conjuntos de datos de forma distribuida, facilitando la detección de
+patrones anómalos y amenazas mediante búsquedas en tiempo real y o dashboards dinámicos.
+Estas características han llevado a su adopción en aviación no solo para análisis operativos, sino
+también para reforzar la ciberseguridad: por ejemplo, Flightwatching, una empresa aeroespacial
+francesa, monitorea en esta tecnología datos telemétricos de más de 600 aeronaves en tiempo real,
+utilizando Kibana para tableros y alertas, e incluso detección de anomalías automatizada sobre
+dichos datos. Este caso demuestra la capacidad de Elastic Stack para centralizar datos
+aeronáuticos y descubrir comportamientos fuera de lo normal en tiempo real, mejorando la
+conciencia situacional y la toma de decisiones en entornos de aviación.
+
+
+
+
+                             Ilustración 1 - Ejemplo modular de arquitectura SIEM
+
+
+En este proyecto se aborda un caso concreto: la aplicación de Elastic Stack como SIEM para
+detectar anomalías en datos de tráfico aéreo ADS-B simulado. ADS-B (Automatic Dependent
+Surveillance–Broadcast) es una tecnología de vigilancia cooperativa en la cual las aeronaves emiten
+periódicamente por radio su posición, velocidad, identificador, etc., proporcionando a los
+controladores información más precisa y en tiempo real que los radares convencionales. Este
+sistema está adoptado ampliamente a nivel internacional (en España la implantación corre a cargo
+de ENAIRE).
+                                                                            Rodríguez Fernández, Mario
+
+
+No obstante, ADS-B carece de mecanismos de seguridad básicos: las transmisiones se emiten en
+abierto sin autenticación ni cifrado, lo que las hace vulnerables a interferencias maliciosas. Un
+atacante con equipo radio y conocimiento del protocolo puede inyectar señales falsas en la
+frecuencia (1090 MHz en aviación comercial) simulando blancos inexistentes o distorsionando
+datos de aviones reales. Entre las amenazas documentadas se incluyen la suplantación de
+aeronaves (spoofing) o la creación de aviones fantasma (mensajes inventados que muestran tráfico
+inexistente), aprovechando la ausencia de autenticación.
+Para reforzar la justificación de este proyecto, resulta relevante señalar que en 2017 la FAA emitió
+alertas dirigidas al personal de mantenimiento, advirtiendo que las pruebas en tierra de sistemas
+ADS-B pueden generar “targets fantasma” en los radares de control de tráfico aéreo cuando se
+transmiten datos de posición sin las precauciones adecuadas. Estos riesgos evidencian la
+necesidad de herramientas de monitorización que permitan distinguir actividad legítima de anómala
+en los datos ADS-B, alertando tempranamente sobre posibles incidentes de seguridad aérea.
+
+
+
+
+                                  Ilustración 2 - Funcionamiento ADS-B
+
+Un SIEM basado en Elastic Stack resulta idóneo para este cometido: puede correlacionar datos y
+aplicar reglas de detección para resaltar comportamientos atípicos, complementando la vigilancia
+tradicional de los controladores.
+En resumen, el proyecto busca demostrar cómo la utilización de Elastic Stack como SIEM puede
+fortalecer la seguridad en entornos de aviación civil, aportando visibilidad unificada sobre datos
+críticos y capacidad de respuesta ante anomalías, todo ello mediante una implementación
+reproducible en un laboratorio académico.
+
+
+
+
+                                                   4
+                                                                             Rodríguez Fernández, Mario
+
+
+   2.      FUNDAMENTOS DEL ELASTIC STACK, APLICACIÓN Y
+           RELACIÓN CON LA ASIGNATURA
+
+El Elastic Stack SIEM es un entorno avanzado de gestión de información y eventos de seguridad
+(SIEM) que integra diversos principios estudiados en la asignatura, combinando conocimientos de
+administración de sistemas, monitorización de redes, gestión de logs, virtualización y seguridad de
+la información. Su implementación práctica en este proyecto no solo sirve como ejercicio técnico,
+sino también como aplicación directa de los fundamentos teóricos abordados en clase.
+El Elastic Stack — compuesto principalmente por Elasticsearch, Logstash, Kibana y Beats —
+traduce estos conceptos teóricos en una arquitectura modular y escalable para el tratamiento de
+datos. A continuación, se explican mas en detalle los módulos dichos anteriormente.
+
+   •    ELASTICSEARCH
+
+        Elasticsearch funciona como el repositorio central donde se almacenan los mensajes ADS-
+        B simulados. Su estructura de índices distribuidos permite buscar y analizar los datos en
+        tiempo real, aplicando los principios de almacenamiento eficiente y gestión de registros de
+        eventos estudiados en la asignatura.
+   •    LOGSTASH
+
+        Se encarga del procesamiento intermedio y aplica conceptos de automatización de tareas y
+        transformación de flujos de datos, vistos en los temas de automatización de sistemas.
+        Gracias a sus filtros y pipelines, muestra cómo crear un flujo controlado que convierte datos
+        brutos en información estructurada y útil.
+
+   •    BEATS
+
+        Filebeat es un pilar básico en la monitorización de sistemas y en el uso de agentes
+        recolectores. Su misión es sencilla: recoger los logs de forma constante y enviarlos de
+        manera fiable a Logstash. Con este proceso se muestra la idea de una observabilidad
+        distribuida, algo que se estudia en los temas de monitorización proactiva y recolección de
+        eventos.
+
+   •    Elastic Security (Kibana)
+
+        Integra los temas de visualización, análisis y gestión de incidentes, actuando como una
+        interfaz que ayuda al administrador a interpretar datos y tomar decisiones con fundamento.
+        Su módulo Elastic Security aplica directamente conceptos como detección de anomalías,
+        correlación de eventos y respuesta ante incidentes, tratados en la teoría sobre seguridad de
+        la información y auditoría de sistemas.
+Desde la visión del temario, el Elastic Stack SIEM también se apoya en los fundamentos de la
+virtualización y contenedorización de servicios. El proyecto utilizará Docker para desplegar de forma
+aislada cada componente del stack, lo cual refuerza el aprendizaje práctico sobre gestión de
+entornos virtualizados, configuración mediante contenedores y automatización de despliegues,
+permitiendo una administración más eficiente y reproducible del sistema.
+
+
+
+
+                                                  5
+                                                                                         Rodríguez Fernández, Mario
+
+
+En términos de seguridad, la implementación del SIEM ejemplifica los conceptos teóricos sobre
+detección de intrusiones y gestión de incidentes. Los mecanismos de correlación de esta tecnología
+permiten aplicar las técnicas de detección basada en reglas y detección de anomalías estudiadas
+en el curso. En el contexto del proyecto, estas reglas se traducen en la identificación de
+comportamientos anómalos en los datos ADS-B, como altitudes negativas o duplicaciones de
+identificadores ICAO.
+Por otra parte, el uso de logs estructurados y análisis de datos en tiempo real conecta directamente
+con los temas del temario relacionados con administración de registros del sistema (syslog,
+journald) y gestión de la información en entornos distribuidos. En el proyecto, la simulación de
+tráfico aéreo genera flujos de datos continuos que son tratados como si provinieran de un entorno
+real de red o de infraestructura crítica.
+El Elastic Stack SIEM actúa como un puente entre la teoría y la práctica de la asignatura. Integra en
+un entorno funcional todos los elementos que se abordan a lo largo del curso:
+
+   •   Principios de administración de sistemas y servicios.
+   •   Virtualización y despliegue mediante contenedores.
+   •   Monitorización y análisis de logs.
+   •   Detección y gestión de incidentes de seguridad.
+   •   Automatización del control y respuesta ante eventos.
+
+
+
+
+                          Ilustración 3 - Relación entre Elastic Stack y la asignatura
+
+
+
+
+                                                       6
+                                                                             Rodríguez Fernández, Mario
+
+
+   3.      OBJETIVOS Y ANÁLISIS DE REQUISITOS
+
+La hipótesis central del proyecto es que, mediante la ingesta centralizada de tramas ADS-B en
+Elasticsearch y el uso de reglas de correlación en Kibana, es posible detectar eventos anómalos –
+como un avión transmitiendo una altitud físicamente imposible o dos emisiones simultáneas con
+un mismo identificador– incluso dentro de un flujo de tráfico simulado.
+Se trata de un ejercicio práctico de integración: no se desarrollará un sistema ADS-B, sino que se
+aprovecharán componentes existentes de código abierto – un backend simulador de tráfico aéreo.
+Se implementará desde 0 el Elastic Stack– para crear una plataforma de monitoreo y alerta.
+El propósito del proyecto se desglosa en los siguientes objetivos específicos:
+
+3.1 DESPLIEGUE DE ELASTIC STACK
+
+El primer objetivo consiste en instalar, configurar y desplegar todos los módulos del sistema SIEM
+en un entorno Linux, empleando contenedores Docker para asegurar la portabilidad y la
+reproducibilidad del entorno.
+El despliegue se gestionará con un archivo docker-compose.yml que orquestará los servicios y
+definirá las redes internas, volúmenes de persistencia y dependencias entre contenedores. Este
+enfoque modular y contenedorizado permitirá levantar todo el entorno con un solo comando
+(docker-compose up -d), simplificando la puesta en marcha y reduciendo la complejidad operativa
+del sistema.
+
+3.2 INGESTA Y NORMALIZACIÓN DE DATOS ADS-B
+
+Una vez desplegada la infraestructura base, el siguiente objetivo consiste en desarrollar una
+automatización de ingesta continua y normalizada que capture las tramas ADS-B generadas por el
+backend Co-ATC y scripts auxiliares en Python, las procese en tiempo real y las almacene en
+Elasticsearch.
+Cada mensaje ADS-B contendrá campos esenciales como timestamp, icao, latitud, longitud, altitud,
+velocidad y rumbo. Durante la ingesta, estos eventos serán validados y transformados para asegurar
+que los campos numéricos y geográficos estén correctamente tipados (float, integer, geo_point),
+garantizando su eficiencia en consultas, agregaciones y visualizaciones en Kibana.
+La canalización de datos se gestionará de la siguiente manera:
+   1. Filebeat actuará como recolector (harvester) de archivos de log o flujos en red. Su función
+      será leer de un archivo JSON generado por el simulador (por ejemplo, adsb_events.log) y
+      enviar cada línea como evento estructurado a Logstash. Si el simulador emite directamente
+      por red, Filebeat podrá reemplazarse o complementarse con un input de Logstash basado
+      en HTTP o UDP.
+   2. Logstash recibirá los eventos desde Filebeat y ejecutará una pipeline de procesamiento
+      compuesta por filtros de validación (mutate, convert, drop). Durante esta etapa, se añadirán
+      metadatos como source: "simulated", así como banderas de anomalías (anomaly_flags)
+      para identificar valores físicamente imposibles, por ejemplo, altitudes negativas o
+      velocidades superiores a límites razonables.
+
+
+
+                                                 7
+                                                                                     Rodríguez Fernández, Mario
+
+
+   3. Elasticsearch indexará los datos procesados bajo un esquema de índices diarios (adsb-
+      data-YYYY.MM.dd), facilitando la organización y consulta eficiente del histórico de mensajes.
+      El esquema incluirá plantillas de mapeo para cada campo y políticas de retención de datos
+      (por ejemplo, eliminación automática de índices con más de 30 días).
+El flujo completo operará en tiempo casi real, con una latencia esperada de pocos segundos entre
+la generación de un mensaje y su disponibilidad en los dashboards. Este diseño garantiza la
+coherencia, trazabilidad y capacidad analítica inmediata sobre el tráfico aéreo simulado.
+
+3.3 DETECCIÓN DE ANOMALÍAS DE SEGURIDAD
+
+Una vez los datos estén indexados y accesibles, se configurarán reglas de correlación en el módulo
+Elastic Security de Kibana para detectar comportamientos anómalos o potencialmente maliciosos
+dentro de las transmisiones ADS-B.
+El objetivo de este subsistema es identificar, clasificar y alertar sobre patrones de comportamiento
+anómalo que puedan indicar errores de simulación o intentos de spoofing. Las anomalías
+principales que se abordarán incluyen:
+
+
+
+
+                           Ilustración 4 - Ejemplos visuales de posibles anomalías
+
+   •   Altitudes negativas o fuera de rango operativo, indicando errores de sensor o datos no
+       válidos.
+   •   Velocidades imposibles, superiores a 1200 nudos, incompatibles con la física del vuelo.
+   •   Duplicación simultánea de identificadores ICAO, potencialmente indicativa de ataques de
+       spoofing o aeronaves falsas.
+   •   Saltos bruscos de posición, que reflejan incoherencias en la trayectoria de vuelo (por
+       ejemplo, un avión que se “teletransporta” entre posiciones distantes en menos de un
+       segundo).
+Cada una de estas anomalías se definirá como una regla de detección independiente, operando
+sobre el índice de los datos ADS-B. Las reglas simples (como detección de altitud o velocidad) se
+implementarán con condiciones del tipo altitude < 0 o velocity > 1200.
+Las reglas más complejas, como duplicación de ICAO o saltos de posición, requerirán correlación
+temporal entre eventos, implementado mediante scripts que comparen la evolución de los datos en
+ventanas temporales cortas. Cuando una condición de alerta se cumpla, Elastic Security generará
+un evento de detección con los campos relevantes: tipo de anomalía, severidad, ICAO afectado, y
+hora de detección. Estas alertas se almacenarán en los índices internos del SIEM.
+Asimismo, el sistema podrá definir acciones automáticas asociadas a alertas críticas, tales como:
+
+
+                                                    8
+                                                                              Rodríguez Fernández, Mario
+
+
+   •   Envío de notificaciones por correo electrónico a los administradores.
+   •   Visualización inmediata en un panel de control de alertas en tiempo real dentro de Kibana.
+Estas funcionalidades permiten cerrar el ciclo de detección y respuesta, haciendo de Elastic Stack
+un entorno completo de seguridad operacional y análisis forense de datos ADS-B simulados.
+
+
+3.4 DASHBOARDS Y VISUALIZACIÓN
+
+Una parte esencial del proyecto es la creación de dashboards interactivos en Kibana, que servirán
+como interfaz visual para la monitorización del tráfico aéreo y la gestión de alertas. Estos paneles
+permitirán al analista observar tanto la actividad operativa del espacio aéreo simulado como las
+incidencias de seguridad detectadas por el SIEM.
+Los dashboards principales incluirán:
+   •   Dashboard Operativo ADS-B:
+
+Un mapa interactivo con la posición actual de todas las aeronaves simuladas, actualizado en
+tiempo real mediante datos de Elasticsearch. Se complementará con gráficos de series temporales
+(por ejemplo, número de mensajes por minuto, altitud media, velocidad promedio) y listas Top N
+(aeronaves más activas, eventos por ICAO).
+
+   •   Dashboard de Seguridad y Anomalías:
+
+Panel enfocado en las detecciones del SIEM, que mostrará el número y tipo de alertas activas, su
+severidad, y la evolución temporal de las mismas. Permitirá filtrar por ICAO, tipo de anomalía o rango
+temporal, facilitando el análisis forense posterior.
+
+   •   Dashboard de Estado del Sistema (posibilidad):
+
+Se podrá incluir un tablero de monitorización de la plataforma, mostrando métricas de CPU, RAM y
+estado de los contenedores Elastic, asegurando la disponibilidad del entorno de laboratorio.
+Estos paneles estarán diseñados para ofrecer una visión situacional completa, con filtros dinámicos
+y actualizaciones automáticas, sirviendo como interfaz principal del analista de seguridad. La
+usabilidad y claridad visual se considerarán prioritarias: unidades coherentes (pies, nudos),
+umbrales destacados en color y navegación fluida entre datos y alertas.
+
+3.5 REQUISITOS TÉCNICOS Y DE CALIDAD
+
+El sistema deberá cumplir los siguientes requisitos globales para asegurar su correcto
+funcionamiento:
+
+   •   Integridad de datos: Filebeat debe retener el puntero del archivo y garantizar la entrega sin
+       duplicados, incluso tras reinicios de servicio.
+   •   Fiabilidad: Los contenedores deberán poder reiniciarse independientemente sin perder
+       estado, y Logstash debe reintentar la entrega en caso de caídas temporales de Elasticsearch.
+   •   Usabilidad: Kibana deberá proporcionar dashboards claros, con visualizaciones en mapa y
+       gráficos de series temporales que permitan filtrar fácilmente por ICAO, tiempo o tipo de
+       alerta.
+
+
+
+                                                  9
+                                                                              Rodríguez Fernández, Mario
+
+
+   •    Portabilidad: Todo el entorno deberá ser replicable con un solo comando, garantizando
+        consistencia entre entornos de desarrollo y prueba.
+
+
+
+
+   4.      SIMULACIÓN DE TRÁFICO ADS-B
+
+Para construir un entorno de ingesta de tráfico aéreo que resultara didáctico y técnicamente
+manejable, se decidió partir del proyecto open-source Co-ATC, el cual ya funciona como backend
+de monitorización aeronáutica. De este modo, se reduce el tiempo invertido en aspectos ajenos a
+los objetivos principales del proyecto y focalizando el trabajo en la administración y explotación del
+SIEM.
+
+
+
+
+                                 Ilustración 5 - Menú principal de Co-ATC
+
+
+
+
+4.1 ADAPTACIÓN DE CO-ATC AL CONTEXTO DE LEBL
+
+Co-ATC es un proyecto open-source que permite visualizar, gestionar y simular aeronaves mediante
+una interfaz web y una API REST. Co-ATC puede funcionar tanto con receptores ADS-B reales como
+con fuentes locales de datos JSON, lo que lo convierte en una herramienta ideal para entornos
+educativos o de desarrollo sin necesidad de hardware aeronáutico.
+El programa se entrega con una configuración orientada a Toronto (CYYZ). Para que los cálculos de
+distancia, rumbo y filtros visuales sean coherentes con un escenario español, se modificó `co-atc-
+main/configs/config.toml`. El fragmento siguiente resume el cambio más relevante:
+
+
+
+
+                                                   10
+                                                                            Rodríguez Fernández, Mario
+
+
+
+
+2. `local_source_url`: ahora apunta a `http://127.0.0.1:9000/aircraft.json`, un feed que servimos
+con `python3 -m http.server` para que Co-ATC tenga siempre un fichero disponible.
+4. `[station]`: define la latitud, longitud, elevación y el código ICAO de Barcelona. Con ello, las
+herramientas de Co-ATC calculan correctamente distancias a la estación, fases de vuelo y filtros
+geográficos en la interfaz.
+Además, se añadió un fichero mínimo `co-atc-main/data/aircraft.json`:
+
+
+
+
+Este JSON vacío evita errores cuando el backend intenta leer un feed inexistente. Al servirlo
+mediante un HTTP local (ejemplo: `python3 -m http.server 9000` dentro de `co-atc-main/data/`),
+garantizamos que el bucle de ingestión se mantenga activo y que las aeronaves simuladas se
+integren en la vista web y en los históricos de SQLite.
+
+
+
+4.2 ORQUESTADOR DE TRÁFICO SIMULADO
+
+El siguiente componente clave es `simulador_bcn.py`, un script en Python que se comunica con la
+API REST de Co-ATC. Su misión es crear aeronaves con rutas predefinidas y actualizar sus controles
+(rumbo, velocidad, razón de ascenso/descenso) en tiempo real. El esqueleto principal utiliza la
+clase `VueloSimulado` y la función `construir_vuelos`:
+Cada `TramoVuelo` define destino, velocidad, altitud objetivo y, opcionalmente, duración manual
+o rumbo forzado. Al ejecutar el script, se construye una lista de eventos cronológicos
+(`EventoProgramado`) que llaman a Co-ATC con `POST /simulation/aircraft` para dar de alta una
+aeronave, y posteriormente `PUT /simulation/aircraft/{hex}/controls` para modificar su trayectoria.
+
+
+
+
+                                                11
+                                                                           Rodríguez Fernández, Mario
+
+
+
+
+4.3 ESCENARIO NOMINAL Y AJUSTES DE RITMO
+
+Para evitar dependencias externas, el simulador generará por ejemplo un bloque de ocho vuelos
+nominales entre las 06:00 y las 06:06 CET (VLG201, IBE432, VY6502, RYR221, DLH1421, EZY8104,
+RYR611 y AFR1738). Esta ventana comprimida acelera la generación de datos, permitiendo que el
+pipeline Elastic reciba múltiples eventos en pocos minutos.
+
+
+
+4.5 FLUJO COMPLETO Y RELACIÓN CON ELASTIC STACK
+
+Una vez que Co-ATC contiene aeronaves activas, su endpoint `/api/v1/aircraft` expone el estado de
+cada vuelo. Este mismo endpoint se utiliza para alimentar Elastic Stack a través de Filebeat o
+Logstash. La secuencia es la siguiente:
+
+       1. Simulador (Python) → crea/actualiza aeronaves en Co-ATC.
+
+       2. Co-ATC → mezcla aeronaves, actualiza posiciones y guarda registros.
+
+       3. Filebeat/Logstash → consulta `/api/v1/aircraft`, enriquece campos (p. ej.
+       `is_simulated`, `anomaly_flags`) y envía eventos a Elasticsearch (`adsb-data-*`).
+
+       4. Elastic Security / Kibana → aplica reglas, genera dashboards y alertas.
+De este modo, la adaptación respeta la arquitectura de Co-ATC (frontend web, almacenamiento,
+APIs) y añade la capa de simulación + ingesta que necesitamos para el laboratorio SIEM. El archivo
+dispone de scripts, configuraciones y documentación que explican cada paso, por lo que resulta
+sencillo replicar la puesta en marcha incluso sin familiaridad previa con el proyecto original.
+
+
+
+
+                                               12
+                                                                                 Rodríguez Fernández, Mario
+
+
+    5.     DESCRIPCIÓN DE LA ARQUITECTURA Y MÓDULOS DEL
+           SISTEMA
+
+En la Ilustración 6 se presenta la arquitectura general, donde pueden identificarse dos subsistemas
+principales: por un lado, el entorno de simulación ADS-B (fuente de datos) y por otro el SIEM Elastic
+Stack (ingesta, almacenamiento, detección y visualización). A continuación, se describen los
+módulos involucrados y cómo interactúan:
+
+5.1 SIMULADOR CO-ATC (BACKEND TRÁFICO AÉREO)
+
+Es el módulo que genera los datos base de ADS-B. Para efectos de nuestro SIEM, Co-ATC se
+configurará en modo local de datos: en lugar de requerir un receptor ADS-B físico, leerá/escribirá a
+un archivo JSON local actuando como fuente de datos ADS-B. Cada vez que el simulador genera un
+nuevo paquete ADS-B (por ejemplo, cada 1 segundo por aeronave), lo añadirá como línea JSON en
+dicho archivo de log (p.ej. adsb_events.log), incluyendo campos de telemetría (ICAO, lat, lon, alt,
+vel, heading) y metadatos de simulación (timestamp, tipo “simulado”, etc.). Este archivo constituye
+el punto de integración entre la simulación y Elastic Stack.
+
+.
+
+
+
+
+                              Ilustración 6 - Descripción modular general SIEM
+
+5.2 FILEBEAT (BEAT DE RECOLECCIÓN)
+
+Es el agente ligero de Elastic encargado de leer el archivo de log producido por el simulador y enviar
+sus líneas a la pipeline central. Filebeat se ejecutará en un contenedor Docker junto con los demás
+servicios Elastic. Se configurará un input de tipo log apuntando al archivo adsb_events.log. Dado
+que el simulador escribe líneas JSON, aprovecharemos la característica de Filebeat para
+decodificar JSON automáticamente de cada línea (json.keys_under_root: true). Esto evitará tener
+
+
+                                                    13
+                                                                               Rodríguez Fernández, Mario
+
+
+que pasar manualmente el mensaje en Logstash: Filebeat enviará ya un evento estructurado con
+campos JSON. La configuración de Filebeat (filebeat.yml) incluirá la dirección de destino, que en
+nuestro caso será Logstash. De esta forma, Filebeat actúa como “forwarder”, monitorizando
+continuamente el archivo; cuando detecta nuevas líneas, las envía a Logstash. Se habilitará el
+registro de estado (registry) de Filebeat para que recuerde por dónde va leyendo incluso si se reinicia,
+garantizando no duplicar ni perder datos. Este componente es fundamental para desacoplar la
+generación de datos del procesamiento: el simulador solo se preocupa de escribir su archivo, y
+Filebeat de tomarlo y pasarlo al SIEM.
+
+
+
+
+                                Ilustración 7 - Diagrama del módulo FileBeat
+
+
+                                                    14
+                                                                              Rodríguez Fernández, Mario
+
+
+5.3 LOGSTASH (PIPELINE DE INGESTA)
+
+Logstash recibe los eventos de Filebeat a través de un input Beats en el puerto 5044. Cada evento
+contendrá los campos decodificados de una trama ADS-B. En la etapa de filtros, Logstash aplicará
+nuestra lógica de normalización y limpieza: por ejemplo, usar un filtros para garantizar que altitude,
+velocity y otros campos numéricos sean integer/float, validar si la altitud es plausible (>=0 y <=
+60000 ft, p.ej.) y marcar un campo booleano out_of_range o incluso calcular las banderas de
+anomalía (anomaly_flags) básicas. Asimismo, Logstash podría realizar un enriquecimiento
+geográfico: combinar latitud y longitud en un solo campo geo-point location que Elasticsearch
+pueda indexar para mapas. Si contamos con una lista de aeronaves bloqueadas (por ejemplo un
+índice adsb-blacklist de ICAOs sospechosos), Logstash también puede cruzar cada evento contra
+ella (filtro translate o consulta Elasticsearch) para marcar un flag blacklisted o decidir enviar el
+evento a un índice diferente de cuarentena.
+
+Tras los filtros, en la sección output, Logstash indexará los eventos en Elasticsearch usando el
+cliente nativo. Aquí definiremos que todos los eventos vayan al índice adsb-data-<fecha> principal.
+Logstash actuará, en suma, como el corazón de procesamiento, asegurando que los datos salgan
+limpios y enriquecidos hacia el almacenamiento.
+
+
+
+
+5.4 ELASTICSEARCH (NODO DE DATOS)
+
+Es el motor de base de datos donde se almacenarán y gestionarán los logs y alertas. Se desplegará
+un único nodo dentro de Docker, exponiendo el puerto 9200 para comunicaciones internas y para
+Kibana. Antes de la ingesta, configuraremos en Elasticsearch los mapeos adecuados: por ejemplo,
+usar un index template para adsb-* que establezca tipos de dato (lat/lon como geo_point, ICAO
+como keyword, timestamp como date, etc.). Esto garantiza que, al indexar el primer evento, los
+campos tengan el tipo correcto. Elasticsearch almacenará no solo los eventos ADS-B ingestados,
+
+                                                 15
+                                                                            Rodríguez Fernández, Mario
+
+
+sino también las alertas de seguridad que el SIEM genere. En Elastic Security, por defecto las
+detecciones se almacenan en índices especiales escondidos. En cualquier caso, Elasticsearch
+permitirá consultar tanto los datos como las alertas mediante su API REST y, sobre todo, proveerá a
+Kibana la capacidad de búsqueda y agregación. Se habilitará algún snapshot de backup local para
+preservar la configuración entre reinicios.
+
+
+
+
+5.5 KIBANA (INTERFAZ SIEM):
+
+Kibana es la interfaz web a través de la cual interactuaremos con el SIEM. Se conectará al nodo
+Elasticsearch y ofrecerá un espacio de trabajo dedicado (podemos crear un Space llamado “ADS-B
+SIEM”). En Kibana se llevarán a cabo varias tareas:
+
+   1. Configuración de data views para los índices, lo que facilita crear visualizaciones sin
+      buscarlos manualmente.
+   2. Diseño de dashboards operativos y forenses, arrastrando visualizaciones de mapa, gráficas
+      de series, etc., según lo descrito en requisitos.
+   3. Uso del módulo Elastic Security (SIEM):
+
+Habilitaremos la funcionalidad de “detecciones” en Kibana, que permite definir reglas. Crearemos
+al menos cuatro reglas, correspondientes a las anomalías objetivo. Por ejemplo, una regla de tipo
+Threshold para altitud negativa (condición altitude < 0 en cualquier evento); una para velocidad
+imposible (velocity > 1200); una para detectar dos documentos con mismo icao en ventana de 5
+segundos con posiciones separadas > X km (indicando duplicidad); y otra para saltos de posición
+que podría implementarse calculando la distancia entre posiciones consecutivas de la misma
+aeronave.
+
+
+
+
+                                                16
+                                                                              Rodríguez Fernández, Mario
+
+
+
+
+Asignaremos grados a estas reglas (ej. altitud negativa = low, duplicado de ICAO = high), y
+definiremos acciones básicas (log en consola, marcar campo). Kibana mostrará en la sección
+“Alerts” cualquier evento que active una regla, y permitirá al analista hacer clic para explorar
+detalles del evento original. También se pueden usar las herramientas de Timeline de Elastic
+Security para correlacionar eventos relacionados a una alerta (por ejemplo, filtrar todos los datos
+de ese ICAO en los 10 minutos alrededor de la detección). En resumen, Kibana será el centro de
+control donde configuramos las detecciones y visualizamos resultados.
+
+Además de estos módulos principales, la arquitectura podría complementarse con otros
+componentes: por ejemplo, Metricbeat para recopilar métricas del sistema como hemos dicho
+anteriormente (CPU, memoria, etc.) de los contenedores.
+
+Asimismo, podría haber un módulo externo opcional que gestione una lista negra de ICAOs: la idea
+sería que ante ciertos alertas (ej. confirmación de spoofing), se agregue el identificador a una lista
+de bloqueo y Logstash/Kibana dejen de considerarlo en Co-ATC.
+
+
+
+
+                                                 17
+                                                                            Rodríguez Fernández, Mario
+
+
+   6.      CONCLUSIONES Y PASOS SIGUIENTES
+
+Esta primera entrega ha supuesto un acercamiento sólido y estructurado al funcionamiento real de
+un SIEM y, en particular, al ecosistema Elastic Stack. Más allá de familiarizarme con sus
+componentes, he aprendido a comprenderlos como un conjunto integrado: Filebeat como
+recolector fiable, Logstash como núcleo de transformación, Elasticsearch como base de datos
+optimizada para búsquedas y Kibana como la capa de visualización y análisis que convierte datos
+en conocimiento. Este proceso me ha permitido interiorizar cómo se articula una plataforma
+completa de seguridad y monitorización en un entorno profesional.
+
+El trabajo también ha reforzado conceptos clave de la asignatura, como la importancia de la ingesta
+controlada de datos, la normalización de eventos, la gestión de logs en sistemas distribuidos, el
+versionado mediante contenedores y la correlación de alertas. Entender cómo se define una regla
+de detección, cómo se estructura un pipeline de procesamiento y cómo un índice debe ser
+configurado para consultas eficientes me ha ayudado a conectar la teoría de clase con un caso
+práctico realista.
+
+La aviación, una de mis grandes pasiones, ha aportado al proyecto un contexto especialmente
+motivador. La posibilidad de aplicar técnicas de seguridad y análisis de información a un entorno
+que conozco y que me interesa ha hecho el proyecto más enriquecedor. Trabajar con tráfico ADS-B
+simulado me ha permitido ver cómo un SIEM puede ser útil incluso en escenarios fuera del ámbito
+puramente empresarial o informático, destacando su valor en sectores donde la integridad de los
+datos y la detección de anomalías son fundamentales para la seguridad operacional.
+
+Esta primera entrega establece así los cimientos necesarios para la parte práctica que se
+desarrollará en la segunda entrega. Todo lo trabajado aquí —la arquitectura, el flujo de ingesta, el
+diseño preliminar de reglas, la organización de datos y la planificación del despliegue— servirá
+como base para implementar el sistema completo, generar los datos simulados, identificar
+anomalías reales y construir dashboards operativos y de seguridad. En dicha fase, se validará el
+funcionamiento del SIEM y se comprobará hasta qué punto los mecanismos teóricos descritos
+pueden operar eficazmente en un entorno que emule un flujo continuo de tráfico ADS-B.
+
+En conjunto, esta primera etapa del proyecto me ha permitido comprender no solo qué es un SIEM,
+sino cómo se construye, cómo se administra y cómo se aprovecha en un entorno real. La segunda
+entrega permitirá cerrar el ciclo y demostrar de manera práctica el potencial de Elastic Stack como
+herramienta de seguridad, análisis y monitorización.
+
+
+
+
+                                                18
+                                                                         Rodríguez Fernández, Mario
+
+
+7.     REFERENCIAS Y BIBLIOGRAFÍA
+
+Elastic. (2023, 17 de abril). Flightwatching helps carriers reduce CO₂ emissions and save
+$100,000+ per aircraft per year, with Elastic. https://www.elastic.co/blog/flightwatching-helps-
+carriers-with-elastic
+La Roche, A., & Beeching, B. (2025, 18 de marzo). Elasticsearch in the aviation industry: A game-
+changer for data management. Elastic. https://www.elastic.co/blog/elasticsearch-data-
+management-aviation
+Segurilatam. (2017, 18 de mayo). Ciberseguridad en aeropuertos y compañías de aviación civil.
+https://www.segurilatam.com/seguridad-por-sectores/puertos-y-
+aeropuertos/ciberseguridad-en-aeropuertos-y-companias-de-aviacion-civil_20170518.html
+Controladores Aéreos. (2024, 8 de enero). ADS-B: La Revolución en la Vigilancia del Tráfico
+Aéreo en España. https://controladoresaereos.es/ads-b-la-revolucion-en-la-vigilancia-del-
+trafico-aereo-en-espana/
+Murisa, W. (2025). A Conceptual SOC Framework for Air Traffic Management Systems.
+Proceedings               of         ICISSP            2025.            Scitepress.          PDF:
+https://www.scitepress.org/Papers/2025/131742/131742.pdf
+Kosho. (s. f.). Flight Track — ADS-B Signal Visualization with Elastic Stack [Repositorio GitHub].
+https://github.com/kosho/flight-track
+Gilbert, G. (2017, 27 de febrero). FAA Cautions about Transponder and ADS-B Testing. AINonline.
+https://www.ainonline.com/aviation-news/aerospace/2017-02-27/faa-cautions-about-
+transponder-and-ads-b-testing
+W. Ahmed, N.A. Bhatti, A. Masood, A.A. Alharbi & A. Alotaibi. (2024). Advancements in ADS-B
+Security: A Comprehensive Survey of Vulnerabilities, Mitigation Strategies, System
+Requirements             and       Emerging         Research          Trends.       Preprints.org.
+https://doi.org/10.20944/preprints202405.0586.v1
+J. Manzoor. (2024). Evaluating security and performance of open-source SIEM systems. PMC.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10977669/
+M. Sheeraz. (2024). Revolutionizing SIEM Security: An Innovative Correlation Engine for Multi-
+Layered Attack Detection. Sensors, 24(15), 4901. MDPI. https://doi.org/10.3390/s24154901
+Y.W. Law & J. Slay. (2022). SIEM4GS: Security Information and Event Management for a Virtual
+Ground Station Testbed. University of South Australia / SmartSat CRC.
+https://ywlaw.github.io/pub/law2022siem4gs.pdf
+Aymard Cuello, M. (2019). Security Monitoring System Applied to IoT. Tesis Máster, Universidad
+Politécnica                                        de                                      Madrid.
+https://oa.upm.es/65634/1/TESIS_MASTER_MARIANNE_AYMARD_CUELLO.pdf
+X. Ying, J. Mazer, G. Bernieri, M. Conti, L. Bushnell & R. Poovendran. (2019). Detecting ADS-B
+Spoofing Attacks using Deep Neural Networks. arXiv. https://arxiv.org/abs/1904.09969
+M. Ngamboé, J.-S. Marrocco, J.-Y. Ouattara, J.M. Fernandez & G. Nicolescu. (2023). CABBA:
+Compatible Authenticated Bandwidth-efficient Broadcast protocol for ADS-B. arXiv.
+https://arxiv.org/abs/2312.09870
+
+
+                                             19
+                                                                   Rodríguez Fernández, Mario
+
+
+S. Akerman, E. Habler & A. Shabtai. (2019). VizADS-B: Analyzing Sequences of ADS-B Images
+Using Explainable Convolutional LSTM Encoder-Decoder to Detect Cyber Attacks. arXiv.
+https://arxiv.org/abs/1906.07921
+“AI-driven SIEM that is open source and affordable”. (s. f.). Elastic.
+https://www.elastic.co/security/siem
+
+
+
+
+                                         20
+
