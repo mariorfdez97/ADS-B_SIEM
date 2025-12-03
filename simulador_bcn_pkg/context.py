@@ -16,10 +16,11 @@ from simulador_bcn_pkg.models import VueloSimulado
 class ContextoSimulacion:
     """Gestiona la sesion HTTP y el registro de aeronaves creadas."""
 
-    def __init__(self, url_base: str, modo_simulacion: bool, reintentos: int = 3) -> None:
+    def __init__(self, url_base: str, modo_simulacion: bool, reintentos: int = 3, factor_tiempo: float = 1.0) -> None:
         self.url_base = url_base.rstrip("/")
         self.modo_simulacion = modo_simulacion
         self.reintentos = reintentos
+        self.factor_tiempo = max(1.0, factor_tiempo)
         self.sesion = requests.Session()
         self.hex_por_vuelo: Dict[str, str] = {}
         self.vuelos_registrados: List[VueloSimulado] = []
@@ -85,10 +86,20 @@ class ContextoSimulacion:
     ) -> None:
         """Invoca PUT /simulation/aircraft/{hex}/controls."""
         codigo_hex = self.obtener_hex(vuelo)
+        escala = self.factor_tiempo
+        velocidad_ajustada = max(0.0, velocidad_kt * escala)
+        vertical_rate_ajustada = vertical_rate * escala
+        # Limites de la API: vel 0-500 kt, vertical_rate -3000..3000 fpm
+        if velocidad_ajustada > 500.0:
+            velocidad_ajustada = 500.0
+        if vertical_rate_ajustada > 3000.0:
+            vertical_rate_ajustada = 3000.0
+        if vertical_rate_ajustada < -3000.0:
+            vertical_rate_ajustada = -3000.0
         cuerpo_peticion = {
             "heading": rumbo,
-            "speed": velocidad_kt,
-            "vertical_rate": vertical_rate,
+            "speed": velocidad_ajustada,
+            "vertical_rate": vertical_rate_ajustada,
         }
         if self.modo_simulacion:
             logging.info(
@@ -101,16 +112,21 @@ class ContextoSimulacion:
         url = f"{self.url_base}/simulation/aircraft/{codigo_hex}/controls"
         respuesta = self.sesion.put(url, json=cuerpo_peticion, timeout=5)
         if not respuesta.ok:
-            raise RuntimeError(
-                f"Error actualizando {vuelo.identificador}: {respuesta.status_code} {respuesta.text}"
+            logging.warning(
+                "Error actualizando %s: %s %s (payload %s)",
+                vuelo.identificador,
+                respuesta.status_code,
+                respuesta.text,
+                cuerpo_peticion,
             )
+            return
         logging.info(
             "Actualizacion enviada para %s (%s): rumbo %.1f, vel %.1f kt, vr %.0f ft/min",
             vuelo.identificador,
             descripcion,
             rumbo,
-            velocidad_kt,
-            vertical_rate,
+            velocidad_ajustada,
+            vertical_rate_ajustada,
         )
 
     def eliminar_aeronave(self, vuelo: VueloSimulado) -> None:

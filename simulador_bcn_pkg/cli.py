@@ -27,7 +27,7 @@ def parsear_argumentos() -> argparse.Namespace:
     parser.add_argument(
         "--factor-tiempo",
         type=float,
-        default=120.0,
+        default=1.0,
         help="Factor de aceleracion temporal (1.0 = tiempo real).",
     )
     parser.add_argument(
@@ -69,6 +69,7 @@ def main() -> None:
     contexto = ContextoSimulacion(
         url_base=argumentos.url_base,
         modo_simulacion=argumentos.modo_prueba,
+        factor_tiempo=argumentos.factor_tiempo,
     )
     contexto.vuelos_registrados = vuelos
 

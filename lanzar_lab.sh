@@ -38,6 +38,40 @@ kill_residuals() {
   done
 }
 
+# ----------------------- Menu interactivo -----------------------------------
+echo "================ MENÚ DE ARRANQUE ================"
+read -r -p "Factor de tiempo (default 1.0): " INPUT_FACTOR
+SIM_FACTOR_TIEMPO="${INPUT_FACTOR:-${SIM_FACTOR_TIEMPO:-1.0}}"
+
+read -r -p "Incluir anomalías? [s/N]: " INPUT_ANOM
+INCLUIR_ANOMALIAS="no"
+if [[ "${INPUT_ANOM,,}" == "s" || "${INPUT_ANOM,,}" == "y" ]]; then
+  INCLUIR_ANOMALIAS="si"
+fi
+
+read -r -p "Resetear bases co-atc (RESET_COATC_DB=1)? [s/N]: " INPUT_RESET
+RESET_COATC_DB="${INPUT_RESET:-}"
+if [[ "${INPUT_RESET,,}" == "s" || "${INPUT_RESET,,}" == "y" ]]; then
+  RESET_COATC_DB="1"
+else
+  RESET_COATC_DB="0"
+fi
+
+read -r -p "Forzar build de co-atc (go build)? [s/N]: " INPUT_BUILD
+FORCE_BUILD="${INPUT_BUILD:-}"
+if [[ "${INPUT_BUILD,,}" == "s" || "${INPUT_BUILD,,}" == "y" ]]; then
+  FORCE_BUILD="1"
+else
+  FORCE_BUILD="0"
+fi
+echo "=================================================="
+echo "[INFO] Configuración seleccionada:"
+echo "  - factor-tiempo: ${SIM_FACTOR_TIEMPO}"
+echo "  - anomalías: ${INCLUIR_ANOMALIAS}"
+echo "  - reset DB: ${RESET_COATC_DB}"
+echo "  - force build: ${FORCE_BUILD}"
+echo "--------------------------------------------------"
+
 mkdir -p "$LOG_DIR"
 
 # Detener instancias anteriores si existen
@@ -94,13 +128,17 @@ echo "CO_ATC_PID=$!" >>"$PIDS_FILE"
 echo "[INFO] Esperando a que Co-ATC escuche en 8000..."
 wait_for_port "127.0.0.1" 8000 30
 
-SIM_FACTOR_TIEMPO="${SIM_FACTOR_TIEMPO:-120.0}"
+SIM_FACTOR_TIEMPO="${SIM_FACTOR_TIEMPO:-1.0}"
+EXTRA_ARGS=()
+if [[ "$INCLUIR_ANOMALIAS" == "si" ]]; then
+  EXTRA_ARGS+=(--incluir-anomalias)
+fi
 
 # Arranque del simulador
 echo "[INFO] Iniciando simulador BCN (factor-tiempo=${SIM_FACTOR_TIEMPO}; añade --incluir-anomalias si procede)..."
 (
   cd "$BASE_DIR"
-  exec python3 simulador_bcn.py --factor-tiempo "$SIM_FACTOR_TIEMPO" >>"$LOG_DIR/simulador.log" 2>&1
+  exec python3 simulador_bcn.py --factor-tiempo "$SIM_FACTOR_TIEMPO" "${EXTRA_ARGS[@]}" >>"$LOG_DIR/simulador.log" 2>&1
 ) &
 echo "SIM_PID=$!" >>"$PIDS_FILE"
 
