@@ -31,3 +31,17 @@ Thumbs.db
 /venv/
 /bin/
 /dist/
+
+# Logs y artefactos de ejecucion
+logs/
+*.log
+
+# Estado runtime de Co-ATC / Elastic
+co-atc-main/data/co-atc-*.db
+co-atc-main/data/co-atc-*.db-shm
+co-atc-main/data/co-atc-*.db-wal
+co-atc-main/data/aircraft.json
+esdata/
+elasticsearch/
+logstash/data/
+docker-compose.override.yml
