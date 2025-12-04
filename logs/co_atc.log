@@ -9367,3 +9367,198 @@ WARN: Post-processing is enabled but no OpenAI API key provided in transcription
 2025-12-04T16:53:06.997+0100	[1;36minfo[0m	HTTP server shutdown complete	{"addr": "127.0.0.1:8000"}
 2025-12-04T16:53:06.997+0100	[1;36minfo[0m	All HTTP servers shutdown.
 2025-12-04T16:53:06.997+0100	[1;36minfo[0m	Server fully stopped
+WARN: No OpenAI API key provided for transcription - transcription features will be disabled
+WARN: ATC Chat is enabled but no OpenAI API key provided - ATC chat features will be disabled
+WARN: Post-processing is enabled but no OpenAI API key provided in transcription config - post-processing features will be disabled
+2025-12-04T17:00:52.188+0100	[1;36minfo[0m	Starting Co-ATC server	{"version": "0.1.0", "config_path": "/home/mario/uni/admin/ADS-B_SIEM/co-atc-main/configs/config.toml"}
+2025-12-04T17:00:52.188+0100	[1;36minfo[0m	Using daily database	{"path": "data/co-atc-2025-12-04.db"}
+2025-12-04T17:00:52.188+0100	[1;36minfo[0m	sqlite         	Initializing SQLite storage	{"path": "data/co-atc-2025-12-04.db"}
+2025-12-04T17:00:52.199+0100	[1;36minfo[0m	sqlite         	Initializing database schema
+2025-12-04T17:00:52.200+0100	[1;36minfo[0m	sqlite         	Database schema initialized successfully
+2025-12-04T17:00:52.200+0100	[1;36minfo[0m	Using SQLite storage	{"path": "data/co-atc-2025-12-04.db"}
+2025-12-04T17:00:52.200+0100	[1;36minfo[0m	Aircraft streaming DISABLED - using HTTP polling only
+2025-12-04T17:00:52.200+0100	[1;36minfo[0m	adsb           	Loading airline data from: assets/airlines.json
+2025-12-04T17:00:52.202+0100	[1;36minfo[0m	web-socket     	Starting WebSocket server
+2025-12-04T17:00:52.239+0100	[1;36minfo[0m	adsb           	Airline map loaded	{"count": 6879}
+2025-12-04T17:00:52.239+0100	[1;36minfo[0m	adsb           	Loaded airline data	{"count": 6879}
+2025-12-04T17:00:52.239+0100	[1;36minfo[0m	adsb           	Loading runway data from: assets/runways.json
+2025-12-04T17:00:52.241+0100	[1;36minfo[0m	adsb           	Loaded runway data	{"airport": "CYYZ", "runway_count": 5}
+2025-12-04T17:00:52.241+0100	[1;36minfo[0m	adsb           	Starting ADS-B service	{"fetch_interval": 2}
+2025-12-04T17:00:52.271+0100	[1;36minfo[0m	adsb           	Aircraft status updated	{"hex": "441E0F", "flight": "SIM518", "new_status": "signal_lost", "on_ground": true, "time_since_last_seen": 466.26322806}
+2025-12-04T17:00:52.272+0100	[1;36minfo[0m	adsb           	Aircraft status updated	{"hex": "4F156B", "flight": "SIM966", "new_status": "signal_lost", "on_ground": true, "time_since_last_seen": 466.26322806}
+2025-12-04T17:00:52.273+0100	[1;36minfo[0m	adsb           	Aircraft status updated	{"hex": "E2C426", "flight": "SIM180", "new_status": "signal_lost", "on_ground": true, "time_since_last_seen": 466.26322806}
+2025-12-04T17:00:52.274+0100	[1;36minfo[0m	adsb           	Aircraft status updated	{"hex": "581493", "flight": "SIM793", "new_status": "signal_lost", "on_ground": false, "time_since_last_seen": 466.26322806}
+2025-12-04T17:00:52.274+0100	[1;36minfo[0m	weather-service	Starting weather service	{"airport": "LEBL", "refresh_interval_minutes": 10}
+2025-12-04T17:00:52.274+0100	[1;36minfo[0m	weather-service	Performing initial weather data fetch	{"airport": "LEBL"}
+2025-12-04T17:00:52.274+0100	[1;36minfo[0m	weather-service	Background weather refresh started	{"interval": "10m0s"}
+2025-12-04T17:00:52.274+0100	[1;36minfo[0m	Loaded transcription prompt from file	{"path": "assets/transcription_prompt.txt", "prompt_length": 843}
+2025-12-04T17:00:52.274+0100	[1;36minfo[0m	freq-service   	Starting frequencies service with persistent connections
+2025-12-04T17:00:52.274+0100	[1;36minfo[0m	freq-service   	All frequency stream processors started
+2025-12-04T17:00:52.274+0100	[1;36minfo[0m	freq-service   	Starting post-processing
+2025-12-04T17:00:52.274+0100	[1;36minfo[0m	transcribe     	Post-processing disabled - no OpenAI API key provided
+2025-12-04T17:00:52.274+0100	[1;36minfo[0m	Creating ATC Chat service
+2025-12-04T17:00:52.274+0100	[1;33mwarn[0m	OpenAI API key is empty - ATC Chat features will not work
+2025-12-04T17:00:52.275+0100	[1;36minfo[0m	ATC Chat service created successfully
+2025-12-04T17:00:52.276+0100	[1;36minfo[0m	Configured listener ports	{"ports": [8000, 8001, 8002, 8003, 8004]}
+2025-12-04T17:00:52.276+0100	[1;36minfo[0m	Starting HTTP server	{"addr": "127.0.0.1:8000"}
+2025-12-04T17:00:52.277+0100	[1;36minfo[0m	Starting HTTP server	{"addr": "127.0.0.1:8001"}
+2025-12-04T17:00:52.277+0100	[1;36minfo[0m	Starting HTTP server	{"addr": "127.0.0.1:8002"}
+2025-12-04T17:00:52.277+0100	[1;36minfo[0m	Starting HTTP server	{"addr": "127.0.0.1:8003"}
+2025-12-04T17:00:52.277+0100	[1;36minfo[0m	Starting HTTP server	{"addr": "127.0.0.1:8004"}
+2025-12-04T17:00:53.451+0100	[1;36minfo[0m	simulation     	Created simulated aircraft hex=4A7FA1 flight=SIM551 lat=41.286300 lon=2.088600
+2025-12-04T17:00:53.452+0100	[1;36minfo[0m	api-handler    	Created simulated aircraft via API	{"hex": "4A7FA1", "flight": "SIM551"}
+2025-12-04T17:00:54.281+0100	[1;36minfo[0m	adsb           	New aircraft detected	{"hex": "4A7FA1", "flight": "SIM551", "altitude": 0, "on_ground": true}
+2025-12-04T17:00:54.286+0100	[1;36minfo[0m	adsb           	New aircraft phase detected	{"hex": "4A7FA1", "flight": "SIM551", "phase": "NEW", "altitude": 0, "ground_speed": 0, "vertical_rate": 0, "distance_from_station": 0.7925087279097501, "on_ground": true}
+2025-12-04T17:00:55.450+0100	[1;36minfo[0m	simulation     	Created simulated aircraft hex=62ADD5 flight=SIM760 lat=41.291600 lon=2.074300
+2025-12-04T17:00:55.450+0100	[1;36minfo[0m	api-handler    	Created simulated aircraft via API	{"hex": "62ADD5", "flight": "SIM760"}
+2025-12-04T17:00:56.280+0100	[1;36minfo[0m	adsb           	New aircraft detected	{"hex": "62ADD5", "flight": "SIM760", "altitude": 0, "on_ground": true}
+2025-12-04T17:00:56.288+0100	[1;36minfo[0m	adsb           	New aircraft phase detected	{"hex": "62ADD5", "flight": "SIM760", "phase": "NEW", "altitude": 0, "ground_speed": 0, "vertical_rate": 0, "distance_from_station": 0.3807137982133067, "on_ground": true}
+2025-12-04T17:00:57.450+0100	[1;36minfo[0m	simulation     	Created simulated aircraft hex=8254DE flight=SIM696 lat=41.286300 lon=2.088600
+2025-12-04T17:00:57.462+0100	[1;36minfo[0m	api-handler    	Created simulated aircraft via API	{"hex": "8254DE", "flight": "SIM696"}
+2025-12-04T17:00:58.280+0100	[1;36minfo[0m	adsb           	New aircraft detected	{"hex": "8254DE", "flight": "SIM696", "altitude": 0, "on_ground": true}
+2025-12-04T17:00:58.300+0100	[1;36minfo[0m	adsb           	New aircraft phase detected	{"hex": "8254DE", "flight": "SIM696", "phase": "NEW", "altitude": 0, "ground_speed": 0, "vertical_rate": 0, "distance_from_station": 0.7925087279097501, "on_ground": true}
+2025-12-04T17:00:59.452+0100	[1;36minfo[0m	simulation     	Created simulated aircraft hex=BBCA89 flight=SIM334 lat=41.291600 lon=2.074300
+2025-12-04T17:00:59.453+0100	[1;36minfo[0m	api-handler    	Created simulated aircraft via API	{"hex": "BBCA89", "flight": "SIM334"}
+2025-12-04T17:01:00.282+0100	[1;36minfo[0m	adsb           	New aircraft detected	{"hex": "BBCA89", "flight": "SIM334", "altitude": 0, "on_ground": true}
+2025-12-04T17:01:00.286+0100	[1;36minfo[0m	adsb           	IMMEDIATE TAKEOFF DETECTED	{"hex": "4A7FA1", "flight": "SIM551", "was_on_ground": true, "now_on_ground": false, "altitude": 100.01629265, "ground_speed": 500}
+2025-12-04T17:01:00.288+0100	[1;36minfo[0m	adsb           	Aircraft TOOK OFF (IMMEDIATE)	{"hex": "4A7FA1", "flight": "SIM551", "altitude": 0, "timestamp": "2025-12-04T16:01:00Z"}
+2025-12-04T17:01:00.297+0100	[1;36minfo[0m	adsb           	New aircraft phase detected	{"hex": "BBCA89", "flight": "SIM334", "phase": "NEW", "altitude": 0, "ground_speed": 0, "vertical_rate": 0, "distance_from_station": 0.3807137982133067, "on_ground": true}
+2025-12-04T17:01:01.451+0100	[1;36minfo[0m	simulation     	Created simulated aircraft hex=F3532F flight=SIM956 lat=41.286300 lon=2.088600
+2025-12-04T17:01:01.451+0100	[1;36minfo[0m	api-handler    	Created simulated aircraft via API	{"hex": "F3532F", "flight": "SIM956"}
+2025-12-04T17:01:02.274+0100	[1;33mwarn[0m	weather-client 	Weather API request failed, may retry	{"type": "metar", "airport": "LEBL", "error": "Get \"https://node.windy.com/airports/metar/LEBL\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)", "attempt": 1, "max_attempts": 3}
+2025-12-04T17:01:02.275+0100	[1;36minfo[0m	weather-client 	Retrying weather data fetch	{"type": "metar", "airport": "LEBL", "attempt": 1, "backoff": "500ms"}
+2025-12-04T17:01:02.275+0100	[1;33mwarn[0m	weather-client 	Weather API request failed, may retry	{"type": "taf", "airport": "LEBL", "error": "Get \"https://node.windy.com/airports/taf/LEBL\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)", "attempt": 1, "max_attempts": 3}
+2025-12-04T17:01:02.275+0100	[1;36minfo[0m	weather-client 	Retrying weather data fetch	{"type": "taf", "airport": "LEBL", "attempt": 1, "backoff": "500ms"}
+2025-12-04T17:01:02.274+0100	[1;33mwarn[0m	weather-client 	Weather API request failed, may retry	{"type": "notams", "airport": "LEBL", "error": "Get \"https://node.windy.com/airports/notams/LEBL\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)", "attempt": 1, "max_attempts": 3}
+2025-12-04T17:01:02.275+0100	[1;36minfo[0m	weather-client 	Retrying weather data fetch	{"type": "notams", "airport": "LEBL", "attempt": 1, "backoff": "500ms"}
+2025-12-04T17:01:02.281+0100	[1;36minfo[0m	adsb           	New aircraft detected	{"hex": "F3532F", "flight": "SIM956", "altitude": 0, "on_ground": true}
+2025-12-04T17:01:02.296+0100	[1;36minfo[0m	adsb           	New aircraft phase detected	{"hex": "F3532F", "flight": "SIM956", "phase": "NEW", "altitude": 0, "ground_speed": 0, "vertical_rate": 0, "distance_from_station": 0.7925087279097501, "on_ground": true}
+2025-12-04T17:01:03.451+0100	[1;36minfo[0m	simulation     	Created simulated aircraft hex=1B2991 flight=SIM286 lat=41.291600 lon=2.074300
+2025-12-04T17:01:03.452+0100	[1;36minfo[0m	api-handler    	Created simulated aircraft via API	{"hex": "1B2991", "flight": "SIM286"}
+2025-12-04T17:01:04.028+0100	[1;36minfo[0m	weather-client 	Successfully fetched weather data after retries	{"type": "metar", "airport": "LEBL", "attempts_needed": 2}
+2025-12-04T17:01:04.140+0100	[1;36minfo[0m	weather-client 	Successfully fetched weather data after retries	{"type": "taf", "airport": "LEBL", "attempts_needed": 2}
+2025-12-04T17:01:04.281+0100	[1;36minfo[0m	adsb           	New aircraft detected	{"hex": "1B2991", "flight": "SIM286", "altitude": 0, "on_ground": true}
+2025-12-04T17:01:04.285+0100	[1;36minfo[0m	adsb           	IMMEDIATE TAKEOFF DETECTED	{"hex": "62ADD5", "flight": "SIM760", "was_on_ground": true, "now_on_ground": false, "altitude": 99.98983935, "ground_speed": 500}
+2025-12-04T17:01:04.288+0100	[1;36minfo[0m	adsb           	Aircraft TOOK OFF (IMMEDIATE)	{"hex": "62ADD5", "flight": "SIM760", "altitude": 0, "timestamp": "2025-12-04T16:01:04Z"}
+2025-12-04T17:01:04.299+0100	[1;36minfo[0m	adsb           	New aircraft phase detected	{"hex": "1B2991", "flight": "SIM286", "phase": "NEW", "altitude": 0, "ground_speed": 0, "vertical_rate": 0, "distance_from_station": 0.3807137982133067, "on_ground": true}
+2025-12-04T17:01:04.442+0100	[1;36minfo[0m	weather-client 	Successfully fetched weather data after retries	{"type": "notams", "airport": "LEBL", "attempts_needed": 2}
+2025-12-04T17:01:04.443+0100	[1;36minfo[0m	weather-cache  	Weather cache updated	{"airport": "LEBL", "successful_fetches": 3, "failed_fetches": 0, "expires_at": "2025-12-04T18:01:04.443+0100"}
+2025-12-04T17:01:04.443+0100	[1;36minfo[0m	weather-service	Weather data fetch completed	{"airport": "LEBL", "duration": "12.168568578s", "total_requests": 3}
+2025-12-04T17:01:04.443+0100	[1;36minfo[0m	weather-service	Initial weather data fetch completed
+2025-12-04T17:01:05.451+0100	[1;36minfo[0m	simulation     	Created simulated aircraft hex=8C18C9 flight=SIM302 lat=41.286300 lon=2.088600
+2025-12-04T17:01:05.451+0100	[1;36minfo[0m	api-handler    	Created simulated aircraft via API	{"hex": "8C18C9", "flight": "SIM302"}
+2025-12-04T17:01:05.627+0100	[1;36minfo[0m	api-handler    	WebSocket connection request received
+2025-12-04T17:01:05.627+0100	[1;36minfo[0m	web-socket     	Handling new WebSocket connection request	{"remote_addr": "127.0.0.1:41392", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+2025-12-04T17:01:06.281+0100	[1;36minfo[0m	adsb           	New aircraft detected	{"hex": "8C18C9", "flight": "SIM302", "altitude": 0, "on_ground": true}
+2025-12-04T17:01:06.303+0100	[1;36minfo[0m	adsb           	New aircraft phase detected	{"hex": "8C18C9", "flight": "SIM302", "phase": "NEW", "altitude": 0, "ground_speed": 0, "vertical_rate": 0, "distance_from_station": 0.7925087279097501, "on_ground": true}
+2025-12-04T17:01:07.454+0100	[1;36minfo[0m	simulation     	Created simulated aircraft hex=D26F0E flight=SIM032 lat=41.291600 lon=2.074300
+2025-12-04T17:01:07.454+0100	[1;36minfo[0m	api-handler    	Created simulated aircraft via API	{"hex": "D26F0E", "flight": "SIM032"}
+2025-12-04T17:01:08.280+0100	[1;36minfo[0m	adsb           	New aircraft detected	{"hex": "D26F0E", "flight": "SIM032", "altitude": 0, "on_ground": true}
+2025-12-04T17:01:08.289+0100	[1;36minfo[0m	adsb           	IMMEDIATE TAKEOFF DETECTED	{"hex": "8254DE", "flight": "SIM696", "was_on_ground": true, "now_on_ground": false, "altitude": 99.92891715, "ground_speed": 500}
+2025-12-04T17:01:08.290+0100	[1;36minfo[0m	adsb           	Aircraft TOOK OFF (IMMEDIATE)	{"hex": "8254DE", "flight": "SIM696", "altitude": 0, "timestamp": "2025-12-04T16:01:08Z"}
+2025-12-04T17:01:08.301+0100	[1;36minfo[0m	adsb           	New aircraft phase detected	{"hex": "D26F0E", "flight": "SIM032", "phase": "NEW", "altitude": 0, "ground_speed": 0, "vertical_rate": 0, "distance_from_station": 0.3807137982133067, "on_ground": true}
+2025-12-04T17:01:10.296+0100	[1;36minfo[0m	adsb           	IMMEDIATE TAKEOFF DETECTED	{"hex": "BBCA89", "flight": "SIM334", "was_on_ground": true, "now_on_ground": false, "altitude": 100.04818920000001, "ground_speed": 500}
+2025-12-04T17:01:10.298+0100	[1;36minfo[0m	adsb           	Aircraft TOOK OFF (IMMEDIATE)	{"hex": "BBCA89", "flight": "SIM334", "altitude": 0, "timestamp": "2025-12-04T16:01:10Z"}
+2025-12-04T17:01:12.288+0100	[1;36minfo[0m	adsb           	IMMEDIATE TAKEOFF DETECTED	{"hex": "F3532F", "flight": "SIM956", "was_on_ground": true, "now_on_ground": false, "altitude": 99.93276675, "ground_speed": 500}
+2025-12-04T17:01:12.289+0100	[1;36minfo[0m	adsb           	Aircraft TOOK OFF (IMMEDIATE)	{"hex": "F3532F", "flight": "SIM956", "altitude": 0, "timestamp": "2025-12-04T16:01:12Z"}
+2025-12-04T17:01:14.297+0100	[1;36minfo[0m	adsb           	IMMEDIATE TAKEOFF DETECTED	{"hex": "1B2991", "flight": "SIM286", "was_on_ground": true, "now_on_ground": false, "altitude": 100.05970175, "ground_speed": 500}
+2025-12-04T17:01:14.300+0100	[1;36minfo[0m	adsb           	Aircraft TOOK OFF (IMMEDIATE)	{"hex": "1B2991", "flight": "SIM286", "altitude": 0, "timestamp": "2025-12-04T16:01:14Z"}
+2025-12-04T17:01:16.293+0100	[1;36minfo[0m	adsb           	IMMEDIATE TAKEOFF DETECTED	{"hex": "8C18C9", "flight": "SIM302", "was_on_ground": true, "now_on_ground": false, "altitude": 100.057879, "ground_speed": 500}
+2025-12-04T17:01:16.295+0100	[1;36minfo[0m	adsb           	Aircraft TOOK OFF (IMMEDIATE)	{"hex": "8C18C9", "flight": "SIM302", "altitude": 0, "timestamp": "2025-12-04T16:01:16Z"}
+2025-12-04T17:01:18.292+0100	[1;36minfo[0m	adsb           	IMMEDIATE TAKEOFF DETECTED	{"hex": "D26F0E", "flight": "SIM032", "was_on_ground": true, "now_on_ground": false, "altitude": 99.96417, "ground_speed": 500}
+2025-12-04T17:01:18.294+0100	[1;36minfo[0m	adsb           	Aircraft TOOK OFF (IMMEDIATE)	{"hex": "D26F0E", "flight": "SIM032", "altitude": 0, "timestamp": "2025-12-04T16:01:18Z"}
+2025-12-04T17:01:30.341+0100	[1;36minfo[0m	adsb           	Phase change detected	{"hex": "4A7FA1", "flight": "SIM551", "transition": "T/O → DEP", "altitude": 1590.1256955164804, "ground_speed": 500, "vertical_rate": 2940.88387033602, "distance_from_station": 2.659890883160661, "on_ground": false}
+2025-12-04T17:01:34.301+0100	[1;36minfo[0m	adsb           	Phase change detected	{"hex": "62ADD5", "flight": "SIM760", "transition": "T/O → DEP", "altitude": 1599.9801472000001, "ground_speed": 500, "vertical_rate": 3000, "distance_from_station": 4.075722116707958, "on_ground": false}
+2025-12-04T17:01:38.087+0100	[1;36minfo[0m	simulation     	Removed simulated aircraft hex=F3532F
+2025-12-04T17:01:38.087+0100	[1;36minfo[0m	api-handler    	Removed simulated aircraft via API	{"hex": "F3532F"}
+2025-12-04T17:01:38.301+0100	[1;36minfo[0m	adsb           	Phase change detected	{"hex": "8254DE", "flight": "SIM696", "transition": "T/O → DEP", "altitude": 1599.9718222000001, "ground_speed": 500, "vertical_rate": 3000, "distance_from_station": 4.387409714375632, "on_ground": false}
+2025-12-04T17:01:40.303+0100	[1;36minfo[0m	adsb           	Phase change detected	{"hex": "BBCA89", "flight": "SIM334", "transition": "T/O → DEP", "altitude": 1600.0358947, "ground_speed": 500, "vertical_rate": 3000, "distance_from_station": 4.730380832971952, "on_ground": false}
+2025-12-04T17:01:44.307+0100	[1;36minfo[0m	adsb           	Phase change detected	{"hex": "1B2991", "flight": "SIM286", "transition": "T/O → DEP", "altitude": 1566.0181453584942, "ground_speed": 500, "vertical_rate": 2744.8249456469516, "distance_from_station": 2.4685897321405625, "on_ground": false}
+2025-12-04T17:01:46.300+0100	[1;36minfo[0m	adsb           	Phase change detected	{"hex": "8C18C9", "flight": "SIM302", "transition": "T/O → DEP", "altitude": 1599.9669177, "ground_speed": 500, "vertical_rate": 3000, "distance_from_station": 4.301228418882284, "on_ground": false}
+2025-12-04T17:01:48.302+0100	[1;36minfo[0m	adsb           	Phase change detected	{"hex": "D26F0E", "flight": "SIM032", "transition": "T/O → DEP", "altitude": 1599.9726712000001, "ground_speed": 500, "vertical_rate": 3000, "distance_from_station": 2.175815582146865, "on_ground": false}
+2025-12-04T17:02:05.451+0100	[1;36minfo[0m	simulation     	Created simulated aircraft hex=B8E312 flight=SIM501 lat=41.400000 lon=0.900000
+2025-12-04T17:02:05.451+0100	[1;36minfo[0m	api-handler    	Created simulated aircraft via API	{"hex": "B8E312", "flight": "SIM501"}
+2025-12-04T17:02:06.281+0100	[1;36minfo[0m	adsb           	New aircraft detected	{"hex": "B8E312", "flight": "SIM501", "altitude": 9013.765629683334, "on_ground": false}
+2025-12-04T17:02:06.308+0100	[1;36minfo[0m	adsb           	New aircraft phase detected	{"hex": "B8E312", "flight": "SIM501", "phase": "ARR", "altitude": 9013.765629683334, "ground_speed": 220, "vertical_rate": 1000, "distance_from_station": 53.5038511144076, "on_ground": false}
+2025-12-04T17:02:07.452+0100	[1;36minfo[0m	simulation     	Created simulated aircraft hex=169875 flight=SIM634 lat=41.480000 lon=2.300000
+2025-12-04T17:02:07.453+0100	[1;36minfo[0m	api-handler    	Created simulated aircraft via API	{"hex": "169875", "flight": "SIM634"}
+2025-12-04T17:02:08.281+0100	[1;36minfo[0m	adsb           	New aircraft detected	{"hex": "169875", "flight": "SIM634", "altitude": 9013.73942405, "on_ground": false}
+2025-12-04T17:02:08.309+0100	[1;36minfo[0m	adsb           	New aircraft phase detected	{"hex": "169875", "flight": "SIM634", "phase": "ARR", "altitude": 9013.73942405, "ground_speed": 220, "vertical_rate": 1000, "distance_from_station": 14.786759588584566, "on_ground": false}
+2025-12-04T17:02:09.453+0100	[1;36minfo[0m	simulation     	Created simulated aircraft hex=07791C flight=SIM147 lat=41.143300 lon=1.173300
+2025-12-04T17:02:09.453+0100	[1;36minfo[0m	api-handler    	Created simulated aircraft via API	{"hex": "07791C", "flight": "SIM147"}
+2025-12-04T17:02:10.282+0100	[1;36minfo[0m	adsb           	New aircraft detected	{"hex": "07791C", "flight": "SIM147", "altitude": 9013.752191766667, "on_ground": false}
+2025-12-04T17:02:10.308+0100	[1;36minfo[0m	adsb           	New aircraft phase detected	{"hex": "07791C", "flight": "SIM147", "phase": "ARR", "altitude": 9013.752191766667, "ground_speed": 220, "vertical_rate": 1000, "distance_from_station": 41.95015748147245, "on_ground": false}
+2025-12-04T17:02:11.452+0100	[1;36minfo[0m	simulation     	Created simulated aircraft hex=BB7538 flight=SIM467 lat=41.886400 lon=2.580000
+2025-12-04T17:02:11.452+0100	[1;36minfo[0m	api-handler    	Created simulated aircraft via API	{"hex": "BB7538", "flight": "SIM467"}
+2025-12-04T17:02:12.280+0100	[1;36minfo[0m	adsb           	New aircraft detected	{"hex": "BB7538", "flight": "SIM467", "altitude": 9013.742711216666, "on_ground": false}
+2025-12-04T17:02:12.313+0100	[1;36minfo[0m	adsb           	New aircraft phase detected	{"hex": "BB7538", "flight": "SIM467", "phase": "ARR", "altitude": 9013.742711216666, "ground_speed": 220, "vertical_rate": 1000, "distance_from_station": 41.890150163944796, "on_ground": false}
+2025-12-04T17:02:13.453+0100	[1;36minfo[0m	simulation     	Created simulated aircraft hex=505E18 flight=SIM605 lat=41.900000 lon=2.760000
+2025-12-04T17:02:13.453+0100	[1;36minfo[0m	api-handler    	Created simulated aircraft via API	{"hex": "505E18", "flight": "SIM605"}
+2025-12-04T17:02:14.283+0100	[1;36minfo[0m	adsb           	New aircraft detected	{"hex": "505E18", "flight": "SIM605", "altitude": 9013.729784333333, "on_ground": false}
+2025-12-04T17:02:14.315+0100	[1;36minfo[0m	adsb           	New aircraft phase detected	{"hex": "505E18", "flight": "SIM605", "phase": "ARR", "altitude": 9013.729784333333, "ground_speed": 220, "vertical_rate": 1000, "distance_from_station": 47.347666058060945, "on_ground": false}
+2025-12-04T17:02:15.453+0100	[1;36minfo[0m	simulation     	Created simulated aircraft hex=B5D554 flight=SIM164 lat=41.735000 lon=2.390000
+2025-12-04T17:02:15.453+0100	[1;36minfo[0m	api-handler    	Created simulated aircraft via API	{"hex": "B5D554", "flight": "SIM164"}
+2025-12-04T17:02:16.283+0100	[1;36minfo[0m	adsb           	New aircraft detected	{"hex": "B5D554", "flight": "SIM164", "altitude": 9013.758460583333, "on_ground": false}
+2025-12-04T17:02:16.329+0100	[1;36minfo[0m	adsb           	New aircraft phase detected	{"hex": "B5D554", "flight": "SIM164", "phase": "ARR", "altitude": 9013.758460583333, "ground_speed": 220, "vertical_rate": 1000, "distance_from_station": 29.739210727387594, "on_ground": false}
+2025-12-04T17:02:17.453+0100	[1;36minfo[0m	simulation     	Created simulated aircraft hex=38BB84 flight=SIM546 lat=41.360000 lon=2.140000
+2025-12-04T17:02:17.454+0100	[1;36minfo[0m	api-handler    	Created simulated aircraft via API	{"hex": "38BB84", "flight": "SIM546"}
+2025-12-04T17:02:18.283+0100	[1;36minfo[0m	adsb           	New aircraft detected	{"hex": "38BB84", "flight": "SIM546", "altitude": 9013.730274516667, "on_ground": false}
+2025-12-04T17:02:18.375+0100	[1;36minfo[0m	adsb           	New aircraft phase detected	{"hex": "38BB84", "flight": "SIM546", "phase": "ARR", "altitude": 9013.730274516667, "ground_speed": 220, "vertical_rate": 1000, "distance_from_station": 4.634896905035231, "on_ground": false}
+2025-12-04T17:02:19.454+0100	[1;36minfo[0m	simulation     	Created simulated aircraft hex=4A8971 flight=SIM749 lat=41.250000 lon=2.100000
+2025-12-04T17:02:19.454+0100	[1;36minfo[0m	api-handler    	Created simulated aircraft via API	{"hex": "4A8971", "flight": "SIM749"}
+2025-12-04T17:02:20.283+0100	[1;36minfo[0m	adsb           	New aircraft detected	{"hex": "4A8971", "flight": "SIM749", "altitude": 9013.711440283334, "on_ground": false}
+2025-12-04T17:02:20.318+0100	[1;36minfo[0m	adsb           	New aircraft phase detected	{"hex": "4A8971", "flight": "SIM749", "phase": "ARR", "altitude": 9013.711440283334, "ground_speed": 220, "vertical_rate": 1000, "distance_from_station": 3.015970411294479, "on_ground": false}
+2025-12-04T17:02:36.319+0100	[1;36minfo[0m	adsb           	Aircraft status updated	{"hex": "F3532F", "flight": "SIM956", "new_status": "signal_lost", "on_ground": false, "time_since_last_seen": 60.318984653}
+2025-12-04T17:02:46.910+0100	[1;36minfo[0m	simulation     	Removed simulated aircraft hex=4A8971
+2025-12-04T17:02:46.910+0100	[1;36minfo[0m	api-handler    	Removed simulated aircraft via API	{"hex": "4A8971"}
+2025-12-04T17:02:55.166+0100	[1;36minfo[0m	simulation     	Removed simulated aircraft hex=8C18C9
+2025-12-04T17:02:55.166+0100	[1;36minfo[0m	api-handler    	Removed simulated aircraft via API	{"hex": "8C18C9"}
+2025-12-04T17:02:55.700+0100	[1;36minfo[0m	simulation     	Removed simulated aircraft hex=BBCA89
+2025-12-04T17:02:55.700+0100	[1;36minfo[0m	api-handler    	Removed simulated aircraft via API	{"hex": "BBCA89"}
+2025-12-04T17:03:06.158+0100	[1;36minfo[0m	simulation     	Removed simulated aircraft hex=62ADD5
+2025-12-04T17:03:06.158+0100	[1;36minfo[0m	api-handler    	Removed simulated aircraft via API	{"hex": "62ADD5"}
+2025-12-04T17:03:18.988+0100	[1;36minfo[0m	simulation     	Removed simulated aircraft hex=8254DE
+2025-12-04T17:03:18.988+0100	[1;36minfo[0m	api-handler    	Removed simulated aircraft via API	{"hex": "8254DE"}
+2025-12-04T17:03:24.359+0100	[1;36minfo[0m	simulation     	Removed simulated aircraft hex=D26F0E
+2025-12-04T17:03:24.359+0100	[1;36minfo[0m	api-handler    	Removed simulated aircraft via API	{"hex": "D26F0E"}
+2025-12-04T17:03:44.075+0100	[1;36minfo[0m	simulation     	Removed simulated aircraft hex=4A7FA1
+2025-12-04T17:03:44.076+0100	[1;36minfo[0m	api-handler    	Removed simulated aircraft via API	{"hex": "4A7FA1"}
+2025-12-04T17:03:46.309+0100	[1;36minfo[0m	adsb           	Aircraft status updated	{"hex": "4A8971", "flight": "SIM749", "new_status": "signal_lost", "on_ground": false, "time_since_last_seen": 60.308962896}
+2025-12-04T17:03:54.306+0100	[1;36minfo[0m	adsb           	Aircraft status updated	{"hex": "8C18C9", "flight": "SIM302", "new_status": "signal_lost", "on_ground": false, "time_since_last_seen": 60.305828826}
+2025-12-04T17:03:54.306+0100	[1;36minfo[0m	adsb           	Aircraft status updated	{"hex": "BBCA89", "flight": "SIM334", "new_status": "signal_lost", "on_ground": false, "time_since_last_seen": 60.305828826}
+2025-12-04T17:03:54.571+0100	[1;36minfo[0m	simulation     	Removed simulated aircraft hex=169875
+2025-12-04T17:03:54.571+0100	[1;36minfo[0m	api-handler    	Removed simulated aircraft via API	{"hex": "169875"}
+2025-12-04T17:03:58.732+0100	[1;36minfo[0m	Shutting down server...
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	Stopping weather service...
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	weather-service	Stopping weather service
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	weather-service	Background weather refresh stopped
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	weather-service	Weather service stopped
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	Weather service stopped.
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	Stopping frequencies service...
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	freq-service   	Frequencies service stopping
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	transcribe     	Stopping all transcription processors	{"count": 0}
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	transcribe     	No post-processor to stop
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	freq-service   	All stream processors stopped
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	freq-service   	Frequencies service stopped
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	Frequencies service stopped.
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	Stopping ATC Chat service...
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	atc-chat-servic	Shutting down ATC chat service
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	atc-chat-servic	ATC chat service shutdown complete
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	ATC Chat service stopped.
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	Stopping ADS-B service...
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	adsb           	Stopping ADS-B service
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	adsb           	ADS-B service stopped
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	ADS-B service stopped.
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	Shutting down HTTP servers...
+2025-12-04T17:03:58.733+0100	[1;36minfo[0m	Attempting to shutdown HTTP server	{"addr": "127.0.0.1:8004"}
+2025-12-04T17:03:58.734+0100	[1;36minfo[0m	Attempting to shutdown HTTP server	{"addr": "127.0.0.1:8000"}
+2025-12-04T17:03:58.734+0100	[1;36minfo[0m	Attempting to shutdown HTTP server	{"addr": "127.0.0.1:8002"}
+2025-12-04T17:03:58.734+0100	[1;36minfo[0m	HTTP server shutdown complete	{"addr": "127.0.0.1:8004"}
+2025-12-04T17:03:58.734+0100	[1;36minfo[0m	Attempting to shutdown HTTP server	{"addr": "127.0.0.1:8003"}
+2025-12-04T17:03:58.734+0100	[1;36minfo[0m	HTTP server shutdown complete	{"addr": "127.0.0.1:8002"}
+2025-12-04T17:03:58.734+0100	[1;36minfo[0m	HTTP server shutdown complete	{"addr": "127.0.0.1:8003"}
+2025-12-04T17:03:58.734+0100	[1;36minfo[0m	Attempting to shutdown HTTP server	{"addr": "127.0.0.1:8001"}
+2025-12-04T17:03:58.734+0100	[1;36minfo[0m	HTTP server shutdown complete	{"addr": "127.0.0.1:8001"}
+2025-12-04T17:03:58.734+0100	[1;36minfo[0m	HTTP server shutdown complete	{"addr": "127.0.0.1:8000"}
+2025-12-04T17:03:58.734+0100	[1;36minfo[0m	All HTTP servers shutdown.
+2025-12-04T17:03:58.734+0100	[1;36minfo[0m	Server fully stopped
