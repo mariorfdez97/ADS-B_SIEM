@@ -1,0 +1,43 @@
+[INFO] Consultando https://opendata.adsb.fi/api/v3/lat/41.2971/lon/2.0785/dist/80.0 cada 1.0s. Escribiendo co-atc-main/data/aircraft.json
+[INFO] Escrito 41 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 41 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 41 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 41 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 41 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 42 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 42 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 42 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 42 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 42 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 42 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 42 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+[INFO] Escrito 43 aeronaves en co-atc-main/data/aircraft.json
+Traceback (most recent call last):
+  File "/home/mario/uni/admin/ADS-B_SIEM/fetch_adsbfi.py", line 158, in <module>
+    main()
+  File "/home/mario/uni/admin/ADS-B_SIEM/fetch_adsbfi.py", line 154, in main
+    time.sleep(args.interval)
+KeyboardInterrupt

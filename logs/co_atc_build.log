@@ -1,2 +1,0 @@
-go: failed to trim cache: open /home/mario/.cache/go-build/trim.txt: permission denied
-internal/simulation/service_flightplan.go:3:1: expected 'package', found 'func'
