@@ -1,0 +1,194 @@
+2025-12-04 12:53:20,996 [INFO] root: Total de eventos programados: 64
+2025-12-04 12:53:20,996 [INFO] root: Ejecutando evento 2025-12-04 06:00:00+01:00 (Creacion de DPT101)
+2025-12-04 12:53:21,001 [DEBUG] urllib3.connectionpool: Starting new HTTP connection (1): 127.0.0.1:8000
+2025-12-04 12:53:21,005 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "POST /api/v1/simulation/aircraft HTTP/1.1" 200 791
+2025-12-04 12:53:21,006 [INFO] root: Creado DPT101 con hex E2FDC8 en intento 1
+2025-12-04 12:53:22,997 [INFO] root: Ejecutando evento 2025-12-04 06:00:10+01:00 (Creacion de DPT102)
+2025-12-04 12:53:23,004 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "POST /api/v1/simulation/aircraft HTTP/1.1" 200 795
+2025-12-04 12:53:23,006 [INFO] root: Creado DPT102 con hex DFB6B9 en intento 1
+2025-12-04 12:53:24,997 [INFO] root: Ejecutando evento 2025-12-04 06:00:20+01:00 (Creacion de DPT103)
+2025-12-04 12:53:25,001 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "POST /api/v1/simulation/aircraft HTTP/1.1" 200 798
+2025-12-04 12:53:25,002 [INFO] root: Creado DPT103 con hex F45D05 en intento 1
+2025-12-04 12:53:26,997 [INFO] root: Ejecutando evento 2025-12-04 06:00:30+01:00 (Tramo 1 de DPT101)
+2025-12-04 12:53:27,000 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/E2FDC8/controls HTTP/1.1" 200 21
+2025-12-04 12:53:27,001 [INFO] root: Actualizacion enviada para DPT101 (Tramo 1 de DPT101): rumbo 123.9, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 12:53:27,001 [INFO] root: Ejecutando evento 2025-12-04 06:00:30+01:00 (Creacion de DPT104)
+2025-12-04 12:53:27,005 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "POST /api/v1/simulation/aircraft HTTP/1.1" 200 791
+2025-12-04 12:53:27,005 [INFO] root: Creado DPT104 con hex 2ECF28 en intento 1
+2025-12-04 12:53:28,435 [INFO] root: Ejecutando evento 2025-12-04 06:00:40+01:00 (Creacion de DPT105)
+2025-12-04 12:53:28,439 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "POST /api/v1/simulation/aircraft HTTP/1.1" 200 792
+2025-12-04 12:53:28,440 [INFO] root: Creado DPT105 con hex 5308E4 en intento 1
+2025-12-04 12:53:30,435 [INFO] root: Ejecutando evento 2025-12-04 06:00:50+01:00 (Tramo 1 de DPT102)
+2025-12-04 12:53:30,440 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/DFB6B9/controls HTTP/1.1" 200 21
+2025-12-04 12:53:30,441 [INFO] root: Actualizacion enviada para DPT102 (Tramo 1 de DPT102): rumbo 41.9, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 12:53:30,442 [INFO] root: Ejecutando evento 2025-12-04 06:00:50+01:00 (Creacion de DPT106)
+2025-12-04 12:53:30,448 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "POST /api/v1/simulation/aircraft HTTP/1.1" 200 791
+2025-12-04 12:53:30,450 [INFO] root: Creado DPT106 con hex F036D2 en intento 1
+2025-12-04 12:53:32,435 [INFO] root: Ejecutando evento 2025-12-04 06:01:00+01:00 (Creacion de DPT107)
+2025-12-04 12:53:32,441 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "POST /api/v1/simulation/aircraft HTTP/1.1" 200 793
+2025-12-04 12:53:32,444 [INFO] root: Creado DPT107 con hex C40295 en intento 1
+2025-12-04 12:53:34,435 [INFO] root: Ejecutando evento 2025-12-04 06:01:10+01:00 (Tramo 1 de DPT103)
+2025-12-04 12:53:34,440 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/F45D05/controls HTTP/1.1" 200 21
+2025-12-04 12:53:34,441 [INFO] root: Actualizacion enviada para DPT103 (Tramo 1 de DPT103): rumbo 244.3, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 12:53:34,443 [INFO] root: Ejecutando evento 2025-12-04 06:01:10+01:00 (Creacion de DPT108)
+2025-12-04 12:53:34,449 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "POST /api/v1/simulation/aircraft HTTP/1.1" 200 795
+2025-12-04 12:53:34,451 [INFO] root: Creado DPT108 con hex 699D80 en intento 1
+2025-12-04 12:53:36,436 [INFO] root: Ejecutando evento 2025-12-04 06:01:20+01:00 (Tramo 1 de DPT104)
+2025-12-04 12:53:36,438 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/2ECF28/controls HTTP/1.1" 200 21
+2025-12-04 12:53:36,439 [INFO] root: Actualizacion enviada para DPT104 (Tramo 1 de DPT104): rumbo 253.5, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 12:53:38,436 [INFO] root: Ejecutando evento 2025-12-04 06:01:30+01:00 (Tramo 1 de DPT105)
+2025-12-04 12:53:38,439 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/5308E4/controls HTTP/1.1" 200 21
+2025-12-04 12:53:38,440 [INFO] root: Actualizacion enviada para DPT105 (Tramo 1 de DPT105): rumbo 166.7, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 12:53:40,436 [INFO] root: Ejecutando evento 2025-12-04 06:01:40+01:00 (Tramo 1 de DPT106)
+2025-12-04 12:53:40,439 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/F036D2/controls HTTP/1.1" 200 21
+2025-12-04 12:53:40,439 [INFO] root: Actualizacion enviada para DPT106 (Tramo 1 de DPT106): rumbo 123.1, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 12:53:42,436 [INFO] root: Ejecutando evento 2025-12-04 06:01:50+01:00 (Tramo 1 de DPT107)
+2025-12-04 12:53:42,438 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/C40295/controls HTTP/1.1" 200 21
+2025-12-04 12:53:42,438 [INFO] root: Actualizacion enviada para DPT107 (Tramo 1 de DPT107): rumbo 39.2, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 12:53:44,435 [INFO] root: Ejecutando evento 2025-12-04 06:02:00+01:00 (Tramo 1 de DPT108)
+2025-12-04 12:53:44,437 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/699D80/controls HTTP/1.1" 200 21
+2025-12-04 12:53:44,438 [INFO] root: Actualizacion enviada para DPT108 (Tramo 1 de DPT108): rumbo 155.1, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 12:53:46,113 [INFO] root: Ejecutando evento 2025-12-04 06:02:08.389111+01:00 (Tramo 2 de DPT105)
+2025-12-04 12:53:46,115 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/5308E4/controls HTTP/1.1" 200 21
+2025-12-04 12:53:46,115 [INFO] root: Actualizacion enviada para DPT105 (Tramo 2 de DPT105): rumbo 15.3, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 12:53:48,246 [INFO] root: Ejecutando evento 2025-12-04 06:02:19.056293+01:00 (Tramo 2 de DPT101)
+2025-12-04 12:53:48,250 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/E2FDC8/controls HTTP/1.1" 200 21
+2025-12-04 12:53:48,251 [INFO] root: Actualizacion enviada para DPT101 (Tramo 2 de DPT101): rumbo 280.3, vel 500.0 kt, vr 2941 ft/min
+2025-12-04 12:53:54,349 [INFO] root: Ejecutando evento 2025-12-04 06:02:49.568479+01:00 (Tramo 2 de DPT108)
+2025-12-04 12:53:54,351 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/699D80/controls HTTP/1.1" 200 21
+2025-12-04 12:53:54,351 [INFO] root: Actualizacion enviada para DPT108 (Tramo 2 de DPT108): rumbo 29.3, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 12:54:04,260 [INFO] root: Ejecutando evento 2025-12-04 06:03:41.902295+01:00 (Tramo 2 de DPT106)
+2025-12-04 12:54:04,262 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/F036D2/controls HTTP/1.1" 200 21
+2025-12-04 12:54:04,262 [INFO] root: Actualizacion enviada para DPT106 (Tramo 2 de DPT106): rumbo 280.3, vel 500.0 kt, vr 2745 ft/min
+2025-12-04 12:54:04,516 [INFO] root: Ejecutando evento 2025-12-04 06:03:43.185808+01:00 (Eliminacion de DPT105)
+2025-12-04 12:54:04,518 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "DELETE /api/v1/simulation/aircraft/5308E4 HTTP/1.1" 200 21
+2025-12-04 12:54:04,518 [INFO] root: Aeronave DPT105 eliminada.
+2025-12-04 12:54:22,025 [INFO] root: Ejecutando evento 2025-12-04 06:05:10.730304+01:00 (Tramo 2 de DPT102)
+2025-12-04 12:54:22,027 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/DFB6B9/controls HTTP/1.1" 200 21
+2025-12-04 12:54:22,028 [INFO] root: Actualizacion enviada para DPT102 (Tramo 2 de DPT102): rumbo 27.1, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 12:54:30,602 [INFO] root: Ejecutando evento 2025-12-04 06:05:53.615201+01:00 (Tramo 2 de DPT104)
+2025-12-04 12:54:30,606 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/2ECF28/controls HTTP/1.1" 200 21
+2025-12-04 12:54:30,607 [INFO] root: Actualizacion enviada para DPT104 (Tramo 2 de DPT104): rumbo 84.8, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 12:54:31,879 [INFO] root: Ejecutando evento 2025-12-04 06:06:00+01:00 (Creacion de ARR201)
+2025-12-04 12:54:31,883 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "POST /api/v1/simulation/aircraft HTTP/1.1" 200 795
+2025-12-04 12:54:31,883 [INFO] root: Creado ARR201 con hex DF6F39 en intento 1
+2025-12-04 12:54:33,319 [INFO] root: Ejecutando evento 2025-12-04 06:06:10+01:00 (Creacion de ARR202)
+2025-12-04 12:54:33,322 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "POST /api/v1/simulation/aircraft HTTP/1.1" 200 801
+2025-12-04 12:54:33,323 [INFO] root: Creado ARR202 con hex E84788 en intento 1
+2025-12-04 12:54:35,319 [INFO] root: Ejecutando evento 2025-12-04 06:06:20+01:00 (Tramo 1 de ARR201)
+2025-12-04 12:54:35,321 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/DF6F39/controls HTTP/1.1" 200 21
+2025-12-04 12:54:35,321 [INFO] root: Actualizacion enviada para ARR201 (Tramo 1 de ARR201): rumbo 99.1, vel 500.0 kt, vr -1215 ft/min
+2025-12-04 12:54:35,322 [INFO] root: Ejecutando evento 2025-12-04 06:06:20+01:00 (Creacion de ARR203)
+2025-12-04 12:54:35,323 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "POST /api/v1/simulation/aircraft HTTP/1.1" 200 807
+2025-12-04 12:54:35,324 [INFO] root: Creado ARR203 con hex 58153B en intento 1
+2025-12-04 12:54:35,433 [INFO] root: Ejecutando evento 2025-12-04 06:06:20.566922+01:00 (Tramo 2 de DPT107)
+2025-12-04 12:54:35,435 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/C40295/controls HTTP/1.1" 200 21
+2025-12-04 12:54:35,435 [INFO] root: Actualizacion enviada para DPT107 (Tramo 2 de DPT107): rumbo 14.8, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 12:54:37,319 [INFO] root: Ejecutando evento 2025-12-04 06:06:30+01:00 (Tramo 1 de ARR202)
+2025-12-04 12:54:37,321 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/E84788/controls HTTP/1.1" 200 21
+2025-12-04 12:54:37,321 [INFO] root: Actualizacion enviada para ARR202 (Tramo 1 de ARR202): rumbo 284.2, vel 500.0 kt, vr -3000 ft/min
+2025-12-04 12:54:37,321 [INFO] root: Ejecutando evento 2025-12-04 06:06:30+01:00 (Creacion de ARR204)
+2025-12-04 12:54:37,322 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "POST /api/v1/simulation/aircraft HTTP/1.1" 200 805
+2025-12-04 12:54:37,322 [INFO] root: Creado ARR204 con hex 76C48B en intento 1
+2025-12-04 12:54:39,319 [INFO] root: Ejecutando evento 2025-12-04 06:06:40+01:00 (Tramo 1 de ARR203)
+2025-12-04 12:54:39,321 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/58153B/controls HTTP/1.1" 200 21
+2025-12-04 12:54:39,321 [INFO] root: Actualizacion enviada para ARR203 (Tramo 1 de ARR203): rumbo 79.4, vel 500.0 kt, vr -2315 ft/min
+2025-12-04 12:54:39,321 [INFO] root: Ejecutando evento 2025-12-04 06:06:40+01:00 (Creacion de ARR205)
+2025-12-04 12:54:39,322 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "POST /api/v1/simulation/aircraft HTTP/1.1" 200 797
+2025-12-04 12:54:39,322 [INFO] root: Creado ARR205 con hex 896FB6 en intento 1
+2025-12-04 12:54:41,319 [INFO] root: Ejecutando evento 2025-12-04 06:06:50+01:00 (Tramo 1 de ARR204)
+2025-12-04 12:54:41,321 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/76C48B/controls HTTP/1.1" 200 21
+2025-12-04 12:54:41,321 [INFO] root: Actualizacion enviada para ARR204 (Tramo 1 de ARR204): rumbo 224.0, vel 500.0 kt, vr -2575 ft/min
+2025-12-04 12:54:41,321 [INFO] root: Ejecutando evento 2025-12-04 06:06:50+01:00 (Creacion de ARR206)
+2025-12-04 12:54:41,322 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "POST /api/v1/simulation/aircraft HTTP/1.1" 200 800
+2025-12-04 12:54:41,322 [INFO] root: Creado ARR206 con hex 254A57 en intento 1
+2025-12-04 12:54:43,320 [INFO] root: Ejecutando evento 2025-12-04 06:07:00+01:00 (Tramo 1 de ARR205)
+2025-12-04 12:54:43,321 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/896FB6/controls HTTP/1.1" 200 21
+2025-12-04 12:54:43,321 [INFO] root: Actualizacion enviada para ARR205 (Tramo 1 de ARR205): rumbo 219.4, vel 500.0 kt, vr -2046 ft/min
+2025-12-04 12:54:43,321 [INFO] root: Ejecutando evento 2025-12-04 06:07:00+01:00 (Creacion de ARR207)
+2025-12-04 12:54:43,323 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "POST /api/v1/simulation/aircraft HTTP/1.1" 200 802
+2025-12-04 12:54:43,323 [INFO] root: Creado ARR207 con hex 78E5F4 en intento 1
+2025-12-04 12:54:45,319 [INFO] root: Ejecutando evento 2025-12-04 06:07:10+01:00 (Tramo 1 de ARR206)
+2025-12-04 12:54:45,321 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/254A57/controls HTTP/1.1" 200 21
+2025-12-04 12:54:45,321 [INFO] root: Actualizacion enviada para ARR206 (Tramo 1 de ARR206): rumbo 194.8, vel 500.0 kt, vr -3000 ft/min
+2025-12-04 12:54:45,321 [INFO] root: Ejecutando evento 2025-12-04 06:07:10+01:00 (Creacion de ARR208)
+2025-12-04 12:54:45,323 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "POST /api/v1/simulation/aircraft HTTP/1.1" 200 800
+2025-12-04 12:54:45,323 [INFO] root: Creado ARR208 con hex 5922FE en intento 1
+2025-12-04 12:54:47,319 [INFO] root: Ejecutando evento 2025-12-04 06:07:20+01:00 (Tramo 1 de ARR207)
+2025-12-04 12:54:47,321 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/78E5F4/controls HTTP/1.1" 200 21
+2025-12-04 12:54:47,321 [INFO] root: Actualizacion enviada para ARR207 (Tramo 1 de ARR207): rumbo 350.5, vel 500.0 kt, vr -3000 ft/min
+2025-12-04 12:54:49,319 [INFO] root: Ejecutando evento 2025-12-04 06:07:30+01:00 (Tramo 1 de ARR208)
+2025-12-04 12:54:49,321 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/5922FE/controls HTTP/1.1" 200 21
+2025-12-04 12:54:49,321 [INFO] root: Actualizacion enviada para ARR208 (Tramo 1 de ARR208): rumbo 334.5, vel 500.0 kt, vr -3000 ft/min
+2025-12-04 12:55:01,812 [INFO] root: Ejecutando evento 2025-12-04 06:08:32.465510+01:00 (Tramo 2 de DPT103)
+2025-12-04 12:55:01,814 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/F45D05/controls HTTP/1.1" 200 21
+2025-12-04 12:55:01,814 [INFO] root: Actualizacion enviada para DPT103 (Tramo 2 de DPT103): rumbo 280.8, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 12:55:04,822 [INFO] root: Ejecutando evento 2025-12-04 06:08:47.515029+01:00 (Tramo 2 de ARR208)
+2025-12-04 12:55:04,825 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/5922FE/controls HTTP/1.1" 200 21
+2025-12-04 12:55:04,825 [INFO] root: Actualizacion enviada para ARR208 (Tramo 2 de ARR208): rumbo 136.5, vel 500.0 kt, vr -3000 ft/min
+2025-12-04 12:55:11,593 [INFO] root: Ejecutando evento 2025-12-04 06:09:21.368428+01:00 (Tramo 2 de ARR202)
+2025-12-04 12:55:11,595 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/E84788/controls HTTP/1.1" 200 21
+2025-12-04 12:55:11,595 [INFO] root: Actualizacion enviada para ARR202 (Tramo 2 de ARR202): rumbo 183.1, vel 500.0 kt, vr -3000 ft/min
+2025-12-04 12:55:12,779 [INFO] root: Ejecutando evento 2025-12-04 06:09:27.300848+01:00 (Eliminacion de ARR208)
+2025-12-04 12:55:12,781 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "DELETE /api/v1/simulation/aircraft/5922FE HTTP/1.1" 200 21
+2025-12-04 12:55:12,781 [INFO] root: Aeronave ARR208 eliminada.
+2025-12-04 12:55:20,231 [INFO] root: Ejecutando evento 2025-12-04 06:10:08.583196+01:00 (Eliminacion de DPT107)
+2025-12-04 12:55:20,233 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "DELETE /api/v1/simulation/aircraft/C40295 HTTP/1.1" 200 21
+2025-12-04 12:55:20,233 [INFO] root: Aeronave DPT107 eliminada.
+2025-12-04 12:55:20,764 [INFO] root: Ejecutando evento 2025-12-04 06:10:11.250788+01:00 (Eliminacion de DPT104)
+2025-12-04 12:55:20,766 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "DELETE /api/v1/simulation/aircraft/2ECF28 HTTP/1.1" 200 21
+2025-12-04 12:55:20,766 [INFO] root: Aeronave DPT104 eliminada.
+2025-12-04 12:55:22,708 [INFO] root: Ejecutando evento 2025-12-04 06:10:20.969403+01:00 (Tramo 2 de ARR207)
+2025-12-04 12:55:22,710 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/78E5F4/controls HTTP/1.1" 200 21
+2025-12-04 12:55:22,711 [INFO] root: Actualizacion enviada para ARR207 (Tramo 2 de ARR207): rumbo 185.8, vel 500.0 kt, vr -3000 ft/min
+2025-12-04 12:55:31,223 [INFO] root: Ejecutando evento 2025-12-04 06:11:03.544382+01:00 (Eliminacion de DPT102)
+2025-12-04 12:55:31,226 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "DELETE /api/v1/simulation/aircraft/DFB6B9 HTTP/1.1" 200 21
+2025-12-04 12:55:31,227 [INFO] root: Aeronave DPT102 eliminada.
+2025-12-04 12:55:41,518 [INFO] root: Ejecutando evento 2025-12-04 06:11:55.020343+01:00 (Tramo 2 de ARR206)
+2025-12-04 12:55:41,520 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/254A57/controls HTTP/1.1" 200 21
+2025-12-04 12:55:41,520 [INFO] root: Actualizacion enviada para ARR206 (Tramo 2 de ARR206): rumbo 222.0, vel 500.0 kt, vr -3000 ft/min
+2025-12-04 12:55:44,051 [INFO] root: Ejecutando evento 2025-12-04 06:12:07.684639+01:00 (Eliminacion de DPT103)
+2025-12-04 12:55:44,053 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "DELETE /api/v1/simulation/aircraft/F45D05 HTTP/1.1" 200 21
+2025-12-04 12:55:44,053 [INFO] root: Aeronave DPT103 eliminada.
+2025-12-04 12:55:49,423 [INFO] root: Ejecutando evento 2025-12-04 06:12:34.547173+01:00 (Eliminacion de DPT108)
+2025-12-04 12:55:49,425 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "DELETE /api/v1/simulation/aircraft/699D80 HTTP/1.1" 200 21
+2025-12-04 12:55:49,425 [INFO] root: Aeronave DPT108 eliminada.
+2025-12-04 12:56:08,590 [INFO] root: Ejecutando evento 2025-12-04 06:14:13.127332+01:00 (Eliminacion de DPT101)
+2025-12-04 12:56:08,592 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "DELETE /api/v1/simulation/aircraft/E2FDC8 HTTP/1.1" 200 21
+2025-12-04 12:56:08,592 [INFO] root: Aeronave DPT101 eliminada.
+2025-12-04 12:56:19,086 [INFO] root: Ejecutando evento 2025-12-04 06:15:05.603298+01:00 (Eliminacion de ARR202)
+2025-12-04 12:56:19,088 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "DELETE /api/v1/simulation/aircraft/E84788 HTTP/1.1" 200 21
+2025-12-04 12:56:19,088 [INFO] root: Aeronave ARR202 eliminada.
+2025-12-04 12:56:21,615 [INFO] root: Ejecutando evento 2025-12-04 06:15:18.248321+01:00 (Tramo 2 de ARR203)
+2025-12-04 12:56:21,616 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/58153B/controls HTTP/1.1" 200 21
+2025-12-04 12:56:21,617 [INFO] root: Actualizacion enviada para ARR203 (Tramo 2 de ARR203): rumbo 75.4, vel 500.0 kt, vr -3000 ft/min
+2025-12-04 12:56:29,148 [INFO] root: Ejecutando evento 2025-12-04 06:15:58.564568+01:00 (Eliminacion de ARR207)
+2025-12-04 12:56:29,151 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "DELETE /api/v1/simulation/aircraft/78E5F4 HTTP/1.1" 200 21
+2025-12-04 12:56:29,151 [INFO] root: Aeronave ARR207 eliminada.
+2025-12-04 12:56:34,831 [INFO] root: Ejecutando evento 2025-12-04 06:16:26.978408+01:00 (Eliminacion de DPT106)
+2025-12-04 12:56:34,833 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "DELETE /api/v1/simulation/aircraft/F036D2 HTTP/1.1" 200 21
+2025-12-04 12:56:34,833 [INFO] root: Aeronave DPT106 eliminada.
+2025-12-04 12:56:35,961 [INFO] root: Ejecutando evento 2025-12-04 06:16:32.629861+01:00 (Tramo 2 de ARR204)
+2025-12-04 12:56:35,963 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/76C48B/controls HTTP/1.1" 200 21
+2025-12-04 12:56:35,963 [INFO] root: Actualizacion enviada para ARR204 (Tramo 2 de ARR204): rumbo 185.8, vel 500.0 kt, vr -3000 ft/min
+2025-12-04 12:56:38,712 [INFO] root: Ejecutando evento 2025-12-04 06:16:46.383428+01:00 (Tramo 2 de ARR205)
+2025-12-04 12:56:38,713 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/896FB6/controls HTTP/1.1" 200 21
+2025-12-04 12:56:38,714 [INFO] root: Actualizacion enviada para ARR205 (Tramo 2 de ARR205): rumbo 219.4, vel 500.0 kt, vr -3000 ft/min
+2025-12-04 12:56:53,444 [INFO] root: Ejecutando evento 2025-12-04 06:18:00.042768+01:00 (Eliminacion de ARR206)
+2025-12-04 12:56:53,449 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "DELETE /api/v1/simulation/aircraft/254A57 HTTP/1.1" 200 21
+2025-12-04 12:56:53,449 [INFO] root: Aeronave ARR206 eliminada.
+2025-12-04 12:57:25,150 [INFO] root: Ejecutando evento 2025-12-04 06:20:41.227197+01:00 (Eliminacion de ARR203)
+2025-12-04 12:57:25,151 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "DELETE /api/v1/simulation/aircraft/58153B HTTP/1.1" 200 21
+2025-12-04 12:57:25,152 [INFO] root: Aeronave ARR203 eliminada.
+2025-12-04 12:57:42,455 [INFO] root: Ejecutando evento 2025-12-04 06:22:10.225026+01:00 (Eliminacion de ARR204)
+2025-12-04 12:57:42,457 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "DELETE /api/v1/simulation/aircraft/76C48B HTTP/1.1" 200 21
+2025-12-04 12:57:42,457 [INFO] root: Aeronave ARR204 eliminada.
+2025-12-04 12:57:49,838 [INFO] root: Ejecutando evento 2025-12-04 06:22:47.139324+01:00 (Eliminacion de ARR205)
+2025-12-04 12:57:49,839 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "DELETE /api/v1/simulation/aircraft/896FB6 HTTP/1.1" 200 21
+2025-12-04 12:57:49,840 [INFO] root: Aeronave ARR205 eliminada.
+2025-12-04 12:57:49,873 [INFO] root: Ejecutando evento 2025-12-04 06:22:47.312063+01:00 (Tramo 2 de ARR201)
+2025-12-04 12:57:49,875 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "PUT /api/v1/simulation/aircraft/DF6F39/controls HTTP/1.1" 200 21
+2025-12-04 12:57:49,875 [INFO] root: Actualizacion enviada para ARR201 (Tramo 2 de ARR201): rumbo 335.1, vel 500.0 kt, vr -3000 ft/min
+2025-12-04 12:58:02,501 [INFO] root: Ejecutando evento 2025-12-04 06:23:53.403369+01:00 (Eliminacion de ARR201)
+2025-12-04 12:58:02,503 [DEBUG] urllib3.connectionpool: http://127.0.0.1:8000 "DELETE /api/v1/simulation/aircraft/DF6F39 HTTP/1.1" 200 21
+2025-12-04 12:58:02,503 [INFO] root: Aeronave ARR201 eliminada.

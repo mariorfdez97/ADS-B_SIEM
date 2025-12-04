@@ -2,6 +2,22 @@
 
 Este documento sirve como una guía paso a paso para implementar la solución Elastic Stack (SIEM) descrita en `contexto.md`. El objetivo es centralizar, analizar y detectar anomalías en los datos de tráfico aéreo generados por el simulador `simulador_bcn.py` y el backend `co-atc`.
 
+## Implementación en este repo (archivos ya listos)
+- `docker-compose.yml`: levanta Elasticsearch, Kibana, Logstash y Filebeat (Elastic 8.11.1, sin seguridad, un nodo).
+- `filebeat.yml`: lee `logs/co_atc.log`, `logs/simulador.log`, `logs/inyector.log` y `logs/adsb_events.log` (JSON por línea) y las envía a Logstash.
+- `logstash/pipeline/adsb.conf`: input Beats 5044, conversión de tipos, geo_point `[location]`, parseo de `timestamp` ISO8601 y envío a índice `adsb-data-*` + stdout.
+- Arranque rápido (desde la raíz del proyecto):
+  ```bash
+  docker-compose up -d
+  docker-compose logs -f filebeat logstash
+  ```
+- Requisitos: tener `logs/*.log` con líneas JSON (idealmente cada mensaje ADS-B). Los contenedores leen `/home/.../ADS-B_SIEM/logs` montado en `/logs`.
+
+## Generación de logs ADS-B desde Co-ATC
+- Script `co_atc_exporter.py`: consulta `http://127.0.0.1:8000/api/v1/aircraft` cada segundo y vuelca cada aeronave como JSON en `logs/adsb_events.log` (se trunca en cada arranque).
+- `lanzar_lab.sh` lo lanza automáticamente tras Co-ATC y el simulador; su salida se guarda en `logs/exporter.log`. `detener_lab.sh` lo mata vía `EXPORTER_PID`.
+- Campos emitidos: `timestamp`, `hex`, `flight`, `is_simulated`, `lat`, `lon`, `altitude`, `speed`, `heading`, `vertical_rate`, `on_ground`, `anomaly_flags`, `source="co_atc_api"`.
+
 ## Arquitectura General
 
 El flujo de datos seguirá el siguiente esquema:

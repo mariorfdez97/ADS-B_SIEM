@@ -9,7 +9,7 @@ PIDS_FILE="$LOG_DIR/pids.env"
 if [ -f "$PIDS_FILE" ]; then
   source "$PIDS_FILE"
 
-  for pid_var in FEED_PID CO_ATC_PID SIM_PID TAIL_PID; do
+  for pid_var in FEED_PID CO_ATC_PID SIM_PID EXPORTER_PID TAIL_PID; do
     pid="${!pid_var:-}"
     if [ -n "$pid" ]; then
       if kill -0 "$pid" 2>/dev/null; then

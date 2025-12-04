@@ -3,6 +3,7 @@ import logging
 import sys
 from datetime import datetime
 from typing import List
+from pathlib import Path
 
 from simulador_bcn_pkg.builders import construir_anomalias, construir_vuelos
 from simulador_bcn_pkg.context import ContextoSimulacion
@@ -50,10 +51,26 @@ def parsear_argumentos() -> argparse.Namespace:
 
 
 def configurar_logging(nivel: str) -> None:
-    logging.basicConfig(
-        level=getattr(logging, nivel),
-        format="%(asctime)s [%(levelname)s] %(message)s",
-    )
+    """Configura logging en consola y en archivo limpio por ejecución."""
+    logger = logging.getLogger()
+    logger.handlers.clear()
+    logger.setLevel(logging.DEBUG)  # Siempre recolectamos todo en el archivo
+
+    formato = "%(asctime)s [%(levelname)s] %(message)s"
+
+    # Consola: nivel configurable
+    consola = logging.StreamHandler()
+    consola.setLevel(getattr(logging, nivel))
+    consola.setFormatter(logging.Formatter(formato))
+    logger.addHandler(consola)
+
+    # Archivo estructurado y reiniciado en cada ejecución
+    logs_dir = Path(__file__).resolve().parent.parent / "logs"
+    logs_dir.mkdir(parents=True, exist_ok=True)
+    archivo = logging.FileHandler(logs_dir / "inyector.log", mode="w", encoding="utf-8")
+    archivo.setLevel(logging.DEBUG)
+    archivo.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(name)s: %(message)s"))
+    logger.addHandler(archivo)
 
 
 def main() -> None:

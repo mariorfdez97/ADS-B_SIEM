@@ -11,6 +11,7 @@ PIDS_FILE="$LOG_DIR/pids.env"
 CO_ATC_BIN="$CO_ATC_DIR/bin/co-atc"
 CO_ATC_CONFIG="$CO_ATC_DIR/configs/config.toml"
 CO_ATC_BUILD_LOG="$LOG_DIR/co_atc_build.log"
+EXPORTER_SCRIPT="$BASE_DIR/co_atc_exporter.py"
 
 wait_for_port() {
   local host="$1" port="$2" timeout="$3" start
@@ -141,6 +142,18 @@ echo "[INFO] Iniciando simulador BCN (factor-tiempo=${SIM_FACTOR_TIEMPO}; añade
   exec python3 simulador_bcn.py --factor-tiempo "$SIM_FACTOR_TIEMPO" "${EXTRA_ARGS[@]}" >>"$LOG_DIR/simulador.log" 2>&1
 ) &
 echo "SIM_PID=$!" >>"$PIDS_FILE"
+
+# Exportador de telemetría hacia logs/adsb_events.log para Filebeat/Logstash
+if [[ -f "$EXPORTER_SCRIPT" ]]; then
+  echo "[INFO] Iniciando exportador Co-ATC -> logs/adsb_events.log ..."
+  (
+    cd "$BASE_DIR"
+    exec python3 "$EXPORTER_SCRIPT" --url http://127.0.0.1:8000/api/v1/aircraft --output "$LOG_DIR/adsb_events.log" --interval 1.0 >>"$LOG_DIR/exporter.log" 2>&1
+  ) &
+  echo "EXPORTER_PID=$!" >>"$PIDS_FILE"
+else
+  echo "[WARN] No se encontró $EXPORTER_SCRIPT; no se exportarán eventos ADS-B a logs/adsb_events.log"
+fi
 
 # Lanzar un tail unificado en segundo plano
 echo "[INFO] Mostrando logs en vivo (Ctrl+C para salir y detener procesos)..."
