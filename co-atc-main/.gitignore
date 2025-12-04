@@ -31,10 +31,4 @@ Thumbs.db
 /bin/
 /dist/
 
-# Log files
-*.log
-
-/data/
-
-/configs/config.toml
-config.toml
+/venv/

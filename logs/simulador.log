@@ -3577,3 +3577,148 @@ KeyboardInterrupt
 2025-12-04 12:57:49,875 [INFO] Actualizacion enviada para ARR201 (Tramo 2 de ARR201): rumbo 335.1, vel 500.0 kt, vr -3000 ft/min
 2025-12-04 12:58:02,501 [INFO] Ejecutando evento 2025-12-04 06:23:53.403369+01:00 (Eliminacion de ARR201)
 2025-12-04 12:58:02,503 [INFO] Aeronave ARR201 eliminada.
+2025-12-04 16:30:29,631 [INFO] Total de eventos programados: 64
+2025-12-04 16:30:29,632 [INFO] Ejecutando evento 2025-12-04 06:00:00+01:00 (Creacion de DPT101)
+2025-12-04 16:30:29,637 [INFO] Creado DPT101 con hex BC5150 en intento 1
+2025-12-04 16:30:31,632 [INFO] Ejecutando evento 2025-12-04 06:00:10+01:00 (Creacion de DPT102)
+2025-12-04 16:30:31,635 [INFO] Creado DPT102 con hex 7FD25F en intento 1
+2025-12-04 16:30:33,632 [INFO] Ejecutando evento 2025-12-04 06:00:20+01:00 (Creacion de DPT103)
+2025-12-04 16:30:33,636 [INFO] Creado DPT103 con hex ABD8E3 en intento 1
+2025-12-04 16:30:35,632 [INFO] Ejecutando evento 2025-12-04 06:00:30+01:00 (Tramo 1 de DPT101)
+2025-12-04 16:30:35,635 [INFO] Actualizacion enviada para DPT101 (Tramo 1 de DPT101): rumbo 123.9, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:30:35,635 [INFO] Ejecutando evento 2025-12-04 06:00:30+01:00 (Creacion de DPT104)
+2025-12-04 16:30:35,637 [INFO] Creado DPT104 con hex C595A4 en intento 1
+2025-12-04 16:30:37,632 [INFO] Ejecutando evento 2025-12-04 06:00:40+01:00 (Creacion de DPT105)
+2025-12-04 16:30:37,635 [INFO] Creado DPT105 con hex 4C54A1 en intento 1
+2025-12-04 16:30:39,632 [INFO] Ejecutando evento 2025-12-04 06:00:50+01:00 (Tramo 1 de DPT102)
+2025-12-04 16:30:39,634 [INFO] Actualizacion enviada para DPT102 (Tramo 1 de DPT102): rumbo 41.9, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:30:39,635 [INFO] Ejecutando evento 2025-12-04 06:00:50+01:00 (Creacion de DPT106)
+2025-12-04 16:30:39,636 [INFO] Creado DPT106 con hex EBB435 en intento 1
+2025-12-04 16:30:41,632 [INFO] Ejecutando evento 2025-12-04 06:01:00+01:00 (Creacion de DPT107)
+2025-12-04 16:30:41,635 [INFO] Creado DPT107 con hex CAB282 en intento 1
+2025-12-04 16:30:43,632 [INFO] Ejecutando evento 2025-12-04 06:01:10+01:00 (Tramo 1 de DPT103)
+2025-12-04 16:30:43,635 [INFO] Actualizacion enviada para DPT103 (Tramo 1 de DPT103): rumbo 244.3, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:30:43,635 [INFO] Ejecutando evento 2025-12-04 06:01:10+01:00 (Creacion de DPT108)
+2025-12-04 16:30:43,638 [INFO] Creado DPT108 con hex 558769 en intento 1
+2025-12-04 16:30:45,632 [INFO] Ejecutando evento 2025-12-04 06:01:20+01:00 (Tramo 1 de DPT104)
+2025-12-04 16:30:45,635 [INFO] Actualizacion enviada para DPT104 (Tramo 1 de DPT104): rumbo 253.5, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:30:47,632 [INFO] Ejecutando evento 2025-12-04 06:01:30+01:00 (Tramo 1 de DPT105)
+2025-12-04 16:30:47,634 [INFO] Actualizacion enviada para DPT105 (Tramo 1 de DPT105): rumbo 166.7, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:30:49,632 [INFO] Ejecutando evento 2025-12-04 06:01:40+01:00 (Tramo 1 de DPT106)
+2025-12-04 16:30:49,635 [INFO] Actualizacion enviada para DPT106 (Tramo 1 de DPT106): rumbo 123.1, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:30:51,632 [INFO] Ejecutando evento 2025-12-04 06:01:50+01:00 (Tramo 1 de DPT107)
+2025-12-04 16:30:51,634 [INFO] Actualizacion enviada para DPT107 (Tramo 1 de DPT107): rumbo 39.2, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:30:53,632 [INFO] Ejecutando evento 2025-12-04 06:02:00+01:00 (Tramo 1 de DPT108)
+2025-12-04 16:30:53,635 [INFO] Actualizacion enviada para DPT108 (Tramo 1 de DPT108): rumbo 155.1, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:30:55,310 [INFO] Ejecutando evento 2025-12-04 06:02:08.389111+01:00 (Tramo 2 de DPT105)
+2025-12-04 16:30:55,313 [INFO] Actualizacion enviada para DPT105 (Tramo 2 de DPT105): rumbo 15.3, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:30:57,443 [INFO] Ejecutando evento 2025-12-04 06:02:19.056293+01:00 (Tramo 2 de DPT101)
+2025-12-04 16:30:57,447 [INFO] Actualizacion enviada para DPT101 (Tramo 2 de DPT101): rumbo 280.3, vel 500.0 kt, vr 2941 ft/min
+2025-12-04 16:31:03,546 [INFO] Ejecutando evento 2025-12-04 06:02:49.568479+01:00 (Tramo 2 de DPT108)
+2025-12-04 16:31:03,549 [INFO] Actualizacion enviada para DPT108 (Tramo 2 de DPT108): rumbo 29.3, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:31:14,012 [INFO] Ejecutando evento 2025-12-04 06:03:41.902295+01:00 (Tramo 2 de DPT106)
+2025-12-04 16:31:14,016 [INFO] Actualizacion enviada para DPT106 (Tramo 2 de DPT106): rumbo 280.3, vel 500.0 kt, vr 2745 ft/min
+2025-12-04 16:31:14,269 [INFO] Ejecutando evento 2025-12-04 06:03:43.185808+01:00 (Eliminacion de DPT105)
+2025-12-04 16:31:14,272 [INFO] Aeronave DPT105 eliminada.
+2025-12-04 16:31:31,778 [INFO] Ejecutando evento 2025-12-04 06:05:10.730304+01:00 (Tramo 2 de DPT102)
+2025-12-04 16:31:31,781 [INFO] Actualizacion enviada para DPT102 (Tramo 2 de DPT102): rumbo 27.1, vel 500.0 kt, vr 3000 ft/min
+Traceback (most recent call last):
+  File "/home/mario/uni/admin/ADS-B_SIEM/simulador_bcn.py", line 12, in <module>
+    main()
+  File "/home/mario/uni/admin/ADS-B_SIEM/simulador_bcn_pkg/cli.py", line 101, in main
+    ejecutar_eventos(contexto, eventos, factor_tiempo=argumentos.factor_tiempo)
+  File "/home/mario/uni/admin/ADS-B_SIEM/simulador_bcn_pkg/scheduler.py", line 29, in ejecutar_eventos
+    time.sleep(espera)
+KeyboardInterrupt
+2025-12-04 16:32:17,197 [INFO] Total de eventos programados: 64
+2025-12-04 16:32:17,197 [INFO] Ejecutando evento 2025-12-04 06:00:00+01:00 (Creacion de DPT101)
+2025-12-04 16:32:17,203 [INFO] Creado DPT101 con hex 318E01 en intento 1
+2025-12-04 16:32:19,197 [INFO] Ejecutando evento 2025-12-04 06:00:10+01:00 (Creacion de DPT102)
+2025-12-04 16:32:19,200 [INFO] Creado DPT102 con hex FA6995 en intento 1
+2025-12-04 16:32:21,197 [INFO] Ejecutando evento 2025-12-04 06:00:20+01:00 (Creacion de DPT103)
+2025-12-04 16:32:21,213 [INFO] Creado DPT103 con hex 1DF099 en intento 1
+2025-12-04 16:32:23,197 [INFO] Ejecutando evento 2025-12-04 06:00:30+01:00 (Tramo 1 de DPT101)
+2025-12-04 16:32:23,200 [INFO] Actualizacion enviada para DPT101 (Tramo 1 de DPT101): rumbo 123.9, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:32:23,200 [INFO] Ejecutando evento 2025-12-04 06:00:30+01:00 (Creacion de DPT104)
+2025-12-04 16:32:23,202 [INFO] Creado DPT104 con hex 50F8B5 en intento 1
+2025-12-04 16:32:25,197 [INFO] Ejecutando evento 2025-12-04 06:00:40+01:00 (Creacion de DPT105)
+2025-12-04 16:32:25,201 [INFO] Creado DPT105 con hex 92533D en intento 1
+2025-12-04 16:32:27,197 [INFO] Ejecutando evento 2025-12-04 06:00:50+01:00 (Tramo 1 de DPT102)
+2025-12-04 16:32:27,200 [INFO] Actualizacion enviada para DPT102 (Tramo 1 de DPT102): rumbo 41.9, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:32:27,200 [INFO] Ejecutando evento 2025-12-04 06:00:50+01:00 (Creacion de DPT106)
+2025-12-04 16:32:27,203 [INFO] Creado DPT106 con hex 6949EE en intento 1
+2025-12-04 16:32:29,197 [INFO] Ejecutando evento 2025-12-04 06:01:00+01:00 (Creacion de DPT107)
+2025-12-04 16:32:29,200 [INFO] Creado DPT107 con hex D70FA9 en intento 1
+2025-12-04 16:32:31,197 [INFO] Ejecutando evento 2025-12-04 06:01:10+01:00 (Tramo 1 de DPT103)
+2025-12-04 16:32:31,200 [INFO] Actualizacion enviada para DPT103 (Tramo 1 de DPT103): rumbo 244.3, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:32:31,201 [INFO] Ejecutando evento 2025-12-04 06:01:10+01:00 (Creacion de DPT108)
+2025-12-04 16:32:31,203 [INFO] Creado DPT108 con hex 7772D2 en intento 1
+2025-12-04 16:32:33,197 [INFO] Ejecutando evento 2025-12-04 06:01:20+01:00 (Tramo 1 de DPT104)
+2025-12-04 16:32:33,199 [INFO] Actualizacion enviada para DPT104 (Tramo 1 de DPT104): rumbo 253.5, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:32:35,197 [INFO] Ejecutando evento 2025-12-04 06:01:30+01:00 (Tramo 1 de DPT105)
+2025-12-04 16:32:35,200 [INFO] Actualizacion enviada para DPT105 (Tramo 1 de DPT105): rumbo 166.7, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:32:37,197 [INFO] Ejecutando evento 2025-12-04 06:01:40+01:00 (Tramo 1 de DPT106)
+2025-12-04 16:32:37,200 [INFO] Actualizacion enviada para DPT106 (Tramo 1 de DPT106): rumbo 123.1, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:32:39,197 [INFO] Ejecutando evento 2025-12-04 06:01:50+01:00 (Tramo 1 de DPT107)
+2025-12-04 16:32:39,200 [INFO] Actualizacion enviada para DPT107 (Tramo 1 de DPT107): rumbo 39.2, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:32:41,197 [INFO] Ejecutando evento 2025-12-04 06:02:00+01:00 (Tramo 1 de DPT108)
+2025-12-04 16:32:41,200 [INFO] Actualizacion enviada para DPT108 (Tramo 1 de DPT108): rumbo 155.1, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:32:42,875 [INFO] Ejecutando evento 2025-12-04 06:02:08.389111+01:00 (Tramo 2 de DPT105)
+2025-12-04 16:32:42,878 [INFO] Actualizacion enviada para DPT105 (Tramo 2 de DPT105): rumbo 15.3, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:32:45,009 [INFO] Ejecutando evento 2025-12-04 06:02:19.056293+01:00 (Tramo 2 de DPT101)
+2025-12-04 16:32:45,012 [INFO] Actualizacion enviada para DPT101 (Tramo 2 de DPT101): rumbo 280.3, vel 500.0 kt, vr 2941 ft/min
+2025-12-04 16:32:51,111 [INFO] Ejecutando evento 2025-12-04 06:02:49.568479+01:00 (Tramo 2 de DPT108)
+2025-12-04 16:32:51,114 [INFO] Actualizacion enviada para DPT108 (Tramo 2 de DPT108): rumbo 29.3, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:33:01,578 [INFO] Ejecutando evento 2025-12-04 06:03:41.902295+01:00 (Tramo 2 de DPT106)
+2025-12-04 16:33:01,580 [INFO] Actualizacion enviada para DPT106 (Tramo 2 de DPT106): rumbo 280.3, vel 500.0 kt, vr 2745 ft/min
+2025-12-04 16:33:01,835 [INFO] Ejecutando evento 2025-12-04 06:03:43.185808+01:00 (Eliminacion de DPT105)
+2025-12-04 16:33:01,837 [INFO] Aeronave DPT105 eliminada.
+2025-12-04 16:33:19,343 [INFO] Ejecutando evento 2025-12-04 06:05:10.730304+01:00 (Tramo 2 de DPT102)
+2025-12-04 16:33:19,346 [INFO] Actualizacion enviada para DPT102 (Tramo 2 de DPT102): rumbo 27.1, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:33:27,920 [INFO] Ejecutando evento 2025-12-04 06:05:53.615201+01:00 (Tramo 2 de DPT104)
+2025-12-04 16:33:27,924 [INFO] Actualizacion enviada para DPT104 (Tramo 2 de DPT104): rumbo 84.8, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:33:29,197 [INFO] Ejecutando evento 2025-12-04 06:06:00+01:00 (Creacion de ARR201)
+2025-12-04 16:33:29,200 [INFO] Creado ARR201 con hex A7930D en intento 1
+2025-12-04 16:33:31,197 [INFO] Ejecutando evento 2025-12-04 06:06:10+01:00 (Creacion de ARR202)
+2025-12-04 16:33:31,201 [INFO] Creado ARR202 con hex 9853D4 en intento 1
+2025-12-04 16:33:33,197 [INFO] Ejecutando evento 2025-12-04 06:06:20+01:00 (Tramo 1 de ARR201)
+2025-12-04 16:33:33,200 [INFO] Actualizacion enviada para ARR201 (Tramo 1 de ARR201): rumbo 99.1, vel 500.0 kt, vr -1215 ft/min
+2025-12-04 16:33:33,200 [INFO] Ejecutando evento 2025-12-04 06:06:20+01:00 (Creacion de ARR203)
+2025-12-04 16:33:33,202 [INFO] Creado ARR203 con hex 77A2FE en intento 1
+2025-12-04 16:33:33,311 [INFO] Ejecutando evento 2025-12-04 06:06:20.566922+01:00 (Tramo 2 de DPT107)
+2025-12-04 16:33:33,313 [INFO] Actualizacion enviada para DPT107 (Tramo 2 de DPT107): rumbo 14.8, vel 500.0 kt, vr 3000 ft/min
+2025-12-04 16:33:35,197 [INFO] Ejecutando evento 2025-12-04 06:06:30+01:00 (Tramo 1 de ARR202)
+2025-12-04 16:33:35,200 [INFO] Actualizacion enviada para ARR202 (Tramo 1 de ARR202): rumbo 284.2, vel 500.0 kt, vr -3000 ft/min
+2025-12-04 16:33:35,200 [INFO] Ejecutando evento 2025-12-04 06:06:30+01:00 (Creacion de ARR204)
+2025-12-04 16:33:35,202 [INFO] Creado ARR204 con hex CD95E4 en intento 1
+2025-12-04 16:33:37,197 [INFO] Ejecutando evento 2025-12-04 06:06:40+01:00 (Tramo 1 de ARR203)
+2025-12-04 16:33:37,200 [INFO] Actualizacion enviada para ARR203 (Tramo 1 de ARR203): rumbo 79.4, vel 500.0 kt, vr -2315 ft/min
+2025-12-04 16:33:37,200 [INFO] Ejecutando evento 2025-12-04 06:06:40+01:00 (Creacion de ARR205)
+2025-12-04 16:33:37,202 [INFO] Creado ARR205 con hex CABB67 en intento 1
+2025-12-04 16:33:39,197 [INFO] Ejecutando evento 2025-12-04 06:06:50+01:00 (Tramo 1 de ARR204)
+2025-12-04 16:33:39,199 [INFO] Actualizacion enviada para ARR204 (Tramo 1 de ARR204): rumbo 224.0, vel 500.0 kt, vr -2575 ft/min
+2025-12-04 16:33:39,199 [INFO] Ejecutando evento 2025-12-04 06:06:50+01:00 (Creacion de ARR206)
+2025-12-04 16:33:39,201 [INFO] Creado ARR206 con hex 6815D0 en intento 1
+Traceback (most recent call last):
+  File "/home/mario/uni/admin/ADS-B_SIEM/simulador_bcn.py", line 12, in <module>
+    main()
+  File "/home/mario/uni/admin/ADS-B_SIEM/simulador_bcn_pkg/cli.py", line 101, in main
+    ejecutar_eventos(contexto, eventos, factor_tiempo=argumentos.factor_tiempo)
+  File "/home/mario/uni/admin/ADS-B_SIEM/simulador_bcn_pkg/scheduler.py", line 29, in ejecutar_eventos
+    time.sleep(espera)
+KeyboardInterrupt
+2025-12-04 16:52:31,180 [INFO] Total de eventos programados: 64
+2025-12-04 16:52:31,180 [INFO] Ejecutando evento 2025-12-04 06:00:00+01:00 (Creacion de DPT101)
+2025-12-04 16:52:31,185 [INFO] Creado DPT101 con hex 581493 en intento 1
+2025-12-04 16:52:41,180 [INFO] Ejecutando evento 2025-12-04 06:00:10+01:00 (Creacion de DPT102)
+2025-12-04 16:52:41,183 [INFO] Creado DPT102 con hex 441E0F en intento 1
+2025-12-04 16:52:51,181 [INFO] Ejecutando evento 2025-12-04 06:00:20+01:00 (Creacion de DPT103)
+2025-12-04 16:52:51,185 [INFO] Creado DPT103 con hex 4F156B en intento 1
+2025-12-04 16:53:01,181 [INFO] Ejecutando evento 2025-12-04 06:00:30+01:00 (Tramo 1 de DPT101)
+2025-12-04 16:53:01,183 [INFO] Actualizacion enviada para DPT101 (Tramo 1 de DPT101): rumbo 123.9, vel 200.0 kt, vr 1651 ft/min
+2025-12-04 16:53:01,184 [INFO] Ejecutando evento 2025-12-04 06:00:30+01:00 (Creacion de DPT104)
+2025-12-04 16:53:01,186 [INFO] Creado DPT104 con hex E2C426 en intento 1
+Traceback (most recent call last):
+  File "/home/mario/uni/admin/ADS-B_SIEM/simulador_bcn.py", line 12, in <module>
+    main()
+  File "/home/mario/uni/admin/ADS-B_SIEM/simulador_bcn_pkg/cli.py", line 101, in main
