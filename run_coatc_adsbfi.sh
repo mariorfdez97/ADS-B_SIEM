@@ -45,7 +45,7 @@ touch "$CO_ATC_DIR/data/aircraft.json"
 echo "[INFO] (http) Servidor estático 9000 para aircraft.json..."
 (cd "$CO_ATC_DIR/data" && python3 -m http.server 9000 --bind 127.0.0.1 >>"$LOG_DIR/feed_http.log" 2>&1) &
 FEED_PID=$!
-echo "[INFO] (http) PID=$FEED_PID log=logs/feed_http.log"
+echo "[INFO] (http) PID=$FEED_PID log=logs/feed_http_serverEstático.log"
 
 wait_for_port "127.0.0.1" 9000 10
 
