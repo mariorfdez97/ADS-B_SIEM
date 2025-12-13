@@ -72,6 +72,7 @@ Se generan logs y artefactos runtime (ignorados por git):
 - `logs/feed_http.log`: servidor estático del `aircraft.json`
 - `logs/adsbfi_fetch.log`: logs del fetcher
 - `logs/adsb_api_parsed.log`: puede existir si en algún momento se configuró Logstash para escribir salida a fichero
+- `logs/adsb_siem_events.log`: log estructurado (JSON) con lo que Logstash envía al índice `adsb-siem-*`
 
 ---
 
@@ -89,6 +90,30 @@ Se generan logs y artefactos runtime (ignorados por git):
 ---
 
 ## Cómo lanzar (rápido)
+
+### Opción 0 (recomendada): levantar TODO con Docker
+Esto levanta en una sola orden:
+- `adsb-feed` (adsb.fi → `aircraft.json` + servidor HTTP en `9000`)
+- `co-atc` (API+frontend en `8000`)
+- `elasticsearch` (9200), `kibana` (5601), `logstash` (polling API → ES)
+
+```bash
+sudo docker-compose up -d --build
+```
+
+URLs:
+- Co‑ATC: `http://localhost:8000`
+- API: `http://localhost:8000/api/v1/aircraft?status=active&lastSeenMinutes=5`
+- Elasticsearch: `http://localhost:9200`
+- Kibana: `http://localhost:5601`
+
+Índices SIEM:
+- `adsb-siem-*`
+
+Parar:
+```bash
+sudo docker-compose down
+```
 
 ### A) Arrancar Co‑ATC con tráfico real (adsb.fi)
 1) Instala dependencias Python:
@@ -132,6 +157,11 @@ curl -s http://localhost:9200
 4) Comprobar que está entrando dato:
 ```bash
 curl -s 'http://localhost:9200/adsb-siem-*/_count'
+```
+
+Log estructurado (mismo evento que indexa ES):
+```bash
+tail -f logs/adsb_siem_events.log
 ```
 
 ---

@@ -1,6 +1,14 @@
-# Script de arranque único (`lanzar_lab.sh`)
+# Script de arranque (legacy) (`lanzar_lab.sh`)
 
-Este script inicia tres procesos con un solo comando:
+Este documento es **legacy**: en el estado actual del repo el script `lanzar_lab.sh` ya no existe.
+
+Alternativas actuales:
+- Levantar todo con Docker: `sudo docker-compose up -d --build` (ver `README.md`).
+- Levantar Co‑ATC + adsb.fi sin Docker: `./run_coatc_adsbfi.sh`.
+
+El contenido que sigue describe el comportamiento histórico del script eliminado.
+
+Este script iniciaba tres procesos con un solo comando:
 1. Servidor HTTP local (puerto 9000) que sirve `co-atc-main/data/aircraft.json`.
 2. Backend Co-ATC (`bin/co-atc -config configs/config.toml`) usando la configuración del repo (LEBL y fuente local http://127.0.0.1:9000/aircraft.json).
 3. Simulador BCN (`python3 simulador_bcn.py`) en modo nominal con factor de tiempo acelerado (`--factor-tiempo 120.0` por defecto; ajustable con `SIM_FACTOR_TIEMPO`).

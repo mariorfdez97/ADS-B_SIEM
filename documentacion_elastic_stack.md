@@ -10,12 +10,18 @@ Ingerir en Elasticsearch los datos de aeronaves activos expuestos por la API de 
 - **Sin Filebeat**: la obtención de datos es directa por HTTP Poller desde Logstash.
 
 ## Estructura de ficheros
-- `docker-compose.yml`: orquesta los 3 servicios.
+- `docker-compose.yml`: orquesta el laboratorio completo (Co‑ATC + feed + Elastic Stack).
 - `logstash/pipeline/logstash.conf`: pipeline de ingesta (HTTP poller, filtros, outputs).
-- `logs/adsb_api_parsed.log`: log generado por Logstash con los eventos ya procesados.
+- `logs/adsb_siem_events.log`: log generado por Logstash con los eventos ya procesados (lo mismo que se envía a Elasticsearch).
 
 ## Configuración principal
 ### docker-compose.yml
+- **adsb-feed**
+  - Descarga datos de `adsb.fi`, genera `aircraft.json` y lo sirve por HTTP en `9000`.
+  - Se usa como fuente `local_source_url` para Co‑ATC.
+- **co-atc**
+  - Backend + frontend en `8000`.
+  - Usa `co-atc-main/configs/config.docker.toml`.
 - **elasticsearch**
   - `xpack.security.enabled=false` para uso sin credenciales.
   - Datos persistentes en volumen `esdata`.
@@ -35,8 +41,8 @@ Ingerir en Elasticsearch los datos de aeronaves activos expuestos por la API de 
 
 ### logstash/pipeline/logstash.conf
 **Input: http_poller**
-- GET `http://host.docker.internal:8000/api/v1/aircraft?status=active&lastSeenMinutes=5`.
-- Intervalo: 10 s. Timeout: 10 s. Cabecera `Accept: application/json`.
+- GET `http://co-atc:8000/api/v1/aircraft?status=active&lastSeenMinutes=5`.
+- Intervalo: 5 s. Timeout: 10 s. Cabecera `Accept: application/json`.
 - Espera la estructura: objeto con campo `aircraft` que contiene un array de aeronaves.
 
 **Filter**
@@ -50,8 +56,8 @@ Ingerir en Elasticsearch los datos de aeronaves activos expuestos por la API de 
 6. Limpieza de campos intermedios (`aircraft`, `adsb`, etc.).
 
 **Output**
-- Elasticsearch: índice `adsb-api-%{+YYYY.MM.dd}`.
-- Fichero: `/logs/adsb_api_parsed.log` (json_lines, `create_if_deleted`).
+- Elasticsearch: índice `adsb-siem-%{+YYYY.MM.dd}`.
+- Fichero: `/logs/adsb_siem_events.log` (json_lines, `create_if_deleted`).
 
 ## Ejecución desde cero
 1) Parar y limpiar (incluye huérfanos):
@@ -68,11 +74,11 @@ sudo docker-compose ps
 ```
 4) Comprobar ingesta en ES:
 ```bash
-curl -s http://localhost:9200/adsb-api-*/_count
+curl -s http://localhost:9200/adsb-siem-*/_count
 ```
 5) Ver log procesado:
 ```bash
-tail -f logs/adsb_api_parsed.log
+tail -f logs/adsb_siem_events.log
 ```
 6) Kibana: abrir http://localhost:5601 y crear un data view `adsb-api-*`.
 
@@ -99,4 +105,4 @@ tail -f logs/adsb_api_parsed.log
 - **Permisos de logs**: `logs` debe existir y ser escribible por el contenedor (montaje en `./logs`).
 
 ## Flujo resumen
-API Co-ATC (`/api/v1/aircraft?...`) → Logstash HTTP Poller → split y normalización → deduplicación por firma de estado → salida simultánea a Elasticsearch (`adsb-api-*`) y a `logs/adsb_api_parsed.log`.
+API Co-ATC (`/api/v1/aircraft?...`) → Logstash HTTP Poller → split y normalización → reglas SIEM + deduplicación → salida a Elasticsearch (`adsb-siem-*`) y a `logs/adsb_siem_events.log`.

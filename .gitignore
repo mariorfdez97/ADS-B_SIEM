@@ -45,3 +45,7 @@ esdata/
 elasticsearch/
 logstash/data/
 docker-compose.override.yml
+
+# Docker build artefacts (si se crean localmente)
+co-atc-main/bin/
+co-atc-main/.gocache/

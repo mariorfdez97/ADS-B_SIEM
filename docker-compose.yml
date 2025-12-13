@@ -1,6 +1,29 @@
 version: "3.8"
 
 services:
+  adsb-feed:
+    build:
+      context: ./adsb-feed
+    restart: unless-stopped
+    volumes:
+      - aircraft_data:/data
+    ports:
+      - "9000:9000"
+
+  co-atc:
+    build:
+      context: ./co-atc-main
+    restart: unless-stopped
+    depends_on:
+      - adsb-feed
+    environment:
+      - COATC_CONFIG=/app/configs/config.docker.toml
+    volumes:
+      - ./co-atc-main/configs/config.docker.toml:/app/configs/config.docker.toml:ro
+      - coatc_data:/app/data
+    ports:
+      - "8000:8000"
+
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:8.14.1
     restart: unless-stopped
@@ -42,6 +65,8 @@ services:
     depends_on:
       elasticsearch:
         condition: service_healthy
+      co-atc:
+        condition: service_started
     user: root
     command: ["-w", "1"]
     environment:
@@ -52,8 +77,6 @@ services:
     ports:
       - "5044:5044"
       - "9600:9600"
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
     healthcheck:
       test: ["CMD-SHELL", "curl -fs http://localhost:9600/_node/pipelines || exit 1"]
       interval: 10s
@@ -62,3 +85,5 @@ services:
 
 volumes:
   esdata:
+  coatc_data:
+  aircraft_data:

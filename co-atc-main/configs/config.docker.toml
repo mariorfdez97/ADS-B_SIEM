@@ -1,0 +1,61 @@
+#######################################################
+# Co-ATC configuration (Docker / root docker-compose)
+#######################################################
+
+[server]
+port = 8000
+host = "0.0.0.0"
+cors_allowed_origins = ["*"]
+read_timeout_seconds = 0
+write_timeout_seconds = 0
+idle_timeout_seconds = 3600
+additional_ports = []
+static_files_dir = "www"
+
+[adsb]
+source_type = "local"
+local_source_url = "http://adsb-feed:9000/aircraft.json"
+external_source_url = "https://adsbexchange-com1.p.rapidapi.com/v2/lat/%f/lon/%f/dist/%.0f/"
+api_host = "adsbexchange-com1.p.rapidapi.com"
+api_key = ""
+search_radius_nm = 50
+fetch_interval_seconds = 2
+signal_lost_timeout_seconds = 60
+airline_db_path = "assets/airlines.json"
+websocket_aircraft_updates = false
+
+[logging]
+level = "info"
+format = "console"
+
+[storage]
+type = "sqlite"
+sqlite_base_path = "data"
+max_positions_in_api = 50
+
+[station]
+latitude = 41.2971
+longitude = 2.0785
+elevation_feet = 14
+airport_code = "LEBL"
+runways_db_path = "assets/runways.json"
+runway_extension_length_nm = 10.0
+airport_range_nm = 5.0
+
+[frequencies]
+
+[wx]
+# En Docker, dejamos el servicio WX configurado pero sin llamadas externas (fetch_* = false).
+# El backend valida que refresh_interval_minutes > 0.
+refresh_interval_minutes = 10
+api_base_url = "https://node.windy.com/airports"
+request_timeout_seconds = 10
+max_retries = 2
+fetch_metar = true
+fetch_taf = false
+fetch_notams = false
+cache_expiry_minutes = 60
+
+[atc_chat]
+# Desactivado en el laboratorio (no requiere OpenAI).
+enabled = false
