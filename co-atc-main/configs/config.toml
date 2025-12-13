@@ -98,7 +98,7 @@ longitude = 2.0785
 # Elevation of your station above sea level (in feet)
 elevation_feet = 14
 
-# ICAO code of the airport (e.g., "CYYZ" for Toronto Pearson)
+# ICAO Barcelona airport
 airport_code = "LEBL"
 
 # Path to runway database JSON file

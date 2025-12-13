@@ -1,6 +1,15 @@
 // Base API URL - dynamically use the current port
 const API_BASE_URL = `${window.location.protocol}//${window.location.hostname}:${window.location.port}/api/v1`;
 
+// Polyfill simple para crypto.randomUUID en navegadores que no lo soportan.
+const randomUUID = (crypto && typeof crypto.randomUUID === 'function')
+    ? () => crypto.randomUUID()
+    : () => 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+        const r = (Math.random() * 16) | 0;
+        const v = c === 'x' ? r : (r & 0x3) | 0x8;
+        return v.toString(16);
+    });
+
 // Configuration
 const CONFIG = {
     // defaultCenter: [43.6777, -79.6248], // Will be fetched from API
@@ -48,7 +57,7 @@ document.addEventListener('alpine:init', () => {
         },
         visibleAircraftOnMap: new Set(), // Track aircraft visible on map for UI indicators
         audioFrequencies: [],
-        clientID: crypto.randomUUID(), // Unique client ID for audio streams
+        clientID: randomUUID(), // Unique client ID for audio streams
         unmutedFrequencies: new Set(), // Set of unmuted frequency IDs
         audioElements: {}, // Map of frequency ID to audio element
         audioAnalysers: {}, // Map of frequency ID to analyser node
