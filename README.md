@@ -27,7 +27,7 @@ Notas importantes:
 - El frontend usa JavaScript moderno. En este repo se añadió un fallback para `crypto.randomUUID` en:
   - `co-atc-main/www/app.js`
 
-### 2) `fetch_adsbfi.py` (feed ADS‑B real → `aircraft.json`)
+### 2) `tools/adsb/fetch_adsbfi.py` (feed ADS‑B real → `aircraft.json`)
 Script Python que consulta el endpoint público de `adsb.fi` y lo convierte al formato que espera Co‑ATC:
 - consulta: `https://opendata.adsb.fi/api/v3/lat/{lat}/lon/{lon}/dist/{dist}`
 - salida: `co-atc-main/data/aircraft.json`
@@ -41,21 +41,21 @@ Parámetros importantes (ver `--help`):
 
 ### 3) `run_coatc_adsbfi.sh` / `stop_coatc_adsbfi.sh`
 Scripts de conveniencia para levantar Co‑ATC con datos reales:
-- `run_coatc_adsbfi.sh` hace:
+- `scripts/run_coatc_adsbfi.sh` hace:
   1) compilar Co‑ATC si falta el binario
   2) levantar un servidor estático en `9000` que sirve `co-atc-main/data/aircraft.json`
-  3) ejecutar `fetch_adsbfi.py` para rellenar el `aircraft.json`
+  3) ejecutar `tools/adsb/fetch_adsbfi.py` para rellenar el `aircraft.json`
   4) arrancar Co‑ATC con `co-atc-main/configs/config.toml`
   5) mostrar logs en vivo
-- `stop_coatc_adsbfi.sh` mata los procesos anteriores por patrón
+- `scripts/stop_coatc_adsbfi.sh` mata los procesos anteriores por patrón
 
 ### 4) Elastic Stack (SIEM) en Docker
 El stack está en la raíz del repo:
 - `docker-compose.yml`: levanta `elasticsearch`, `kibana` y `logstash`.
-- `logstash/pipeline/logstash.conf`: pipeline que **consulta la API** de Co‑ATC y envía eventos a Elasticsearch.
+- `infra/logstash/pipeline/logstash.conf`: pipeline que **consulta la API** de Co‑ATC y envía eventos a Elasticsearch.
 
 Puntos clave del pipeline (versión actual):
-- input: `http_poller` a `http://host.docker.internal:8000/api/v1/aircraft?status=active&lastSeenMinutes=5`
+- input: `http_poller` a `http://co-atc:8000/api/v1/aircraft?status=active&lastSeenMinutes=5` (red interna de Docker Compose)
 - `split` por aeronave
 - normalización/renombrado a campos “humanos” en español (ej. `id_icao`, `callsign_vuelo`, `latitud`, `altitud_pies`, etc.)
 - crea `location` para uso geográfico en Kibana
@@ -64,14 +64,13 @@ Puntos clave del pipeline (versión actual):
 - output: Elasticsearch en el índice diario `adsb-siem-YYYY.MM.dd`
 
 Documentación específica del stack:
-- `documentacion_elastic_stack.md`
+- `docs/elastic-stack.md`
 
 ### 5) `logs/` (artefactos de ejecución)
 Se generan logs y artefactos runtime (ignorados por git):
 - `logs/co_atc.log`: logs del backend Co‑ATC
 - `logs/feed_http.log`: servidor estático del `aircraft.json`
 - `logs/adsbfi_fetch.log`: logs del fetcher
-- `logs/adsb_api_parsed.log`: puede existir si en algún momento se configuró Logstash para escribir salida a fichero
 - `logs/adsb_siem_events.log`: log estructurado (JSON) con lo que Logstash envía al índice `adsb-siem-*`
 
 ---
@@ -125,8 +124,8 @@ python3 -m pip install requests
 
 2) Arranca:
 ```bash
-chmod +x run_coatc_adsbfi.sh
-./run_coatc_adsbfi.sh
+chmod +x scripts/run_coatc_adsbfi.sh
+./scripts/run_coatc_adsbfi.sh
 ```
 
 3) Abre:
@@ -135,7 +134,7 @@ chmod +x run_coatc_adsbfi.sh
 
 4) Parar:
 ```bash
-./stop_coatc_adsbfi.sh
+./scripts/stop_coatc_adsbfi.sh
 ```
 
 ### B) Arrancar el SIEM (Elastic + Kibana + Logstash)
@@ -171,7 +170,7 @@ tail -f logs/adsb_siem_events.log
 ### 1) Cambiar zona (centro/radio) del feed adsb.fi
 Edita el comando en `run_coatc_adsbfi.sh` o ejecútalo a mano:
 ```bash
-python3 fetch_adsbfi.py --lat 41.2971 --lon 2.0785 --dist 80 --interval 1
+python3 tools/adsb/fetch_adsbfi.py --lat 41.2971 --lon 2.0785 --dist 80 --interval 1
 ```
 
 ### 2) Permitir que Logstash (Docker) llame a Co‑ATC
@@ -179,7 +178,7 @@ En `co-atc-main/configs/config.toml`:
 - `[server]` → `host = "0.0.0.0"`
 
 ### 3) Ajustar la ingesta SIEM
-En `logstash/pipeline/logstash.conf`:
+En `infra/logstash/pipeline/logstash.conf`:
 - cambia el `schedule` (frecuencia)
 - cambia la URL (`lastSeenMinutes`, filtros)
 - añade/quita reglas SIEM (tags)
@@ -219,8 +218,8 @@ sudo docker-compose up -d
 
 ### “Connection refused” desde Logstash a la API de Co‑ATC
 Dentro de Docker, `localhost` no es el host.
-- usa `host.docker.internal` en Logstash (ya está en el pipeline)
-- asegúrate de que Co‑ATC escucha en `0.0.0.0`
+- Logstash llama a Co‑ATC por DNS interno: `http://co-atc:8000/...` (ya está en el pipeline).
+- asegúrate de que Co‑ATC está levantado y expone el puerto `8000`.
 
 ### Kibana “campos vacíos”
 Normalmente es *Data View* desactualizado o rango de tiempo incorrecto:
@@ -236,9 +235,9 @@ Se añadió un fallback en `co-atc-main/www/app.js`. Si sigues viendo el error:
 ---
 
 ## Documentos y contexto del proyecto (asignatura)
-- `Informes_EstadoImplementacion/`: guías y resúmenes del estado.
-- `contextoParaLLM/`: contexto/temario de la parte teórica.
-- `documentacion_elastic_stack.md`: guía del stack SIEM en este repo.
+- `docs/informes/`: guías y resúmenes del estado.
+- `docs/contexto/`: contexto/temario de la parte teórica.
+- `docs/elastic-stack.md`: guía del stack SIEM en este repo.
 
 ---
 

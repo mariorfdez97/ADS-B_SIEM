@@ -4,7 +4,7 @@ Este documento es **legacy**: en el estado actual del repo el script `lanzar_lab
 
 Alternativas actuales:
 - Levantar todo con Docker: `sudo docker-compose up -d --build` (ver `README.md`).
-- Levantar Co‑ATC + adsb.fi sin Docker: `./run_coatc_adsbfi.sh`.
+- Levantar Co‑ATC + adsb.fi sin Docker: `./scripts/run_coatc_adsbfi.sh`.
 
 El contenido que sigue describe el comportamiento histórico del script eliminado.
 

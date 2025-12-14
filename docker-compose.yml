@@ -3,7 +3,7 @@ version: "3.8"
 services:
   adsb-feed:
     build:
-      context: ./adsb-feed
+      context: ./services/adsb-feed
     restart: unless-stopped
     volumes:
       - aircraft_data:/data
@@ -72,7 +72,7 @@ services:
     environment:
       - LS_JAVA_OPTS=-Xms512m -Xmx512m
     volumes:
-      - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
+      - ./infra/logstash/pipeline:/usr/share/logstash/pipeline:ro
       - ./logs:/logs
     ports:
       - "5044:5044"

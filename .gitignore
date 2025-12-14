@@ -29,12 +29,19 @@ Thumbs.db
 
 # Build artifacts
 /venv/
+/.venv/
 /bin/
 /dist/
 
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
 # Logs y artefactos de ejecucion
 logs/
-*.log
+logs/*.log
 
 # Estado runtime de Co-ATC / Elastic
 co-atc-main/data/co-atc-*.db

@@ -7,7 +7,7 @@ formato tar1090/dump1090 (aircraft.json) y escribe el fichero en
 co-atc-main/data/aircraft.json. Sirve de sustituto del inyector local.
 
 Uso:
-  python3 fetch_adsbfi.py --lat 41.2971 --lon 2.0785 --dist 80
+  python3 tools/adsb/fetch_adsbfi.py --lat 41.2971 --lon 2.0785 --dist 80
 
 Requisitos:
   pip install requests
@@ -156,3 +156,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

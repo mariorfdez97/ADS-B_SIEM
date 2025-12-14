@@ -3,6 +3,9 @@
 Objetivo actual:
 - Alimentar Co-ATC con tráfico real vía adsb.fi (open data) y mantener el stack ELK para observabilidad. El inyector local se eliminó; solo se usa un fetcher que convierte la API de adsb.fi al formato `aircraft.json` que consume Co-ATC.
 
+> Nota (estado actual del repo): este resumen es **histórico** y puede contener referencias a archivos o decisiones antiguas.
+> La estructura y el stack actual están descritos en `docs/ARCHITECTURE.md` y `docs/elastic-stack.md`.
+
 Cambios recientes relevantes:
 - Eliminado el inyector Python (`simulador_bcn.py`, `simulador_bcn_pkg/`) y su documentación asociada.
 - Eliminado el exportador `co_atc_exporter.py` y scripts `lanzar_lab.sh`/`detener_lab.sh`.

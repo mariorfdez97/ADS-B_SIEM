@@ -4,14 +4,14 @@
 Ingerir en Elasticsearch los datos de aeronaves activos expuestos por la API de Co-ATC, evitando duplicados, generando también un log local con los eventos que se envían, y disponer de Kibana para visualización.
 
 ## Componentes y versiones
-- **Elasticsearch 8.14.1**: almacén de datos (`adsb-api-*`).
+- **Elasticsearch 8.14.1**: almacén de datos (`adsb-siem-*`).
 - **Kibana 8.14.1**: UI para explorar los índices.
 - **Logstash 8.14.1**: orquestador de ingesta desde la API → ES y log local.
 - **Sin Filebeat**: la obtención de datos es directa por HTTP Poller desde Logstash.
 
 ## Estructura de ficheros
 - `docker-compose.yml`: orquesta el laboratorio completo (Co‑ATC + feed + Elastic Stack).
-- `logstash/pipeline/logstash.conf`: pipeline de ingesta (HTTP poller, filtros, outputs).
+- `infra/logstash/pipeline/logstash.conf`: pipeline de ingesta (HTTP poller, filtros, outputs).
 - `logs/adsb_siem_events.log`: log generado por Logstash con los eventos ya procesados (lo mismo que se envía a Elasticsearch).
 
 ## Configuración principal
@@ -32,16 +32,15 @@ Ingerir en Elasticsearch los datos de aeronaves activos expuestos por la API de 
   - Puerto expuesto: `5601`.
   - Depende de que Elasticsearch esté saludable.
 - **logstash**
-  - Monta `./logstash/pipeline` como solo lectura.
-  - Monta `./logs` para escribir `adsb_api_parsed.log`.
-  - `extra_hosts: host.docker.internal:host-gateway` para que el contenedor resuelva el host (API de Co-ATC en la máquina).
+  - Monta `./infra/logstash/pipeline` como solo lectura (pipelines).
+  - Monta `./logs` para escribir `adsb_siem_events.log`.
   - `command: ["-w", "1"]` limita a un worker para mantener consistente el estado de deduplicación.
   - Puertos: `5044` (reservado Beats si se necesitara) y `9600` (API interna de Logstash).
   - Healthcheck a `http://localhost:9600/_node/pipelines`.
 
-### logstash/pipeline/logstash.conf
+### infra/logstash/pipeline/logstash.conf
 **Input: http_poller**
-- GET `http://co-atc:8000/api/v1/aircraft?status=active&lastSeenMinutes=5`.
+- GET `http://co-atc:8000/api/v1/aircraft?status=active&lastSeenMinutes=5` (vía red interna de Docker Compose).
 - Intervalo: 5 s. Timeout: 10 s. Cabecera `Accept: application/json`.
 - Espera la estructura: objeto con campo `aircraft` que contiene un array de aeronaves.
 
@@ -80,7 +79,7 @@ curl -s http://localhost:9200/adsb-siem-*/_count
 ```bash
 tail -f logs/adsb_siem_events.log
 ```
-6) Kibana: abrir http://localhost:5601 y crear un data view `adsb-api-*`.
+6) Kibana: abrir http://localhost:5601 y crear un data view `adsb-siem-*`.
 
 ## Campos mínimos disponibles en ES/log
 - Identificación: `hex`, `flight`, `status`, `on_ground`, `distance`.
@@ -101,7 +100,7 @@ tail -f logs/adsb_siem_events.log
 ## Resolución de problemas
 - **Kibana no arranca**: espera a que Elasticsearch esté healthy; revisa `docker-compose ps`.
 - **Logstash unhealthy**: ver `sudo docker-compose logs logstash`; revisa la URL o la respuesta de la API.
-- **Sin datos en ES**: revisa el log `adsb_api_parsed.log` y `_count`; confirma que la API responde y que la URL usa `host.docker.internal`.
+- **Sin datos en ES**: revisa `logs/adsb_siem_events.log` y `_count`; confirma que `co-atc` está levantado y que Logstash está llamando a `http://co-atc:8000/...`.
 - **Permisos de logs**: `logs` debe existir y ser escribible por el contenedor (montaje en `./logs`).
 
 ## Flujo resumen

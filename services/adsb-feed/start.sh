@@ -24,6 +24,7 @@ interval = float(os.environ.get("INTERVAL", "1"))
 out_path = Path(os.environ.get("OUT", "/data/aircraft.json"))
 out_path.parent.mkdir(parents=True, exist_ok=True)
 
+
 def safe_alt(value):
     if value is None:
         return 0.0
@@ -35,6 +36,7 @@ def safe_alt(value):
         except ValueError:
             return 0.0
     return float(value)
+
 
 def map_aircraft(ac):
     alt_baro = safe_alt(ac.get("alt_baro"))
@@ -84,6 +86,7 @@ def map_aircraft(ac):
         "seen": ac.get("seen"),
         "rssi": ac.get("rssi"),
     }
+
 
 while True:
     try:

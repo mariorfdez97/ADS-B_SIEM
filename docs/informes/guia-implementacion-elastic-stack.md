@@ -2,10 +2,13 @@
 
 Este documento sirve como una guía paso a paso para implementar la solución Elastic Stack (SIEM) descrita en `contexto.md`. El objetivo es centralizar, analizar y detectar anomalías en los datos de tráfico aéreo generados por el simulador `simulador_bcn.py` y el backend `co-atc`.
 
+> Nota (estado actual del repo): esta guía es **histórica** y contiene referencias a una implementación anterior (p.ej. Filebeat y rutas antiguas).
+> La implementación vigente del stack está documentada en `docs/elastic-stack.md` y usa Logstash consultando la API de Co‑ATC (sin Filebeat).
+
 ## Implementación en este repo (archivos ya listos)
 - `docker-compose.yml`: levanta Elasticsearch, Kibana, Logstash y Filebeat (Elastic 8.11.1, sin seguridad, un nodo).
 - `filebeat.yml`: lee `logs/co_atc.log` (JSON por línea) y las envía a Logstash. Añade nuevas fuentes según la API externa que integres.
-- `logstash/pipeline/adsb.conf`: input Beats 5044, conversión de tipos, geo_point `[location]`, parseo de `timestamp` ISO8601 y envío a índice `adsb-data-*` + stdout.
+- `infra/logstash/pipeline/logstash.conf`: pipeline actual (sin Filebeat) que consulta la API de Co‑ATC y envía a índice `adsb-siem-*`.
 - Arranque rápido (desde la raíz del proyecto):
   ```bash
   docker-compose up -d
@@ -112,7 +115,7 @@ Ahora configuraremos cómo los datos del simulador llegarán a Elasticsearch. Us
         ports:
           - "5044:5044"
         volumes:
-          - ./logstash/pipeline/:/usr/share/logstash/pipeline/
+          - ./infra/logstash/pipeline/:/usr/share/logstash/pipeline/
         depends_on:
           - elasticsearch
     ```
@@ -133,7 +136,7 @@ Ahora configuraremos cómo los datos del simulador llegarán a Elasticsearch. Us
     ```
 
 4.  **Configurar el Pipeline de Logstash**:
-    Crea un directorio `logstash/pipeline/` y dentro un fichero `adsb.conf`. Este pipeline procesará los datos.
+    Crea un directorio `infra/logstash/pipeline/` y dentro un fichero de pipeline. En este repo el pipeline actual es `infra/logstash/pipeline/logstash.conf`.
 
     ```conf
     input {

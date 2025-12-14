@@ -512,7 +512,7 @@ services:
     ports:
       - "5044:5044"
     volumes:
-      - ./pipeline:/usr/share/logstash/pipeline
+      - ./infra/logstash/pipeline:/usr/share/logstash/pipeline
 
   simulator:
     build: ./simulator
