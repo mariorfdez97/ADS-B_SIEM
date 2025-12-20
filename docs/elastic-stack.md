@@ -19,6 +19,8 @@ Ingerir en Elasticsearch los datos de aeronaves activos expuestos por la API de 
 - **adsb-feed**
   - Descarga datos de `adsb.fi`, genera `aircraft.json` y lo sirve por HTTP en `9000`.
   - Se usa como fuente `local_source_url` para Co‑ATC.
+  - Anomalías (opcional): variables `ANOMALY_*` para alterar algunos aviones antes de que Co‑ATC consuma el feed.
+  - Log de anomalías: `ANOMALY_LOG` (por defecto `/data/adsb_feed_anomalies.log`), se monta en `logs/` vía volumen.
 - **co-atc**
   - Backend + frontend en `8000`.
   - Usa `co-atc-main/configs/config.docker.toml`.
@@ -91,6 +93,18 @@ tail -f logs/adsb_siem_events.log
 - El deduplicador evita insertar el mismo estado consecutivo por `hex` si no cambian posición, alturas, velocidad, rumbo ni razón vertical.
 - Si la API entrega la misma aeronave con cualquier variación en esos campos, se reenviará (es un nuevo estado).
 
+## Reglas SIEM actuales (tags)
+- `alerta_velocidad_excesiva`: velocidad tierra > 1200 kt.
+- `alerta_velocidad_baja_cota`: > 260 kt por debajo de 10.000 ft.
+- `alerta_altitud_negativa`: altitud < -100 ft sin estar en tierra.
+- `posible_spoofing`: RSSI alto con NIC bajo.
+- `alerta_emergencia_aerea`: squawk 7500/7600/7700.
+- `alerta_baro_geom_desfase`: diferencia altitud baro vs geom > 3000 ft.
+- `alerta_deriva_imposible`: diferencia rumbo real vs magnético > 60°.
+- `alerta_rssi_distancia_incoherente`: distancia ≥ 300 km con RSSI ≥ -5 dB.
+- `alerta_tasa_vertical_extrema`: |tasa_vertical| > 8000 ft/min.
+- `alerta_tasa_vertical_inestable`: cambio instantáneo ≥ 10.000 ft/min.
+
 ## Ajustes rápidos
 - Cambiar frecuencia de sondeo: `interval` en `http_poller` (segundos).
 - Cambiar ventana de la API: modificar `lastSeenMinutes` en la URL.
@@ -105,3 +119,9 @@ tail -f logs/adsb_siem_events.log
 
 ## Flujo resumen
 API Co-ATC (`/api/v1/aircraft?...`) → Logstash HTTP Poller → split y normalización → reglas SIEM + deduplicación → salida a Elasticsearch (`adsb-siem-*`) y a `logs/adsb_siem_events.log`.
+
+## Inyección de anomalías (opcional)
+Para probar reglas SIEM sin tocar Co‑ATC, este repo permite “ensuciar” el feed externo **antes** de que Co‑ATC lo consuma:
+- Se activa en el servicio `adsb-feed` del `docker-compose.yml` (variables `ANOMALY_*`).
+- El resultado es un `aircraft.json` con algunos valores alterados, que Co‑ATC leerá normalmente.
+ - Se registra cada alteración en `logs/adsb_feed_anomalies.log` (JSON Lines).

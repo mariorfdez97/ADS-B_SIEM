@@ -65,6 +65,7 @@ Puntos clave del pipeline (versión actual):
 
 Documentación específica del stack:
 - `docs/elastic-stack.md`
+  - Incluye cómo activar anomalías en `adsb-feed` (para ensuciar el `aircraft.json` antes de que lo consuma Co‑ATC).
 
 ### 5) `logs/` (artefactos de ejecución)
 Se generan logs y artefactos runtime (ignorados por git):

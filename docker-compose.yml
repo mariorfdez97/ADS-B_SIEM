@@ -5,8 +5,15 @@ services:
     build:
       context: ./services/adsb-feed
     restart: unless-stopped
+    environment:
+      - ANOMALY_ENABLED=true
+      - ANOMALY_RATE=0.01
+      - ANOMALY_MAX_PER_WRITE=2
+      - ANOMALY_TYPES=altitud_negativa,velocidad_excesiva,salto_posicion,squawk_emergencia,posible_spoofing
+      - ANOMALY_LOG=/logs/adsb_feed_anomalies.log
     volumes:
       - aircraft_data:/data
+      - ./logs:/logs
     ports:
       - "9000:9000"
 
@@ -56,6 +63,9 @@ services:
         condition: service_healthy
     environment:
       - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - XPACK_ENCRYPTEDSAVEDOBJECTS_ENCRYPTIONKEY=0123456789abcdef0123456789abcdef
+      - XPACK_SECURITY_ENCRYPTIONKEY=0123456789abcdef0123456789abcdef
+      - XPACK_REPORTING_ENCRYPTIONKEY=0123456789abcdef0123456789abcdef
     ports:
       - "5601:5601"
 
