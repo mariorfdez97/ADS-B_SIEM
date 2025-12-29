@@ -5,10 +5,10 @@ WORKDIR /app
 RUN pip install --no-cache-dir requests
 
 COPY start.sh /app/start.sh
+COPY feed.py /app/feed.py
 RUN chmod +x /app/start.sh
 
 EXPOSE 9000
 VOLUME ["/data"]
 
 CMD ["/app/start.sh"]
-

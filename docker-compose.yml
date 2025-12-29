@@ -8,9 +8,13 @@ services:
     environment:
       - ANOMALY_ENABLED=true
       - ANOMALY_RATE=0.01
-      - ANOMALY_MAX_PER_WRITE=2
+      - ANOMALY_MAX_PER_WRITE=1
+      - ANOMALY_COOLDOWN_CYCLES=30
+      - ANOMALY_RSSI_DISTANCE_RATE=0.01
+      - ANOMALY_RSSI_DISTANCE_MAX_PER_WRITE=1
       - ANOMALY_TYPES=altitud_negativa,velocidad_excesiva,salto_posicion,squawk_emergencia,posible_spoofing
       - ANOMALY_LOG=/logs/adsb_feed_anomalies.log
+      - INTERVAL=3
     volumes:
       - aircraft_data:/data
       - ./logs:/logs
