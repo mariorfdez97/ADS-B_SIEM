@@ -32,6 +32,7 @@ services:
     volumes:
       - ./co-atc-main/configs/config.docker.toml:/app/configs/config.docker.toml:ro
       - coatc_data:/app/data
+      - ./logs:/logs:ro
     ports:
       - "8000:8000"
 

@@ -1055,6 +1055,16 @@ class MapManager {
 
             if (!markerInfo) return;
 
+            if (this.store.hiddenAircraft && this.store.hiddenAircraft.has(hex)) {
+                if (this.layers.aircraft.hasLayer(markerInfo.aircraft)) {
+                    this.layers.aircraft.removeLayer(markerInfo.aircraft);
+                }
+                if (markerInfo.label && this.layers.aircraft.hasLayer(markerInfo.label)) {
+                    this.layers.aircraft.removeLayer(markerInfo.label);
+                }
+                return;
+            }
+
             const callsign = (aircraft.flight || aircraft.hex).toLowerCase();
             const type = (aircraft.adsb?.type || '').toLowerCase();
             const category = (aircraft.adsb?.category || '').toLowerCase();

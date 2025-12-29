@@ -117,6 +117,10 @@ document.addEventListener('alpine:init', () => {
         wsConnection: null, // WebSocket connection
         transcriptions: [], // Array of transcription messages
         aircraftAlerts: [], // Array of aircraft movement alerts
+        hiddenAircraft: new Set(), // Hide aircraft from UI (operator action)
+        siemAlertSeen: new Set(), // Dedup SIEM alerts
+        siemLastTimestamp: null,
+        siemPollingIntervalId: null,
         audioApiUrl: `${API_BASE_URL}/frequencies`,
         transcriptionSearchTerm: '', // For searching transcriptions
         showLostAircraftOnly: false, // Toggle for showing only lost aircraft
@@ -372,6 +376,9 @@ document.addEventListener('alpine:init', () => {
             console.log('[PERFORMANCE] Recalculating filtered aircraft list');
             const searchLower = this.searchTerm.toLowerCase();
             const filtered = Object.values(this.aircraft).filter(aircraft => {
+                if (this.hiddenAircraft.has(aircraft.hex)) {
+                    return false;
+                }
                 // Filter by search term - now includes callsign, type, and category
                 if (searchLower) {
                     const callsign = (aircraft.flight || aircraft.hex).toLowerCase();
@@ -1847,6 +1854,8 @@ document.addEventListener('alpine:init', () => {
                 // CRITICAL FIX: Check server config to determine if WebSocket streaming is enabled
                 await this.initAircraftDataSource();
 
+                this.startSiemPolling();
+
                 // Initialize previous settings for change detection
                 this.previousSettings = { ...this.settings };
 
@@ -2411,6 +2420,9 @@ document.addEventListener('alpine:init', () => {
 
                 if (data.aircraft) {
                     for (const aircraft of data.aircraft) {
+                        if (this.hiddenAircraft.has(aircraft.hex)) {
+                            continue;
+                        }
                         this.calculateAircraftDistance(aircraft);
 
                         // Update animation engine with aircraft data (HTTP polling)
@@ -2979,6 +2991,9 @@ document.addEventListener('alpine:init', () => {
             // Process each aircraft
             if (data.aircraft && Array.isArray(data.aircraft)) {
                 for (const aircraft of data.aircraft) {
+                    if (this.hiddenAircraft.has(aircraft.hex)) {
+                        continue;
+                    }
                     // Calculate distance
                     this.calculateAircraftDistance(aircraft);
 
@@ -3055,6 +3070,9 @@ document.addEventListener('alpine:init', () => {
             // CRITICAL FIX: Process asynchronously to prevent main thread blocking
             setTimeout(() => {
                 if (data.aircraft) {
+                    if (this.hiddenAircraft.has(data.aircraft.hex)) {
+                        return;
+                    }
                     console.log(`Adding new aircraft: ${data.aircraft.flight || data.hex}`);
 
                     // Apply distance calculation
@@ -3095,6 +3113,10 @@ document.addEventListener('alpine:init', () => {
             // CRITICAL FIX: Process asynchronously to prevent main thread blocking
             setTimeout(() => {
                 if (data.aircraft) {
+                    if (this.hiddenAircraft.has(data.aircraft.hex)) {
+                        this.removeAircraftFromView(data.aircraft.hex);
+                        return;
+                    }
                     //console.log(`Updating aircraft: ${data.hex}`);
 
                     // Replace entire aircraft object (no incremental changes)
@@ -3310,6 +3332,9 @@ document.addEventListener('alpine:init', () => {
         aircraftPassesFilters(aircraft) {
             // Apply all current filters to determine if aircraft should be displayed
             const searchLower = this.searchTerm.toLowerCase();
+            if (this.hiddenAircraft.has(aircraft.hex)) {
+                return false;
+            }
 
             // Search filter
             if (searchLower) {
@@ -3545,6 +3570,134 @@ document.addEventListener('alpine:init', () => {
             const noAlertsText = document.getElementById('no-alerts-text');
             if (noAlertsText) {
                 noAlertsText.style.display = visibleAlerts.length === 0 ? 'block' : 'none';
+            }
+        },
+
+        startSiemPolling() {
+            if (this.siemPollingIntervalId) {
+                clearInterval(this.siemPollingIntervalId);
+            }
+            this.fetchSiemAlerts();
+            this.siemPollingIntervalId = setInterval(() => {
+                this.fetchSiemAlerts();
+            }, 4000);
+        },
+
+        async fetchSiemAlerts() {
+            try {
+                const params = new URLSearchParams();
+                params.append('limit', '200');
+                if (this.siemLastTimestamp) {
+                    params.append('since', this.siemLastTimestamp);
+                }
+                const url = `${API_BASE_URL}/siem/alerts?${params.toString()}`;
+                const response = await this.fetchWithTimeout(url);
+                if (!response.ok) {
+                    return;
+                }
+                const data = await response.json();
+                if (!data.alerts || !Array.isArray(data.alerts)) {
+                    return;
+                }
+
+                let newestTimestamp = this.siemLastTimestamp;
+                for (const alert of data.alerts) {
+                    this.addSiemAlert(alert);
+                    if (alert.timestamp) {
+                        if (!newestTimestamp || new Date(alert.timestamp) > new Date(newestTimestamp)) {
+                            newestTimestamp = alert.timestamp;
+                        }
+                    }
+                }
+                this.siemLastTimestamp = newestTimestamp;
+            } catch (error) {
+                console.warn('[SIEM] Failed to fetch SIEM alerts', error);
+            }
+        },
+
+        addSiemAlert(data) {
+            if (!data || !data.hex || !data.tags || data.tags.length === 0) {
+                return;
+            }
+            const key = `${data.hex}|${data.tags.join(',')}|${data.timestamp || ''}`;
+            if (this.siemAlertSeen.has(key)) {
+                return;
+            }
+            this.siemAlertSeen.add(key);
+
+            if (!this.shouldShowAlert(data.hex)) {
+                return;
+            }
+
+            const alertId = Date.now() + '-siem-' + data.hex;
+            this.aircraftAlerts.push({
+                id: alertId,
+                hex: data.hex,
+                type: 'siem',
+                tags: data.tags,
+                timestamp: new Date(data.timestamp || Date.now())
+            });
+
+            const alertsContainer = document.getElementById('alerts-container');
+            if (!alertsContainer) return;
+
+            const noAlertsText = document.getElementById('no-alerts-text');
+            if (noAlertsText) {
+                noAlertsText.style.display = 'none';
+            }
+
+            const alertElement = document.createElement('div');
+            alertElement.id = alertId;
+            alertElement.className = 'inline-flex items-center text-xs px-1.5 py-0.5 rounded text-red-300 cursor-pointer hover:bg-black/50';
+
+            alertElement.addEventListener('click', () => {
+                this.removeAircraftAlert(alertId);
+            });
+
+            alertElement.addEventListener('contextmenu', (e) => {
+                e.preventDefault();
+                const label = data.callsign || data.hex;
+                if (confirm(`Remove aircraft ${label} from view?`)) {
+                    this.hideAircraft(data.hex);
+                }
+            });
+
+            const icon = document.createElement('i');
+            icon.className = 'fas fa-triangle-exclamation fa-xs mr-1';
+            alertElement.appendChild(icon);
+
+            const text = document.createElement('span');
+            const label = data.callsign || data.hex;
+            text.textContent = `SIEM ${data.tags.join('/')}: ${label}`;
+            alertElement.appendChild(text);
+
+            alertsContainer.appendChild(alertElement);
+
+            setTimeout(() => {
+                this.removeAircraftAlert(alertId);
+            }, 60000);
+        },
+
+        hideAircraft(hex) {
+            if (!hex) return;
+            this.hiddenAircraft.add(hex);
+            this.removeAircraftFromView(hex);
+            this._lastFilterHash = null;
+            if (this.mapManager) {
+                this.mapManager.applyFiltersAndRefreshView();
+            }
+        },
+
+        removeAircraftFromView(hex) {
+            delete this.aircraft[hex];
+            if (this.mapManager) {
+                this.mapManager.removeAircraft(hex);
+            }
+            if (this.animationEngine) {
+                this.animationEngine.removeAircraft(hex);
+            }
+            if (this.selectedAircraft && this.selectedAircraft.hex === hex) {
+                this.selectedAircraft = null;
             }
         },
 

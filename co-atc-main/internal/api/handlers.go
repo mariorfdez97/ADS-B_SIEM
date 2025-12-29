@@ -1,6 +1,7 @@
 package api
 
 import (
+	"bytes"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -1822,4 +1823,155 @@ func (h *Handler) GetSimulatedAircraft(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(aircraft)
+}
+
+type siemAlert struct {
+	Hex       string   `json:"hex"`
+	Callsign  string   `json:"callsign"`
+	Tags      []string `json:"tags"`
+	Timestamp string   `json:"timestamp"`
+}
+
+type siemLogEvent struct {
+	Timestamp string   `json:"@timestamp"`
+	Tags      []string `json:"tags"`
+	Hex       string   `json:"id_icao"`
+	Callsign  string   `json:"callsign_vuelo"`
+}
+
+// GetSiemAlerts returns recent SIEM alerts parsed from adsb_siem_events.log
+func (h *Handler) GetSiemAlerts(w http.ResponseWriter, r *http.Request) {
+	limit := 200
+	if limitStr := r.URL.Query().Get("limit"); limitStr != "" {
+		if v, err := strconv.Atoi(limitStr); err == nil && v > 0 {
+			if v > 1000 {
+				v = 1000
+			}
+			limit = v
+		}
+	}
+
+	var since time.Time
+	if sinceStr := r.URL.Query().Get("since"); sinceStr != "" {
+		if t, err := time.Parse(time.RFC3339, sinceStr); err == nil {
+			since = t
+		}
+	}
+
+	logPath := os.Getenv("SIEM_LOG_PATH")
+	if logPath == "" {
+		logPath = "/logs/adsb_siem_events.log"
+	}
+
+	alerts, err := readSiemAlertsFromFile(logPath, limit, since)
+	if err != nil {
+		if os.IsNotExist(err) {
+			alerts = []siemAlert{}
+		} else {
+			h.logger.Warn("Failed to read SIEM alerts", logger.Error(err))
+			http.Error(w, "Failed to read SIEM alerts", http.StatusInternalServerError)
+			return
+		}
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(map[string]interface{}{
+		"alerts": alerts,
+	})
+}
+
+func readSiemAlertsFromFile(path string, limit int, since time.Time) ([]siemAlert, error) {
+	lines, err := readTailLines(path, 1024*1024)
+	if err != nil {
+		return nil, err
+	}
+
+	alerts := make([]siemAlert, 0, limit)
+	for _, line := range lines {
+		line = strings.TrimSpace(line)
+		if line == "" {
+			continue
+		}
+		var event siemLogEvent
+		if err := json.Unmarshal([]byte(line), &event); err != nil {
+			continue
+		}
+		alertTags := filterSiemTags(event.Tags)
+		if len(alertTags) == 0 {
+			continue
+		}
+
+		ts := event.Timestamp
+		if ts == "" {
+			continue
+		}
+		if !since.IsZero() {
+			parsed, err := time.Parse(time.RFC3339, ts)
+			if err != nil || !parsed.After(since) {
+				continue
+			}
+		}
+
+		alerts = append(alerts, siemAlert{
+			Hex:       strings.ToUpper(event.Hex),
+			Callsign:  strings.TrimSpace(event.Callsign),
+			Tags:      alertTags,
+			Timestamp: ts,
+		})
+	}
+
+	if len(alerts) > limit {
+		alerts = alerts[len(alerts)-limit:]
+	}
+
+	return alerts, nil
+}
+
+func filterSiemTags(tags []string) []string {
+	alertTags := make([]string, 0, len(tags))
+	for _, tag := range tags {
+		if strings.HasPrefix(tag, "alerta_") || tag == "posible_spoofing" {
+			alertTags = append(alertTags, tag)
+		}
+	}
+	return alertTags
+}
+
+func readTailLines(path string, maxBytes int64) ([]string, error) {
+	f, err := os.Open(path)
+	if err != nil {
+		return nil, err
+	}
+	defer f.Close()
+
+	stat, err := f.Stat()
+	if err != nil {
+		return nil, err
+	}
+
+	size := stat.Size()
+	start := int64(0)
+	if size > maxBytes {
+		start = size - maxBytes
+	}
+	if _, err := f.Seek(start, io.SeekStart); err != nil {
+		return nil, err
+	}
+
+	buf, err := io.ReadAll(f)
+	if err != nil {
+		return nil, err
+	}
+
+	if start > 0 {
+		if idx := bytes.IndexByte(buf, '\n'); idx >= 0 {
+			buf = buf[idx+1:]
+		}
+	}
+
+	content := strings.TrimSpace(string(buf))
+	if content == "" {
+		return []string{}, nil
+	}
+	return strings.Split(content, "\n"), nil
 }

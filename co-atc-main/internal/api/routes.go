@@ -95,6 +95,9 @@ func (r *Router) Routes() http.Handler {
 		router.Put("/simulation/aircraft/{hex}/controls", r.handler.UpdateSimulationControls)
 		router.Delete("/simulation/aircraft/{hex}", r.handler.RemoveSimulatedAircraft)
 		router.Get("/simulation/aircraft", r.handler.GetSimulatedAircraft)
+
+		// SIEM alerts
+		router.Get("/siem/alerts", r.handler.GetSiemAlerts)
 	})
 
 	// Serve static files from the configured directory
